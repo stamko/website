@@ -60,8 +60,6 @@ const moment = extendMoment(Moment);
 Vue.use(VueMoment, {
   moment
 });
-
-
 Vue.use(VueScrollmagic);
 library.add(faSignInAlt, faDownload, faGlobeAmericas, faBars, faAndroid, faApple, faTasks, faChevronDown, faChevronUp, faChevronLeft, faChevronRight, faFacebookF, faTwitter, faVk, faInstagram, faTimes)
 library.add(faFontAwesome)

@@ -155,7 +155,7 @@
               <font-awesome-icon :icon="['fas', 'chevron-down']" size="3x" class="mt-2 mb-4" />
             </div>
             <div id="scrollTriggerPhone" class="m-5"></div>
-            <h2>Пришлашайте коллег</h2>
+            <h2>Приглашайте коллег</h2>
 
             <hr />
             <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
