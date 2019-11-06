@@ -350,6 +350,7 @@ h3 {
   position: absolute;
   width: 327px;
   max-height: 100vw;
+  min-height: 98vw;
   margin: 0;
   padding-top: 1px;
   overflow-y: auto;
