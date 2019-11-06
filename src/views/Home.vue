@@ -17,35 +17,42 @@
       </div>
       <mdbContainer>
         <mdb-row class="d-flex justify-content-center">
-          <mdb-col lg="10" xl="12">
-            <mdb-row>
-              <mdb-col>
-                <h1>Создайте команду мечты</h1>
-                <p>Сделайте вашу команду мечты лучше с помощью приложения DreamTeam</p>
-              </mdb-col>
-            </mdb-row>
-            <mdb-row>
-              <mdb-col>
-                <dtbtn
-                  :gradiented="true"
-                  title="Попробуйте"
-                  icon="download"
-                  :iconPosition="'end'"
-                  class="d-flex align-items-center"
-                ></dtbtn>
-              </mdb-col>
-              <mdb-col>
-                <div class="brandIcons">
-                  <font-awesome-icon :icon="['fab', 'android']" size="2x" class="mr-4" />
-                  <font-awesome-icon :icon="['fab', 'apple']" size="2x" class="mr-4" />
-                  <font-awesome-icon :icon="['fas', 'globe-americas']" size="2x" />
-                </div>
-              </mdb-col>
-            </mdb-row>
-            <mdb-row class="d-flex justify-content-center py-5">
+          <mdb-col lg="10" xl="12" class="horizontal-reverse-direction">
+            <div class="horizontal-section">
+              <div>
+                <mdb-row>
+                  <mdb-col>
+                    <h1>
+                      Создайте команду
+                      <br />мечты
+                    </h1>
+                    <p>Сделайте вашу команду мечты лучше с помощью приложения DreamTeam</p>
+                  </mdb-col>
+                </mdb-row>
+                <mdb-row class="d-flex">
+                  <mdb-col>
+                    <dtbtn
+                      :gradiented="true"
+                      title="Попробуйте"
+                      icon="download"
+                      :iconPosition="'end'"
+                      class="d-flex align-items-center"
+                    ></dtbtn>
+                  </mdb-col>
+                  <mdb-col class="d-flex">
+                    <div class="brandIcons">
+                      <font-awesome-icon :icon="['fab', 'android']" size="2x" class="mr-2" />
+                      <font-awesome-icon :icon="['fab', 'apple']" size="2x" class="mr-2" />
+                      <font-awesome-icon :icon="['fas', 'globe-americas']" size="2x" />
+                    </div>
+                  </mdb-col>
+                </mdb-row>
+              </div>
+            </div>
+            <mdb-row class="d-flex justify-content-center py-5 horizontal-section">
               <mdb-col lg="10">
                 <img class="img-fluid" src="@/assets/hero-image.png" alt />
-                <div id="trigger2" class="spacer s1"></div>
+                <div id="trigger2"></div>
               </mdb-col>
             </mdb-row>
           </mdb-col>
@@ -53,10 +60,95 @@
       </mdbContainer>
     </div>
     <!-- <div class="home-head-border"></div> -->
-    <div class="card-roll-wrapper">
-      <h2 class="text-center">Возможности приложения:</h2>
-      <div class="d-flex card-scrolls overflow-hidden">
-        <div class="app-card">
+    <div class="card-roll-wrapper d-none d-sm-block">
+      <div>
+        <h2 class="text-center">Возможности приложения:</h2>
+
+        <div class="d-flex card-scrolls overflow-hidden justify-content-around">
+          <div class="app-card">
+            <mdb-view hover>
+              <a href="#!">
+                <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+              </a>
+            </mdb-view>
+            <mdb-card-body>
+              <mdb-card-title>
+                <span class="gradiented">
+                  <font-awesome-icon :icon="['fas', 'tasks']" />
+                </span>Опросы
+              </mdb-card-title>
+              <mdb-card-text>
+                <p>
+                  Some quick example text to build on the card title and make up the bulk of the
+                  card's content.
+                </p>
+              </mdb-card-text>
+            </mdb-card-body>
+          </div>
+          <div class="app-card">
+            <mdb-view hover>
+              <a href="#!">
+                <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+              </a>
+            </mdb-view>
+            <mdb-card-body>
+              <mdb-card-title>
+                <span class="gradiented">
+                  <font-awesome-icon :icon="['fas', 'tasks']" />
+                </span>Группы
+              </mdb-card-title>
+              <mdb-card-text>
+                Some quick example text to build on the card title and make up the bulk of the
+                card's content.
+              </mdb-card-text>
+            </mdb-card-body>
+          </div>
+          <div class="app-card">
+            <mdb-view hover>
+              <a href="#!">
+                <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+              </a>
+            </mdb-view>
+            <mdb-card-body>
+              <mdb-card-title>
+                <span class="gradiented">
+                  <font-awesome-icon :icon="['fas', 'tasks']" />
+                </span>Предложения
+              </mdb-card-title>
+              <mdb-card-text>
+                <p>
+                  Some quick example text to build on the card title and make up the bulk of the
+                  card's content.
+                </p>
+              </mdb-card-text>
+            </mdb-card-body>
+          </div>
+          <div class="app-card">
+            <mdb-view hover>
+              <a href="#!">
+                <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+              </a>
+            </mdb-view>
+            <mdb-card-body>
+              <mdb-card-title>
+                <span class="gradiented">
+                  <font-awesome-icon :icon="['fas', 'tasks']" />
+                </span>Предложения
+              </mdb-card-title>
+              <mdb-card-text>
+                <p>
+                  Some quick example text to build on the card title and make up the bulk of the
+                  card's content.
+                </p>
+              </mdb-card-text>
+            </mdb-card-body>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-container d-block d-sm-none">
+      <div class="mobile-container items">
+        <div class="item pl-2">
           <mdb-view hover>
             <a href="#!">
               <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
@@ -76,7 +168,7 @@
             </mdb-card-text>
           </mdb-card-body>
         </div>
-        <div class="app-card">
+        <div class="item px-1">
           <mdb-view hover>
             <a href="#!">
               <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
@@ -94,7 +186,7 @@
             </mdb-card-text>
           </mdb-card-body>
         </div>
-        <div class="app-card">
+        <div class="item px-1">
           <mdb-view hover>
             <a href="#!">
               <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
@@ -114,7 +206,7 @@
             </mdb-card-text>
           </mdb-card-body>
         </div>
-        <div class="app-card">
+        <div class="item pr-2">
           <mdb-view hover>
             <a href="#!">
               <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
@@ -142,45 +234,49 @@
           <div>
             <div id="imgPhone">
               <img src="@/assets/iphone-x.png" alt class="img-fluid" />
-              <lottie path="@/assets/lottie/data.json" />
             </div>
           </div>
         </mdb-col>
-        <mdb-col md="6" class="pl-5">
-          <div>
-            <h2>Создавайте группы</h2>
-            <hr />
-            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-            <div class="arrow">
-              <font-awesome-icon :icon="['fas', 'chevron-down']" size="3x" class="mt-2 mb-4" />
-            </div>
-            <div id="scrollTriggerPhone" class="m-5"></div>
-            <h2>Приглашайте коллег</h2>
-
-            <hr />
-            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-            <div class="arrow">
-              <font-awesome-icon :icon="['fas', 'chevron-down']" size="3x" class="mt-1 mb-4" />
-            </div>
-            <h2>Запускайте голосование</h2>
-            <hr />
-            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-            <div class="arrow">
-              <font-awesome-icon :icon="['fas', 'chevron-down']" size="3x" class="mt-2 mb-4" />
-            </div>
-            <h2>Оценивайте коллег</h2>
-            <hr />
-            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-            <div class="arrow">
-              <font-awesome-icon :icon="['fas', 'chevron-down']" size="3x" class="mt-2 mb-4" />
-            </div>
-            <h2>Получите результаты</h2>
-            <hr />
-            <div id="scrollTriggerPhoneDelete"></div>
-            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-            <div class="arrow">
-              <font-awesome-icon :icon="['fas', 'chevron-down']" size="3x" class="mt-2 mb-4" />
-            </div>
+        <mdb-col md="6" class="pl-5 align-self-center">
+          <swiper :options="swiperOption">
+            <swiper-slide>
+              <div>
+                <h2>Создавайте группы</h2>
+                <hr />
+                <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+              </div>
+            </swiper-slide>
+            <!-- Слайд  -->
+            <swiper-slide class="vertical-slide">
+              <h2>Приглашайте коллег</h2>
+              <hr />
+              <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+            </swiper-slide>
+            <!-- Слайд  -->
+            <swiper-slide class="vertical-slide">
+              <h2>Запускайте голосование</h2>
+              <hr />
+              <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+            </swiper-slide>
+            <!-- Слайд  -->
+            <swiper-slide class="vertical-slide">
+              <h2>Оценивайте коллег</h2>
+              <hr />
+              <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+            </swiper-slide>
+            <!-- Слайд  -->
+            <swiper-slide class="vertical-slide">
+              <h2>Получите результаты</h2>
+              <hr />
+              <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+            </swiper-slide>
+          </swiper>
+          <div class="arrow">
+            <font-awesome-icon
+              :icon="['fas', 'chevron-down']"
+              size="3x"
+              class="nextSlide"
+            />
           </div>
         </mdb-col>
       </mdb-row>
@@ -195,8 +291,6 @@ import { ScrollToPlugin, TweenMax, TimelineMax } from "gsap";
 import { bus } from "../bus.js";
 import dtbtn from "@/components/UI/dt-btn";
 import Associate from "./Associate";
-import * as animationData from "@/assets/lottie/data.json";
-import lottie from 'lottie-web/build/player/lottie';
 import {
   mdbRow,
   mdbCol,
@@ -234,15 +328,29 @@ export default {
     mdbCardGroup,
     Associate,
     mdbMask,
-    mdbView,
-    lottie
+    mdbView
   },
   data() {
-      return {
-        defaultOptions: {animationData: animationData},
-        animationSpeed: 1
+    return {
+      mouseControl: true,
+      swiperOption: {
+        direction: "vertical",
+        effect: "slide",
+        spaceBetween: 0,
+        mousewheel: true,
+        simulateTouch: false,
+        watchSlidesProgress: true,
+        width: 500,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true
+        },
+        navigation: {
+          nextEl: ".nextSlide"
+        }
       }
-    },
+    };
+  },
   beforeMount() {
     bus.$emit(`paintHeadInit`);
   },
@@ -250,39 +358,38 @@ export default {
     bus.$emit(`paintHeadDestroy`);
   },
   mounted() {
-    var tween = TweenMax.staggerFromTo(
-      ".app-card",
-      2,
-      { left: "100vw" },
-      { left: 0, ease: Back.easeOut },
-
-      0.15
-    );
-
-    const wrapScene = this.$scrollmagic
-      .scene({
-        triggerElement: "#trigger2",
-        duration: 550
-      })
-      .setTween(tween);
-    this.$scrollmagic.addScene(wrapScene);
-
-    const phoneScene = this.$scrollmagic
-      .scene({
-        triggerElement: "#scrollTriggerPhone",
-        duration: 650
-      })
-      .setPin("#imgPhone");
-    this.$scrollmagic.addScene(phoneScene);
-
-    const deleteScene = this.$scrollmagic
-      .scene({
-        triggerElement: "#scrollTriggerPhoneDelete"
-      })
-      .removePin(true);
-    this.$scrollmagic.addScene(deleteScene);
-
+    // var tween = TweenMax.staggerFromTo(
+    //   ".app-card",
+    //   2,
+    //   { left: "100vw" },
+    //   { left: 0, ease: Back.easeOut },
+    //   0.15
+    // );
+    // const wrapScene = this.$scrollmagic
+    //   .scene({
+    //     triggerElement: "#trigger2",
+    //     duration: 550
+    //   })
+    //   .setTween(tween);
+    // this.$scrollmagic.addScene(wrapScene);
+    // const phoneScene = this.$scrollmagic.scene({
+    //   triggerElement: "#scrollTriggerPhone",
+    //   duration: 650
+    // });
+    //   .setPin("#imgPhone");
+    // this.$scrollmagic.addScene(phoneScene);
+    // const deleteScene = this.$scrollmagic
+    //   .scene({
+    //     triggerElement: "#scrollTriggerPhoneDelete"
+    //   })
+    //   .removePin(true);
+    // this.$scrollmagic.addScene(deleteScene);
     // Add scene to element scrollmagic controller
+  },
+  methods: {
+    disableMouse() {
+      bus.$emit("disable");
+    }
   }
 };
 </script>
@@ -308,7 +415,7 @@ export default {
   }
   .app-card {
     min-width: 240px;
-    max-width: 240px;
+    max-width: 20vw;
     font-weight: 800;
     position: relative;
     border-radius: 15px;
@@ -490,4 +597,51 @@ section {
     line-height: 19px;
   }
 }
+.mobile-container {
+  width: 100%;
+}
+.mobile-container.items {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  padding: 3rem 1rem;
+
+  .item {
+    min-width: 240px;
+    font-weight: 800;
+    position: relative;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
+    margin: 0 1rem;
+
+    p {
+      color: #1b3b59;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+    }
+    h4 {
+      margin-left: 1rem;
+      word-wrap: normal;
+    }
+    span {
+      position: absolute;
+      border-radius: 50%;
+      left: -1.5rem;
+      top: -1.5rem;
+      padding: 1rem;
+    }
+  }
+  .item:last-child {
+    mdb-card-body {
+      width: 260px !important;
+      margin-right: -1.5rem !important;
+    }
+  }
+}
+// .rerun-enter-to{
+
+// }
 </style>

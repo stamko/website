@@ -2,7 +2,7 @@
   <div id="app">
     <navbar />
     <router-view class="animated fadeIn"></router-view>
-    <!-- <dtFooter /> -->
+    <dtFooter />
   </div>
 </template>
 

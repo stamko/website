@@ -1,5 +1,5 @@
 <template>
-  <div class="gradient-purple pt-3">
+  <div class="gradient-purple rotate-wrapper">
     <div class="section-shaped-gr">
       <div class="shape">
         <span class="span-150"></span>
@@ -17,7 +17,7 @@
     <mdbContainer class="py-5">
       <h2>Присоединяйтесь!</h2>
       <mdb-row>
-        <mdb-col>
+        <mdb-col class="mt-2">
           <mdb-card class="associateCard">
             <mdb-card-body>
               <mdb-card-title class="titleBorder">
@@ -36,19 +36,20 @@
                   title="Попробуйте"
                   :icon="`sign-in-alt`"
                   :iconPosition="'end'"
+                  class="m-1"
                 ></dtbtn>
               </mdb-card-text>
             </mdb-card-body>
           </mdb-card>
         </mdb-col>
-        <mdb-col class="m-2">
+        <mdb-col class="mt-2">
           <mdb-card class="associateCard">
             <mdb-card-body>
               <mdb-card-title class="titleBorder">
                 <h3>Загрузите приложение</h3>
               </mdb-card-title>
               <mdb-card-text>
-                <mdb-row>
+                <mdb-row class="d-flex">
                   <mdb-col>
                     <img src="@/assets/googlePlay.png" alt class="img-fluid" />
                   </mdb-col>
@@ -62,9 +63,89 @@
         </mdb-col>
       </mdb-row>
     </mdbContainer>
-    <h2 class="mt-5 mb-5">Наш блог</h2>
-    <div class="scroll-container">
-      <div class="horizontal-card-wrapper squares">
+    <h2 class="mt-1 mb-5">Наш блог</h2>
+    <div class="d-flex d-sm-none mobile-container">
+      <div class="mobile-container items">
+        <div class="pl-2">
+          <div class="item">
+            <mdb-card-body>
+              <mdb-card-text>
+                <mdb-card-title class="trim-text">{{postsData[postsData.length -1][0].data.title}}</mdb-card-title>
+                <p
+                  v-html="postsData[postsData.length -1][0].data.description"
+                  class="p-0 m-0 trim-text"
+                ></p>
+                <div
+                  class="card-date"
+                >{{$moment(+postsData[postsData.length -1][0].when).fromNow()}}</div>
+                <span
+                  class="category"
+                >{{getRubricById(postsData[postsData.length -1][0].data.rubricId)}}</span>
+              </mdb-card-text>
+            </mdb-card-body>
+          </div>
+        </div>
+        <div class="px-1">
+          <div class="item">
+            <mdb-card-body>
+              <mdb-card-text>
+                <mdb-card-title class="trim-text">{{postsData[postsData.length -2][0].data.title}}</mdb-card-title>
+                <p
+                  v-html="postsData[postsData.length -2][0].data.description"
+                  class="p-0 m-0 trim-text"
+                ></p>
+                <div
+                  class="card-date"
+                >{{$moment(+postsData[postsData.length -2][0].when).fromNow()}}</div>
+                <span
+                  class="category"
+                >{{getRubricById(postsData[postsData.length -2][0].data.rubricId)}}</span>
+              </mdb-card-text>
+            </mdb-card-body>
+          </div>
+        </div>
+        <div class="px-1">
+          <div class="item">
+            <mdb-card-body>
+              <mdb-card-text>
+                <mdb-card-title class="trim-text">{{postsData[postsData.length -3][0].data.title}}</mdb-card-title>
+                <p
+                  v-html="postsData[postsData.length -3][0].data.description"
+                  class="p-0 m-0 trim-text"
+                ></p>
+                <div
+                  class="card-date"
+                >{{$moment(+postsData[postsData.length -3][0].when).fromNow()}}</div>
+                <span
+                  class="category"
+                >{{getRubricById(postsData[postsData.length -3][0].data.rubricId)}}</span>
+              </mdb-card-text>
+            </mdb-card-body>
+          </div>
+        </div>
+        <div class="pr-2">
+          <div class="item">
+            <mdb-card-body>
+              <mdb-card-text>
+                <mdb-card-title class="trim-text">{{postsData[postsData.length -4][0].data.title}}</mdb-card-title>
+                <p
+                  v-html="postsData[postsData.length -4][0].data.description"
+                  class="p-0 m-0 trim-text"
+                ></p>
+                <div
+                  class="card-date"
+                >{{$moment(+postsData[postsData.length -4][0].when).fromNow()}}</div>
+                <span
+                  class="category"
+                >{{getRubricById(postsData[postsData.length -4][0].data.rubricId)}}</span>
+              </mdb-card-text>
+            </mdb-card-body>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-container d-none d-sm-block">
+      <div class="horizontal-scroll-wrapper squares">
         <mdb-card-body>
           <mdb-card-text>
             <mdb-card-title class="trim-text">{{postsData[postsData.length -1][0].data.title}}</mdb-card-title>
@@ -122,15 +203,15 @@
     <mdbContainer>
       <mdb-row>
         <mdb-col>
-          <div class="blog-button">
+          <div class="blog-button d-flex">
             <button
               type="button"
-              class="btn btn-light m-5"
+              class="btn btn-light m-3"
               @click="$router.push(`/blog`)"
             >Перейти в блог</button>
           </div>
         </mdb-col>
-        <mdb-col class="d-flex mt-5 mb-5 brand-icon">
+        <mdb-col class="d-flex mt-3 mb-5 brand-icon">
           <span>
             <font-awesome-icon :icon="['fab', 'instagram']" class="mr-4" />
           </span>
@@ -220,6 +301,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
 h2 {
   color: #ffffff;
   font-family: Montserrat;
@@ -261,7 +346,7 @@ h3 {
   display: flex;
   margin-bottom: 250px;
 }
-.horizontal-card-wrapper {
+.horizontal-scroll-wrapper {
   position: absolute;
   width: 327px;
   max-height: 100vw;
@@ -276,11 +361,11 @@ h3 {
   margin-left: -80px;
 }
 
-.horizontal-card-wrapper::-webkit-scrollbar {
-  width: 1px;
+.horizontal-scroll-wrapper::-webkit-scrollbar {
+  // width: 1px;
   background-color: transparent;
 }
-.horizontal-card-wrapper > div {
+.horizontal-scroll-wrapper > div {
   display: block;
   padding: 5px;
   -webkit-transform: rotate(90deg);
@@ -431,6 +516,22 @@ h3 {
     padding-left: 15px;
   }
 }
+.mobile-container {
+  width: 100%;
+}
+.mobile-container.items {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  .item {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    color: #1b3b59;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
 @media screen and (max-width: 540px) {
   h2 {
     color: #ffffff;
@@ -440,21 +541,11 @@ h3 {
     line-height: 39px;
     text-align: center;
   }
-  button{
+  button {
     display: flex;
   }
-  .horizontal-scroll-wrapper {
-  position: absolute;
-  max-height: 108vw;
-  margin: 0;
-  padding-top: 1px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-transform: rotate(-90deg) translateY(-250px);
-  transform: rotate(-90deg) translateY(-250px);
-  -webkit-transform-origin: right top;
-  transform-origin: right top;
-  margin-left: -54px;
-}
+  .brand-icon {
+    justify-content: flex-start;
+  }
 }
 </style>
