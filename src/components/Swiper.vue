@@ -109,7 +109,7 @@ export default {
     return {
       swiper: null,
       classes: {
-        // wrapperClass: "swiper-wrapper"
+        wrapperClass: "swiper-wrapper"
       }
     };
   },

@@ -203,7 +203,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 15px 0 rgba(20, 176, 187, 0.5);
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.5);
 
   span {
     color: white;

@@ -65,84 +65,95 @@
         <h2 class="text-center">Возможности приложения:</h2>
 
         <div class="d-flex card-scrolls overflow-hidden justify-content-around">
-          <div class="app-card">
-            <mdb-view hover>
-              <a href="#!">
-                <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-              </a>
-            </mdb-view>
-            <mdb-card-body>
-              <mdb-card-title>
-                <span class="gradiented">
-                  <font-awesome-icon :icon="['fas', 'tasks']" />
-                </span>Опросы
-              </mdb-card-title>
-              <mdb-card-text>
-                <p>
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-              </mdb-card-text>
-            </mdb-card-body>
-          </div>
-          <div class="app-card">
-            <mdb-view hover>
-              <a href="#!">
-                <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-              </a>
-            </mdb-view>
-            <mdb-card-body>
-              <mdb-card-title>
-                <span class="gradiented">
-                  <font-awesome-icon :icon="['fas', 'tasks']" />
-                </span>Группы
-              </mdb-card-title>
-              <mdb-card-text>
-                Some quick example text to build on the card title and make up the bulk of the
-                card's content.
-              </mdb-card-text>
-            </mdb-card-body>
-          </div>
-          <div class="app-card">
-            <mdb-view hover>
-              <a href="#!">
-                <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-              </a>
-            </mdb-view>
-            <mdb-card-body>
-              <mdb-card-title>
-                <span class="gradiented">
-                  <font-awesome-icon :icon="['fas', 'tasks']" />
-                </span>Предложения
-              </mdb-card-title>
-              <mdb-card-text>
-                <p>
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-              </mdb-card-text>
-            </mdb-card-body>
-          </div>
-          <div class="app-card">
-            <mdb-view hover>
-              <a href="#!">
-                <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-              </a>
-            </mdb-view>
-            <mdb-card-body>
-              <mdb-card-title>
-                <span class="gradiented">
-                  <font-awesome-icon :icon="['fas', 'tasks']" />
-                </span>Предложения
-              </mdb-card-title>
-              <mdb-card-text>
-                <p>
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-              </mdb-card-text>
-            </mdb-card-body>
-          </div>
+          <swiper :options="horizontalOption" style="height: 33vh;
+    padding-top: 3rem">
+            <swiper-slide>
+              <div class="app-card">
+                <mdb-view hover>
+                  <a href="#!">
+                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+                  </a>
+                </mdb-view>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <span class="gradiented">
+                      <font-awesome-icon :icon="['fas', 'tasks']" />
+                    </span>Опросы
+                  </mdb-card-title>
+                  <mdb-card-text>
+                    <p>
+                      Some quick example text to build on the card title and make up the bulk of the
+                      card's content.
+                    </p>
+                  </mdb-card-text>
+                </mdb-card-body>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="app-card">
+                <mdb-view hover>
+                  <a href="#!">
+                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+                  </a>
+                </mdb-view>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <span class="gradiented">
+                      <font-awesome-icon :icon="['fas', 'tasks']" />
+                    </span>Группы
+                  </mdb-card-title>
+                  <mdb-card-text>
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card's content.
+                  </mdb-card-text>
+                </mdb-card-body>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="app-card">
+                <mdb-view hover>
+                  <a href="#!">
+                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+                  </a>
+                </mdb-view>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <span class="gradiented">
+                      <font-awesome-icon :icon="['fas', 'tasks']" />
+                    </span>Предложения
+                  </mdb-card-title>
+                  <mdb-card-text>
+                    <p>
+                      Some quick example text to build on the card title and make up the bulk of the
+                      card's content.
+                    </p>
+                  </mdb-card-text>
+                </mdb-card-body>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="app-card">
+                <mdb-view hover>
+                  <a href="#!">
+                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+                  </a>
+                </mdb-view>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <span class="gradiented">
+                      <font-awesome-icon :icon="['fas', 'tasks']" />
+                    </span>Предложения
+                  </mdb-card-title>
+                  <mdb-card-text>
+                    <p>
+                      Some quick example text to build on the card title and make up the bulk of the
+                      card's content.
+                    </p>
+                  </mdb-card-text>
+                </mdb-card-body>
+              </div>
+            </swiper-slide>
+          </swiper>
         </div>
       </div>
     </div>
@@ -237,46 +248,180 @@
             </div>
           </div>
         </mdb-col>
-        <mdb-col md="6" class="pl-5 align-self-center">
+        <mdb-col md="6" class="d-none d-sm-block pl-5 align-self-center" style="height:100px; padding-bottom:280px;">
           <swiper :options="swiperOption">
-            <swiper-slide>
-              <div>
-                <h2>
-                  <transition @before-entrer="beforeEnter" @enter="enter" @leave="leave">
-                    <font-awesome-icon :icon="['fas', 'redo-alt']" class="cursor-pointer" />
-                  </transition>Создавайте группы
-                </h2>
-                <hr />
-                <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+            <swiper-slide class="vertical-slide">
+              <mdb-row>
+                <mdb-col xl="2">
+                  <h2>
+                    <font-awesome-icon
+                      :icon="['fas', 'redo-alt']"
+                      :class="'cursor-pointer ' + rotate"
+                      @click="enableRotatiion(); disableRotatiion() "
+                    />
+                  </h2>
+                </mdb-col>
+                <mdb-col>
+                  <h2>Создавайте группы</h2>
+                </mdb-col>
+              </mdb-row>
+
+              <hr />
+              <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+              <div class="arrow">
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-down']"
+                  size="3x"
+                  class="mt-2 mb-4 nextSlide cursor-pointer"
+                />
               </div>
             </swiper-slide>
             <!-- Слайд  -->
             <swiper-slide class="vertical-slide">
-              <h2>Приглашайте коллег</h2>
+                  <mdb-row>
+                <mdb-col xl="2">
+                  <h2>
+                    <font-awesome-icon
+                      :icon="['fas', 'redo-alt']"
+                      :class="'cursor-pointer ' + rotate"
+                      @click="enableRotatiion(); disableRotatiion() "
+                    />
+                  </h2>
+                </mdb-col>
+                <mdb-col>
+                  <h2>Приглашайте коллег</h2>
+                </mdb-col>
+              </mdb-row>
               <hr />
               <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+              <div class="arrow">
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-down']"
+                  size="3x"
+                  class="mt-2 mb-4 nextSlide cursor-pointer"
+                />
+              </div>
             </swiper-slide>
             <!-- Слайд  -->
             <swiper-slide class="vertical-slide">
-              <h2>Запускайте голосование</h2>
+                  <mdb-row>
+                <mdb-col xl="2">
+                  <h2>
+                    <font-awesome-icon
+                      :icon="['fas', 'redo-alt']"
+                      :class="'cursor-pointer ' + rotate"
+                      @click="enableRotatiion(); disableRotatiion() "
+                    />
+                  </h2>
+                </mdb-col>
+                <mdb-col>
+                  <h2>Запускайте голосование</h2>
+                </mdb-col>
+              </mdb-row>
               <hr />
               <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+              <div class="arrow">
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-down']"
+                  size="3x"
+                  class="mt-2 mb-4 nextSlide cursor-pointer"
+                />
+              </div>
             </swiper-slide>
             <!-- Слайд  -->
             <swiper-slide class="vertical-slide">
-              <h2>Оценивайте коллег</h2>
+                  <mdb-row>
+                <mdb-col xl="2">
+                  <h2>
+                    <font-awesome-icon
+                      :icon="['fas', 'redo-alt']"
+                      :class="'cursor-pointer ' + rotate"
+                      @click="enableRotatiion(); disableRotatiion() "
+                    />
+                  </h2>
+                </mdb-col>
+                <mdb-col>
+                  <h2>Оценивайте коллег</h2>
+                </mdb-col>
+              </mdb-row>
               <hr />
               <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+              <div class="arrow">
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-down']"
+                  size="3x"
+                  class="mt-2 mb-4 nextSlide cursor-pointer"
+                />
+              </div>
             </swiper-slide>
             <!-- Слайд  -->
             <swiper-slide class="vertical-slide">
-              <h2>Получите результаты</h2>
+                  <mdb-row>
+                <mdb-col xl="2">
+                  <h2>
+                    <font-awesome-icon
+                      :icon="['fas', 'redo-alt']"
+                      :class="'cursor-pointer ' + rotate"
+                      @click="enableRotatiion(); disableRotatiion() "
+                    />
+                  </h2>
+                </mdb-col>
+                <mdb-col>
+                  <h2>Получите результаты</h2>
+                </mdb-col>
+              </mdb-row>
               <hr />
               <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+              <div class="arrow">
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-down']"
+                  size="3x"
+                  class="mt-2 mb-4 nextSlide"
+                />
+              </div>
             </swiper-slide>
           </swiper>
-          <div class="arrow">
-            <font-awesome-icon :icon="['fas', 'chevron-down']" size="3x" class="nextSlide" />
+        </mdb-col>
+        <mdb-col class="d-block d-sm-none">
+          <div class="fullpage">
+            <h2>Создавайте группы</h2>
+            <hr />
+            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+            <div class="text-center" style="margin-top:20vh;">
+              <img src="@/assets/iphone-x.png" alt height="350" />
+            </div>
+          </div>
+          <div class="fullpage">
+            <h2>Приглашайте коллег</h2>
+            <hr />
+            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+            <div class="text-center">
+              <img src="@/assets/iphone-x.png" alt height="300" />
+            </div>
+          </div>
+          <div class="fullpage">
+            <h2>Запускайте голосование</h2>
+            <hr />
+            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+            <div class="text-center" style="margin-top:15vh;">
+              <img src="@/assets/iphone-x.png" alt height="300" />
+            </div>
+          </div>
+          <div class="fullpage">
+            <h2>Оценивайте коллег</h2>
+            <hr />
+            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+            <div class="text-center" style="margin-top:15vh;">
+              <img src="@/assets/iphone-x.png" alt height="300" />
+            </div>
+          </div>
+          <div class="fullpage">
+            <h2>Получите результаты</h2>
+            <hr />
+            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+            <div class="text-center" style="margin-top:15vh;">
+              <img src="@/assets/iphone-x.png" alt height="300" />
+            </div>
           </div>
         </mdb-col>
       </mdb-row>
@@ -284,13 +429,13 @@
     <Associate></Associate>
   </div>
 </template>
-
 <script>
 // build tween
 import { ScrollToPlugin, TweenMax, TimelineMax } from "gsap";
 import { bus } from "../bus.js";
 import dtbtn from "@/components/UI/dt-btn";
 import Associate from "./Associate";
+import velocity from "velocity-animate";
 import {
   mdbRow,
   mdbCol,
@@ -308,6 +453,7 @@ import {
   mdbMask,
   mdbView
 } from "mdbvue";
+import { timeout } from "q";
 
 export default {
   name: "home",
@@ -332,10 +478,20 @@ export default {
   },
   data() {
     return {
+      rotate: "",
       mouseControl: true,
+      horizontalOption: {
+        direction: "horizontal",
+        loop: true,
+        slidesPerView: 4,
+        autoplay: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        }
+      },
       swiperOption: {
         direction: "vertical",
-        effect: "slide",
         spaceBetween: 0,
         mousewheel: true,
         simulateTouch: false,
@@ -360,9 +516,27 @@ export default {
     bus.$emit(`paintHeadDestroy`);
   },
   methods: {
-    beforeEnter(el) {},
+    enableRotatiion() {
+      this.rotate = "rotate";
+    },
+    disableRotatiion() {
+      setTimeout(() => {this.rotate = ""}, 1000);
+    },
+
+    beforeEnter(el) {
+      el.style.opacity = 0;
+    },
     enter(el, done) {
-      done();
+      Velocity(
+        el,
+        { opacity: 1 },
+        {
+          duration: 1000,
+          complete() {
+            done();
+          }
+        }
+      );
     },
     leave(el, done) {
       done();
@@ -391,6 +565,7 @@ export default {
     line-height: 22px;
   }
   .app-card {
+    min-height: 150px;
     min-width: 240px;
     max-width: 20vw;
     font-weight: 800;
@@ -398,6 +573,8 @@ export default {
     border-radius: 15px;
     background-color: #ffffff;
     box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
+    margin: 0 2rem;
+    padding: 0 0.5rem;
     p {
       color: #1b3b59;
       font-family: Montserrat;
@@ -405,7 +582,7 @@ export default {
       font-weight: 400;
       line-height: 19px;
     }
-    margin: 0 1rem;
+
     h4 {
       margin-left: 1rem;
       word-wrap: normal;
@@ -418,15 +595,12 @@ export default {
       padding: 1rem;
     }
   }
-  .arrow {
-    color: #14b0bb;
-  }
 }
 .card-roll-wrapper {
   margin-bottom: 150px;
 }
 .card-scrolls {
-  padding: 3rem 1rem;
+  padding: 0 1rem;
 }
 .span-background {
   background: linear-gradient(
@@ -621,4 +795,24 @@ section {
 // .rerun-enter-to{
 
 // }
+.fullpage {
+  height: 100vh;
+}
+.vertical-slide {
+  height: 100px;
+}
+.rotate {
+  animation-name: rotation;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 </style>

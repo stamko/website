@@ -22,13 +22,6 @@ export default {
   },
   methods: {
     // Получение поста последней минус index записи блога из первого блока (main) текста по айди категории
-    getNavWidth() {
-      const size1 = document.getElementById("navbar").offsetHeight;
-      const size2 = document.getElementById("app").offsetHeight;
-      const size3 = size2 - size1;
-      console.log("TUTA" + size3);
-      return size3;
-    },
     clearBlog() {
       this.$store.dispatch(`clearRubrics`);
       this.$store.dispatch(`clearPosts`);
@@ -104,9 +97,6 @@ export default {
     this.getPosts();
     this.getVideos();
   },
-  mounted() {
-    this.getNavWidth();
-  }
 };
 </script>
 
@@ -118,9 +108,6 @@ export default {
   font-weight: 400;
 }
 
-// body {
-//   overflow: hidden;
-// }
 // ШРИФТЫ
 h1 {
   font-size: 60px;
