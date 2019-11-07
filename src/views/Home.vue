@@ -241,7 +241,11 @@
           <swiper :options="swiperOption">
             <swiper-slide>
               <div>
-                <h2> <transition > <font-awesome-icon :icon="['fas', 'redo-alt']" class="cursor-pointer" /> </transition>      Создавайте группы</h2>
+                <h2>
+                  <transition @before-entrer="beforeEnter" @enter="enter" @leave="leave">
+                    <font-awesome-icon :icon="['fas', 'redo-alt']" class="cursor-pointer" />
+                  </transition>Создавайте группы
+                </h2>
                 <hr />
                 <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
               </div>
@@ -272,11 +276,7 @@
             </swiper-slide>
           </swiper>
           <div class="arrow">
-            <font-awesome-icon
-              :icon="['fas', 'chevron-down']"
-              size="3x"
-              class="nextSlide"
-            />
+            <font-awesome-icon :icon="['fas', 'chevron-down']" size="3x" class="nextSlide" />
           </div>
         </mdb-col>
       </mdb-row>
@@ -341,9 +341,9 @@ export default {
         simulateTouch: false,
         watchSlidesProgress: true,
         width: 500,
-        autoHeight:true,  
+        autoHeight: true,
         effect: "fade",
-        speed:1200,
+        speed: 1200,
         fadeEffect: {
           crossFade: true
         },
@@ -359,6 +359,15 @@ export default {
   beforeDestroy() {
     bus.$emit(`paintHeadDestroy`);
   },
+  methods: {
+    beforeEnter(el) {},
+    enter(el, done) {
+      done();
+    },
+    leave(el, done) {
+      done();
+    }
+  }
 };
 </script>
 <style lang="less" scoped>
