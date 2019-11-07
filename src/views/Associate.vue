@@ -145,7 +145,7 @@
       </div>
     </div>
     <div class="scroll-container d-none d-sm-block">
-      <div class="horizontal-scroll-wrapper squares">
+      <div class="horizontal-scroll-wrapper squares justify-content-around">
         <mdb-card-body>
           <mdb-card-text>
             <mdb-card-title class="trim-text">{{postsData[postsData.length -1][0].data.title}}</mdb-card-title>
@@ -349,7 +349,7 @@ h3 {
 .horizontal-scroll-wrapper {
   position: absolute;
   width: 327px;
-  max-height: 100vw;
+  height: 100vw;
   margin: 0;
   padding-top: 1px;
   overflow-y: auto;
