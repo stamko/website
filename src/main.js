@@ -40,7 +40,6 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
 Vue.use(VueAwesomeSwiper)
-
 import '../firebase/';
 import VueMoment from 'vue-moment'
 import Moment from 'moment';
@@ -62,7 +61,7 @@ Vue.use(VueMoment, {
   moment
 });
 Vue.use(VueScrollmagic);
-library.add(faSignInAlt, faDownload, faGlobeAmericas, faBars, faAndroid, faApple, faTasks, faChevronDown, faChevronUp, faChevronLeft, faChevronRight, faFacebookF, faTwitter, faVk, faInstagram, faTimes,faRedoAlt)
+library.add(faSignInAlt, faDownload, faGlobeAmericas, faBars, faAndroid, faApple, faTasks, faChevronDown, faChevronUp, faChevronLeft, faChevronRight, faFacebookF, faTwitter, faVk, faInstagram, faTimes, faRedoAlt)
 library.add(faFontAwesome)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

@@ -241,7 +241,11 @@
           <swiper :options="swiperOption">
             <swiper-slide>
               <div>
-                <h2>Создавайте группы</h2>
+                <h2>
+                  <transition @before-entrer="beforeEnter" @enter="enter" @leave="leave">
+                    <font-awesome-icon :icon="['fas', 'redo-alt']" class="cursor-pointer" />
+                  </transition>Создавайте группы
+                </h2>
                 <hr />
                 <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
               </div>
@@ -272,11 +276,7 @@
             </swiper-slide>
           </swiper>
           <div class="arrow">
-            <font-awesome-icon
-              :icon="['fas', 'chevron-down']"
-              size="3x"
-              class="nextSlide"
-            />
+            <font-awesome-icon :icon="['fas', 'chevron-down']" size="3x" class="nextSlide" />
           </div>
         </mdb-col>
       </mdb-row>
@@ -341,7 +341,9 @@ export default {
         simulateTouch: false,
         watchSlidesProgress: true,
         width: 500,
+        autoHeight: true,
         effect: "fade",
+        speed: 1200,
         fadeEffect: {
           crossFade: true
         },
@@ -357,38 +359,13 @@ export default {
   beforeDestroy() {
     bus.$emit(`paintHeadDestroy`);
   },
-  mounted() {
-    // var tween = TweenMax.staggerFromTo(
-    //   ".app-card",
-    //   2,
-    //   { left: "100vw" },
-    //   { left: 0, ease: Back.easeOut },
-    //   0.15
-    // );
-    // const wrapScene = this.$scrollmagic
-    //   .scene({
-    //     triggerElement: "#trigger2",
-    //     duration: 550
-    //   })
-    //   .setTween(tween);
-    // this.$scrollmagic.addScene(wrapScene);
-    // const phoneScene = this.$scrollmagic.scene({
-    //   triggerElement: "#scrollTriggerPhone",
-    //   duration: 650
-    // });
-    //   .setPin("#imgPhone");
-    // this.$scrollmagic.addScene(phoneScene);
-    // const deleteScene = this.$scrollmagic
-    //   .scene({
-    //     triggerElement: "#scrollTriggerPhoneDelete"
-    //   })
-    //   .removePin(true);
-    // this.$scrollmagic.addScene(deleteScene);
-    // Add scene to element scrollmagic controller
-  },
   methods: {
-    disableMouse() {
-      bus.$emit("disable");
+    beforeEnter(el) {},
+    enter(el, done) {
+      done();
+    },
+    leave(el, done) {
+      done();
     }
   }
 };

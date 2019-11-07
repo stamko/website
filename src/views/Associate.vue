@@ -349,7 +349,8 @@ h3 {
 .horizontal-scroll-wrapper {
   position: absolute;
   width: 327px;
-  height: 100vw;
+  max-height: 100vw;
+  min-height: 98vw;
   margin: 0;
   padding-top: 1px;
   overflow-y: auto;
