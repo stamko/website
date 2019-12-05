@@ -21,7 +21,10 @@ import {
   faChevronRight,
   faTimes,
   faChevronUp,
-  faRedoAlt
+  faRedoAlt,
+  faUsers,
+  faComments,
+  faStar
 } from '@fortawesome/free-solid-svg-icons'
 import {
   FontAwesomeIcon
@@ -61,7 +64,9 @@ Vue.use(VueMoment, {
   moment
 });
 Vue.use(VueScrollmagic);
-library.add(faSignInAlt, faDownload, faGlobeAmericas, faBars, faAndroid, faApple, faTasks, faChevronDown, faChevronUp, faChevronLeft, faChevronRight, faFacebookF, faTwitter, faVk, faInstagram, faTimes, faRedoAlt)
+library.add(faSignInAlt, faDownload, faGlobeAmericas, faBars, faAndroid, faApple, faTasks, faChevronDown, faChevronUp, faChevronLeft, faChevronRight, faFacebookF, faTwitter, faVk, faInstagram, faTimes, faRedoAlt, faUsers,
+  faComments,
+  faStar)
 library.add(faFontAwesome)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

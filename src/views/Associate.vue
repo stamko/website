@@ -54,7 +54,7 @@
                     <img src="@/assets/googlePlay.png" alt class="img-fluid" />
                   </mdb-col>
                   <mdb-col>
-                    <img src="@/assets/appStore.png" alt class="img-fluid" />
+                    <img src="@/assets/appStore.png" style="opacity:50%" alt class="img-fluid" />
                   </mdb-col>
                 </mdb-row>
               </mdb-card-text>

@@ -17,7 +17,7 @@
       </div>
       <mdbContainer>
         <mdb-row class="d-flex justify-content-center">
-          <mdb-col lg="10" xl="12" class="horizontal-reverse-direction">
+          <mdb-col class="d-flex" lg="10" xl="12">
             <div class="horizontal-section">
               <div>
                 <mdb-row>
@@ -37,6 +37,7 @@
                       icon="download"
                       :iconPosition="'end'"
                       class="d-flex align-items-center"
+                      @click.native="$router.push('/downloads')"
                     ></dtbtn>
                   </mdb-col>
                   <mdb-col class="d-flex">
@@ -61,7 +62,7 @@
     </div>
     <!-- <div class="home-head-border"></div> -->
     <div class="card-roll-wrapper d-none d-sm-block">
-      <div>
+      <div c>
         <h2 class="text-center">Возможности приложения:</h2>
 
         <div class="d-flex card-scrolls overflow-hidden justify-content-around">
@@ -229,7 +230,7 @@
                 <font-awesome-icon :icon="['fas', 'tasks']" />
               </span>Предложения
             </mdb-card-title>
-            <mdb-card-text>
+            <mdb-card-text style=" background-image: url(`/assets/iphone-x.png`);">
               <p>
                 Some quick example text to build on the card title and make up the bulk of the
                 card's content.
@@ -242,13 +243,21 @@
     <mdbContainer class="mb-5">
       <mdb-row class="d-flex justify-content-center">
         <mdb-col class="col d-none d-sm-block" md="4">
-          <div>
-            <div id="imgPhone">
-              <img src="@/assets/iphone-x.png" alt class="img-fluid" />
+          <div >
+            <div class="phone-bg" id="imgPhone">
+              <!-- <img src="@/assets/iphone-x.png" alt class="img-fluid" /> -->
+              <video class="video" src="@/assets/vids/group.mp4" autoplay muted playsinline></video>
+              <video class="video" autoplay loop muted>
+                <source :src="'/media/' + currentvideo " type="video/mp4" />
+               </video>
             </div>
           </div>
         </mdb-col>
-        <mdb-col md="6" class="d-none d-sm-block pl-5 align-self-center" style="height:100px; padding-bottom:280px;">
+        <mdb-col
+          md="6"
+          class="d-none d-sm-block pl-5 align-self-center"
+          style="height:100px; padding-bottom:280px;"
+        >
           <swiper :options="swiperOption">
             <swiper-slide class="vertical-slide">
               <mdb-row>
@@ -265,7 +274,6 @@
                   <h2>Создавайте группы</h2>
                 </mdb-col>
               </mdb-row>
-
               <hr />
               <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
               <div class="arrow">
@@ -278,7 +286,7 @@
             </swiper-slide>
             <!-- Слайд  -->
             <swiper-slide class="vertical-slide">
-                  <mdb-row>
+              <mdb-row>
                 <mdb-col xl="2">
                   <h2>
                     <font-awesome-icon
@@ -304,7 +312,7 @@
             </swiper-slide>
             <!-- Слайд  -->
             <swiper-slide class="vertical-slide">
-                  <mdb-row>
+              <mdb-row>
                 <mdb-col xl="2">
                   <h2>
                     <font-awesome-icon
@@ -330,7 +338,7 @@
             </swiper-slide>
             <!-- Слайд  -->
             <swiper-slide class="vertical-slide">
-                  <mdb-row>
+              <mdb-row>
                 <mdb-col xl="2">
                   <h2>
                     <font-awesome-icon
@@ -356,7 +364,7 @@
             </swiper-slide>
             <!-- Слайд  -->
             <swiper-slide class="vertical-slide">
-                  <mdb-row>
+              <mdb-row>
                 <mdb-col xl="2">
                   <h2>
                     <font-awesome-icon
@@ -478,6 +486,7 @@ export default {
   },
   data() {
     return {
+      video:'',
       rotate: "",
       mouseControl: true,
       horizontalOption: {
@@ -520,7 +529,9 @@ export default {
       this.rotate = "rotate";
     },
     disableRotatiion() {
-      setTimeout(() => {this.rotate = ""}, 1000);
+      setTimeout(() => {
+        this.rotate = "";
+      }, 1000);
     },
 
     beforeEnter(el) {
@@ -540,6 +551,11 @@ export default {
     },
     leave(el, done) {
       done();
+    }
+  },
+  computed:{
+    currentvideo(){
+      return "group.31e6d585.mp4";
     }
   }
 };
@@ -814,5 +830,11 @@ section {
   100% {
     transform: rotate(360deg);
   }
+}
+.phone-bg{
+overflow:hidden;
+}
+.video{
+  width:102%;
 }
 </style>

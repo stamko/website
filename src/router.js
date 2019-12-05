@@ -6,17 +6,16 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'home',
       component: () => import('./views/Home.vue')
     },
-    {
-      path: '/functions',
-      name: 'functions',
-      component: () => import('./views/Horizontal-home.vue')
-    },
+    // {
+    //   path: '/functions',
+    //   name: 'functions',
+    //   component: () => import('./views/Horizontal-home.vue')
+    // },
     {
       path: '/price',
       name: 'price',
@@ -64,6 +63,10 @@ export default new Router({
       path: '/rubrics',
       name: 'rubrics',
       component: () => import('./views/blog/CategoriesList.vue')
+    }, {
+      path: '/downloads',
+      name: 'downloads',
+      component: () => import('./views/downloads/Downloads.vue')
     },
   ]
 })

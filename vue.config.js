@@ -1,6 +1,6 @@
 module.exports = {
-  configureWebpack: {
-    resolve: {
+  configureWebpack: {  
+      resolve: {
       alias: {
         'vue$': 'vue/dist/vue.esm.js'
       }

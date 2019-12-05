@@ -9,9 +9,9 @@
                 <font-awesome-icon icon="bars" />
               </mdb-dropdown-toggle>
               <mdb-dropdown-menu>
-                <mdb-dropdown-item  @click="$router.push(`/functions`)">
+                <!-- <mdb-dropdown-item  @click="$router.push(`/functions`)">
                   <a>Функция</a>
-                </mdb-dropdown-item>
+                </mdb-dropdown-item> -->
                 <mdb-dropdown-item  @click="$router.push(`/price`)">
                   <a>Цены</a>
                 </mdb-dropdown-item>
@@ -31,7 +31,7 @@
           </mdb-col>
           <mdb-col md="5" lg="4" class="d-none d-md-block">
             <div class="d-flex justify-content-between w-100">
-              <a @click="$router.push(`/functions`)">Функция</a>
+              <!-- <a @click="$router.push(`/functions`)">Функция</a> -->
               <a @click="$router.push(`/price`)">Цены</a>
               <a @click="$router.push(`/blog`)">Блог</a>
               <a @click="$router.push(`/about`)">О нас</a>
