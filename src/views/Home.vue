@@ -246,10 +246,10 @@
           <div >
             <div class="phone-bg" id="imgPhone">
               <!-- <img src="@/assets/iphone-x.png" alt class="img-fluid" /> -->
-              <video class="video" src="@/assets/vids/group.mp4" autoplay muted playsinline></video>
-              <video class="video" autoplay loop muted>
+              <video class="video" src="@/assets/vids/group.mp4" autoplay muted playsinline loop></video>
+              <!-- <video class="video" autoplay loop muted>
                 <source :src="'/media/' + currentvideo " type="video/mp4" />
-               </video>
+               </video> -->
             </div>
           </div>
         </mdb-col>
