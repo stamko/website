@@ -145,80 +145,89 @@
       </div>
     </div>
     <mdbContainer>
-    <swiper
-      :options="horizontalOption"
-      style="height: 150px;"
-      class="scroll-container d-none d-sm-block"
-    >
-      <swiper-slide>
-        <div class="blogCard">
-          <mdb-card-text>
+      <swiper
+        :options="horizontalOption"
+        style="height: 150px;"
+        class="scroll-container d-none d-sm-block"
+      >
+        <swiper-slide>
+          <div class="blogCard">
             <mdb-card-text>
-              <mdb-card-title class="trim-text">{{postsData[postsData.length -1][0].data.title}}</mdb-card-title>
-              <p
-                v-html="postsData[postsData.length -1][0].data.description"
-                class="p-0 m-0 trim-text"
-              ></p>
-              <div class="card-date">{{$moment(+postsData[postsData.length -1][0].when).fromNow()}}</div>
-              <span
-                class="category"
-              >{{getRubricById(postsData[postsData.length -1][0].data.rubricId)}}</span>
+              <mdb-card-text>
+                <mdb-card-title class="trim-text">{{postsData[postsData.length -1][0].data.title}}</mdb-card-title>
+                <p
+                  v-html="postsData[postsData.length -1][0].data.description"
+                  class="p-0 m-0 trim-text"
+                ></p>
+                <div
+                  class="card-date"
+                >{{$moment(+postsData[postsData.length -1][0].when).fromNow()}}</div>
+                <span
+                  class="category"
+                >{{getRubricById(postsData[postsData.length -1][0].data.rubricId)}}</span>
+              </mdb-card-text>
             </mdb-card-text>
-          </mdb-card-text>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="blogCard">
-          <mdb-card-text>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="blogCard">
             <mdb-card-text>
-              <mdb-card-title class="trim-text">{{postsData[postsData.length -2][0].data.title}}</mdb-card-title>
-              <p
-                v-html="postsData[postsData.length -2][0].data.description"
-                class="p-0 m-0 trim-text"
-              ></p>
-              <div class="card-date">{{$moment(+postsData[postsData.length -2][0].when).fromNow()}}</div>
-              <span
-                class="category"
-              >{{getRubricById(postsData[postsData.length -2][0].data.rubricId)}}</span>
+              <mdb-card-text>
+                <mdb-card-title class="trim-text">{{postsData[postsData.length -2][0].data.title}}</mdb-card-title>
+                <p
+                  v-html="postsData[postsData.length -2][0].data.description"
+                  class="p-0 m-0 trim-text"
+                ></p>
+                <div
+                  class="card-date"
+                >{{$moment(+postsData[postsData.length -2][0].when).fromNow()}}</div>
+                <span
+                  class="category"
+                >{{getRubricById(postsData[postsData.length -2][0].data.rubricId)}}</span>
+              </mdb-card-text>
             </mdb-card-text>
-          </mdb-card-text>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="blogCard">
-          <mdb-card-text>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="blogCard">
             <mdb-card-text>
-              <mdb-card-title class="trim-text">{{postsData[postsData.length -3][0].data.title}}</mdb-card-title>
-              <p
-                v-html="postsData[postsData.length -3][0].data.description"
-                class="p-0 m-0 trim-text"
-              ></p>
-              <div class="card-date">{{$moment(+postsData[postsData.length -3][0].when).fromNow()}}</div>
-              <span
-                class="category"
-              >{{getRubricById(postsData[postsData.length -3][0].data.rubricId)}}</span>
+              <mdb-card-text>
+                <mdb-card-title class="trim-text">{{postsData[postsData.length -3][0].data.title}}</mdb-card-title>
+                <p
+                  v-html="postsData[postsData.length -3][0].data.description"
+                  class="p-0 m-0 trim-text"
+                ></p>
+                <div
+                  class="card-date"
+                >{{$moment(+postsData[postsData.length -3][0].when).fromNow()}}</div>
+                <span
+                  class="category"
+                >{{getRubricById(postsData[postsData.length -3][0].data.rubricId)}}</span>
+              </mdb-card-text>
             </mdb-card-text>
-          </mdb-card-text>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-           <div class="blogCard">
-          <mdb-card-text>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="blogCard">
             <mdb-card-text>
-              <mdb-card-title class="trim-text">{{postsData[postsData.length -4][0].data.title}}</mdb-card-title>
-              <p
-                v-html="postsData[postsData.length -4][0].data.description"
-                class="p-0 m-0 trim-text"
-              ></p>
-              <div class="card-date">{{$moment(+postsData[postsData.length -4][0].when).fromNow()}}</div>
-              <span
-                class="category"
-              >{{getRubricById(postsData[postsData.length -4][0].data.rubricId)}}</span>
+              <mdb-card-text>
+                <mdb-card-title class="trim-text">{{postsData[postsData.length -4][0].data.title}}</mdb-card-title>
+                <p
+                  v-html="postsData[postsData.length -4][0].data.description"
+                  class="p-0 m-0 trim-text"
+                ></p>
+                <div
+                  class="card-date"
+                >{{$moment(+postsData[postsData.length -4][0].when).fromNow()}}</div>
+                <span
+                  class="category"
+                >{{getRubricById(postsData[postsData.length -4][0].data.rubricId)}}</span>
+              </mdb-card-text>
             </mdb-card-text>
-          </mdb-card-text>
-        </div>
-      </swiper-slide>
-    </swiper></mdbContainer>
+          </div>
+        </swiper-slide>
+      </swiper>
+    </mdbContainer>
     <mdbContainer>
       <mdb-row>
         <mdb-col>
@@ -232,16 +241,24 @@
         </mdb-col>
         <mdb-col class="d-flex mt-3 mb-5 brand-icon">
           <span>
-            <font-awesome-icon :icon="['fab', 'instagram']" class="mr-4" />
+            <a href="https://www.instagram.com/dteam.team/">
+              <font-awesome-icon :icon="['fab', 'instagram']" class="mr-4" />
+            </a>
           </span>
           <span>
-            <font-awesome-icon :icon="['fab', 'vk']" class="mr-4" />
+            <a href="https://vk.com/dteam.team">
+              <font-awesome-icon :icon="['fab', 'vk']" class="mr-4" />
+            </a>
           </span>
           <span>
-            <font-awesome-icon :icon="['fab', 'facebook-f']" class="mr-4" />
+            <a href="https://www.facebook.com/dteam.team">
+              <font-awesome-icon :icon="['fab', 'facebook-f']" class="mr-4" />
+            </a>
           </span>
           <span>
-            <font-awesome-icon :icon="['fab', 'twitter']" class="mr-4" />
+            <a href="https://twitter.com/dteam_team">
+              <font-awesome-icon :icon="['fab', 'twitter']" class="mr-4" />
+            </a>
           </span>
         </mdb-col>
       </mdb-row>
@@ -499,6 +516,24 @@ h3 {
 }
 .brand-icon {
   justify-content: flex-end;
+  a {
+    color: #fff !important;
+    a:link {
+      color: #fff !important;
+      border-bottom: 1px dashed;
+    }
+    a:visited {
+      color: #fff !important;
+    }
+    a:hover {
+      color: #fff !important;
+      border-bottom: 0.07em solid;
+    }
+    a:active {
+      color: #fff !important;
+      border-bottom: 1px dashed;
+    }
+  }
   span {
     font-size: 30px;
     margin-left: 21px;

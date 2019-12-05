@@ -15,12 +15,56 @@
           <span class="span-125"></span>
         </div>
       </div>
-      <mdbContainer>
+      <div class="d-none d-xl-flex container-fluid">
         <mdb-row class="d-flex justify-content-center">
-          <mdb-col class="d-flex" lg="10" xl="12">
+          <mdb-col class="d-flex" lg="10" xl="10">
+            <div class="horizontal-section align-self-center">
+              <div>
+                <mdb-row class="d-flex">
+                  <mdb-col>
+                    <h1>
+                      Создайте команду
+                      <br />мечты
+                    </h1>
+                    <p>Сделайте вашу команду мечты лучше с помощью приложения DreamTeam</p>
+                  </mdb-col>
+                </mdb-row>
+                <mdb-row class="d-flex">
+                  <mdb-col>
+                    <dtbtn
+                      :gradiented="true"
+                      title="Попробуйте"
+                      icon="download"
+                      :iconPosition="'end'"
+                      class="d-flex align-items-center"
+                      @click.native="$router.push('/downloads')"
+                    ></dtbtn>
+                  </mdb-col>
+                  <mdb-col class="d-flex">
+                    <div class="brandIcons">
+                      <font-awesome-icon :icon="['fab', 'android']" size="2x" class="mr-2" />
+                      <font-awesome-icon :icon="['fab', 'apple']" size="2x" class="mr-2" />
+                      <font-awesome-icon :icon="['fas', 'globe-americas']" size="2x" />
+                    </div>
+                  </mdb-col>
+                </mdb-row>
+              </div>
+            </div>
+            <mdb-row class="d-flex justify-content-center py-5 horizontal-section">
+              <mdb-col lg="10">
+                <img class="img-fluid" src="@/assets/hero-image.png" alt />
+                <div id="trigger2"></div>
+              </mdb-col>
+            </mdb-row>
+          </mdb-col>
+        </mdb-row>
+      </div>
+      <mdbContainer class="d-xl-none">
+        <mdb-row class="d-flex justify-content-center">
+          <mdb-col lg="10" xl="12">
             <div class="horizontal-section">
               <div>
-                <mdb-row>
+                <mdb-row class="d-flex">
                   <mdb-col>
                     <h1>
                       Создайте команду
@@ -243,13 +287,13 @@
     <mdbContainer class="mb-5">
       <mdb-row class="d-flex justify-content-center">
         <mdb-col class="col d-none d-sm-block" md="4">
-          <div >
+          <div>
             <div class="phone-bg" id="imgPhone">
               <!-- <img src="@/assets/iphone-x.png" alt class="img-fluid" /> -->
               <video class="video" src="@/assets/vids/group.mp4" autoplay muted playsinline loop></video>
               <!-- <video class="video" autoplay loop muted>
                 <source :src="'/media/' + currentvideo " type="video/mp4" />
-               </video> -->
+              </video>-->
             </div>
           </div>
         </mdb-col>
@@ -403,7 +447,7 @@
             <h2>Приглашайте коллег</h2>
             <hr />
             <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-            <div class="text-center">
+            <div class="text-center" style="margin-top:15vh;">
               <img src="@/assets/iphone-x.png" alt height="300" />
             </div>
           </div>
@@ -486,7 +530,7 @@ export default {
   },
   data() {
     return {
-      video:'',
+      video: "",
       rotate: "",
       mouseControl: true,
       horizontalOption: {
@@ -553,8 +597,8 @@ export default {
       done();
     }
   },
-  computed:{
-    currentvideo(){
+  computed: {
+    currentvideo() {
       return "group.31e6d585.mp4";
     }
   }
@@ -831,10 +875,10 @@ section {
     transform: rotate(360deg);
   }
 }
-.phone-bg{
-overflow:hidden;
+.phone-bg {
+  overflow: hidden;
 }
-.video{
-  width:102%;
+.video {
+  width: 102%;
 }
 </style>
