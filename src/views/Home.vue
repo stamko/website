@@ -15,9 +15,9 @@
           <span class="span-125"></span>
         </div>
       </div>
-      <div class="d-none d-xl-flex container-fluid">
-        <mdb-row class="d-flex justify-content-center">
-          <mdb-col class="d-flex" lg="10" xl="10">
+      <div class="d-none d-xl-flex container-fluid ml-5">
+        <mdb-row class="d-flex justify-content-center ml-5">
+          <mdb-col class="d-flex ml-5" lg="10" xl="8">
             <div class="horizontal-section align-self-center">
               <div>
                 <mdb-row class="d-flex">
@@ -126,10 +126,7 @@
                     </span>Опросы
                   </mdb-card-title>
                   <mdb-card-text>
-                    <p>
-                      Some quick example text to build on the card title and make up the bulk of the
-                      card's content.
-                    </p>
+                    <p>Формируйте честную и эффективную команду, используя несложные вопросы</p>
                   </mdb-card-text>
                 </mdb-card-body>
               </div>
@@ -145,11 +142,122 @@
                   <mdb-card-title>
                     <span class="gradiented">
                       <font-awesome-icon :icon="['fas', 'tasks']" />
-                    </span>Группы
+                    </span>Управление проектами
+                  </mdb-card-title>
+                  <mdb-card-text>Выстраивайте структуру команды при помощи групп</mdb-card-text>
+                </mdb-card-body>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="app-card">
+                <mdb-view hover>
+                  <a href="#!">
+                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+                  </a>
+                </mdb-view>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <span class="gradiented">
+                      <font-awesome-icon :icon="['fas', 'tasks']" />
+                    </span>Чаты
                   </mdb-card-title>
                   <mdb-card-text>
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
+                    <p>Общайтесь быстрее, безопаснее, эффективнее</p>
+                  </mdb-card-text>
+                </mdb-card-body>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="app-card">
+                <mdb-view hover>
+                  <a href="#!">
+                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+                  </a>
+                </mdb-view>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <span class="gradiented">
+                      <font-awesome-icon :icon="['fas', 'tasks']" />
+                    </span>Анонимное оценивание
+                  </mdb-card-title>
+                  <mdb-card-text>
+                    <p>Выставляйте оценку профессиональных качеств членам команды</p>
+                  </mdb-card-text>
+                </mdb-card-body>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="app-card">
+                <mdb-view hover>
+                  <a href="#!">
+                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+                  </a>
+                </mdb-view>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <span class="gradiented">
+                      <font-awesome-icon :icon="['fas', 'tasks']" />
+                    </span>Рейтинг
+                  </mdb-card-title>
+                  <mdb-card-text>
+                    <p>Зарабатывайте рейтинг по пяти ключевым компетенциям</p>
+                  </mdb-card-text>
+                </mdb-card-body>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="app-card">
+                <mdb-view hover>
+                  <a href="#!">
+                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+                  </a>
+                </mdb-view>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <span class="gradiented">
+                      <font-awesome-icon :icon="['fas', 'tasks']" />
+                    </span>Геймификация
+                  </mdb-card-title>
+                  <mdb-card-text>
+                    <p>Выполняйте рабочие задачи эффективнее в игровой форме</p>
+                  </mdb-card-text>
+                </mdb-card-body>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="app-card">
+                <mdb-view hover>
+                  <a href="#!">
+                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+                  </a>
+                </mdb-view>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <span class="gradiented">
+                      <font-awesome-icon :icon="['fas', 'tasks']" />
+                    </span>Голосование
+                  </mdb-card-title>
+                  <mdb-card-text>
+                    <p>Советуйтесь с коллегами в принятии важного решения</p>
+                  </mdb-card-text>
+                </mdb-card-body>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="app-card">
+                <mdb-view hover>
+                  <a href="#!">
+                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+                  </a>
+                </mdb-view>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <span class="gradiented">
+                      <font-awesome-icon :icon="['fas', 'tasks']" />
+                    </span>Мероприятия
+                  </mdb-card-title>
+                  <mdb-card-text>
+                    <p>Оповещайте о важном событии или деловой встрече</p>
                   </mdb-card-text>
                 </mdb-card-body>
               </div>
@@ -168,10 +276,7 @@
                     </span>Предложения
                   </mdb-card-title>
                   <mdb-card-text>
-                    <p>
-                      Some quick example text to build on the card title and make up the bulk of the
-                      card's content.
-                    </p>
+                    <p>Предлагайте крутые идеи для улучшения рабочих условий</p>
                   </mdb-card-text>
                 </mdb-card-body>
               </div>
@@ -187,13 +292,29 @@
                   <mdb-card-title>
                     <span class="gradiented">
                       <font-awesome-icon :icon="['fas', 'tasks']" />
-                    </span>Предложения
+                    </span>Задачи
                   </mdb-card-title>
                   <mdb-card-text>
-                    <p>
-                      Some quick example text to build on the card title and make up the bulk of the
-                      card's content.
-                    </p>
+                    <p>Ставьте задачи, определяйте сроки, назначайте ответственных</p>
+                  </mdb-card-text>
+                </mdb-card-body>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="app-card">
+                <mdb-view hover>
+                  <a href="#!">
+                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+                  </a>
+                </mdb-view>
+                <mdb-card-body>
+                  <mdb-card-title>
+                    <span class="gradiented">
+                      <font-awesome-icon :icon="['fas', 'tasks']" />
+                    </span>Стикеры
+                  </mdb-card-title>
+                  <mdb-card-text>
+                    <p>Выражайте эмоции при помощи стикеров</p>
                   </mdb-card-text>
                 </mdb-card-body>
               </div>
@@ -217,10 +338,7 @@
               </span>Опросы
             </mdb-card-title>
             <mdb-card-text>
-              <p>
-                Some quick example text to build on the card title and make up the bulk of the
-                card's content.
-              </p>
+              <p>Формируйте честную и эффективную команду, используя несложные вопросы</p>
             </mdb-card-text>
           </mdb-card-body>
         </div>
@@ -234,11 +352,112 @@
             <mdb-card-title>
               <span class="gradiented">
                 <font-awesome-icon :icon="['fas', 'tasks']" />
-              </span>Группы
+              </span>Управление проектами
             </mdb-card-title>
             <mdb-card-text>
-              Some quick example text to build on the card title and make up the bulk of the
-              card's content.
+              <p>Выстраивайте структуру команды при помощи групп</p>
+            </mdb-card-text>
+          </mdb-card-body>
+        </div>
+        <div class="item px-1">
+          <mdb-view hover>
+            <a href="#!">
+              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+            </a>
+          </mdb-view>
+          <mdb-card-body>
+            <mdb-card-title>
+              <span class="gradiented">
+                <font-awesome-icon :icon="['fas', 'tasks']" />
+              </span>Чаты
+            </mdb-card-title>
+            <mdb-card-text>
+              <p>Общайтесь быстрее, безопаснее, эффективнее</p>
+            </mdb-card-text>
+          </mdb-card-body>
+        </div>
+        <div class="item px-1">
+          <mdb-view hover>
+            <a href="#!">
+              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+            </a>
+          </mdb-view>
+          <mdb-card-body>
+            <mdb-card-title>
+              <span class="gradiented">
+                <font-awesome-icon :icon="['fas', 'tasks']" />
+              </span>Анонимное оценивание
+            </mdb-card-title>
+            <mdb-card-text>
+              <p>Выставляйте оценку профессиональных качеств членам команды</p>
+            </mdb-card-text>
+          </mdb-card-body>
+        </div>
+        <div class="item px-1">
+          <mdb-view hover>
+            <a href="#!">
+              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+            </a>
+          </mdb-view>
+          <mdb-card-body>
+            <mdb-card-title>
+              <span class="gradiented">
+                <font-awesome-icon :icon="['fas', 'tasks']" />
+              </span>Рейтинг
+            </mdb-card-title>
+            <mdb-card-text>
+              <p>Зарабатывайте рейтинг по пяти ключевым компетенциям</p>
+            </mdb-card-text>
+          </mdb-card-body>
+        </div>
+        <div class="item px-1">
+          <mdb-view hover>
+            <a href="#!">
+              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+            </a>
+          </mdb-view>
+          <mdb-card-body>
+            <mdb-card-title>
+              <span class="gradiented">
+                <font-awesome-icon :icon="['fas', 'tasks']" />
+              </span>Геймификация
+            </mdb-card-title>
+            <mdb-card-text>
+              <p>Выполняйте рабочие задачи эффективнее в игровой форме</p>
+            </mdb-card-text>
+          </mdb-card-body>
+        </div>
+        <div class="item px-1">
+          <mdb-view hover>
+            <a href="#!">
+              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+            </a>
+          </mdb-view>
+          <mdb-card-body>
+            <mdb-card-title>
+              <span class="gradiented">
+                <font-awesome-icon :icon="['fas', 'tasks']" />
+              </span>Голосование
+            </mdb-card-title>
+            <mdb-card-text>
+              <p>Советуйтесь с коллегами в принятии важного решения</p>
+            </mdb-card-text>
+          </mdb-card-body>
+        </div>
+        <div class="item px-1">
+          <mdb-view hover>
+            <a href="#!">
+              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+            </a>
+          </mdb-view>
+          <mdb-card-body>
+            <mdb-card-title>
+              <span class="gradiented">
+                <font-awesome-icon :icon="['fas', 'tasks']" />
+              </span>Мероприятия
+            </mdb-card-title>
+            <mdb-card-text>
+              <p>Оповещайте о важном событии или деловой встрече</p>
             </mdb-card-text>
           </mdb-card-body>
         </div>
@@ -255,10 +474,24 @@
               </span>Предложения
             </mdb-card-title>
             <mdb-card-text>
-              <p>
-                Some quick example text to build on the card title and make up the bulk of the
-                card's content.
-              </p>
+              <p>Предлагайте крутые идеи для улучшения рабочих условий</p>
+            </mdb-card-text>
+          </mdb-card-body>
+        </div>
+        <div class="item px-1">
+          <mdb-view hover>
+            <a href="#!">
+              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
+            </a>
+          </mdb-view>
+          <mdb-card-body>
+            <mdb-card-title>
+              <span class="gradiented">
+                <font-awesome-icon :icon="['fas', 'tasks']" />
+              </span>Задачи
+            </mdb-card-title>
+            <mdb-card-text>
+              <p>Ставьте задачи, определяйте сроки, назначайте ответственных</p>
             </mdb-card-text>
           </mdb-card-body>
         </div>
@@ -272,13 +505,10 @@
             <mdb-card-title>
               <span class="gradiented">
                 <font-awesome-icon :icon="['fas', 'tasks']" />
-              </span>Предложения
+              </span>Стикеры
             </mdb-card-title>
             <mdb-card-text style=" background-image: url(`/assets/iphone-x.png`);">
-              <p>
-                Some quick example text to build on the card title and make up the bulk of the
-                card's content.
-              </p>
+              <p>Выражайте эмоции при помощи стикеров</p>
             </mdb-card-text>
           </mdb-card-body>
         </div>
@@ -288,12 +518,29 @@
       <mdb-row class="d-flex justify-content-center">
         <mdb-col class="col d-none d-sm-block" md="4">
           <div>
-            <div class="phone-bg" id="imgPhone">
-              <!-- <img src="@/assets/iphone-x.png" alt class="img-fluid" /> -->
-              <video class="video" src="@/assets/vids/group.mp4" autoplay muted playsinline loop></video>
-              <!-- <video class="video" autoplay loop muted>
+            <!-- <img src="@/assets/iphone-x.png" alt class="img-fluid" /> -->
+            <!-- <VideoGallery class="video" :currentSlide="this.currentSlide" /> -->
+            <!-- <video class="video" autoplay loop muted>
                 <source :src="'/media/' + currentvideo " type="video/mp4" />
-              </video>-->
+            </video>-->
+            <div>
+              <transition name="ma" mode="out-in">
+                <div v-if="currentSlide==1" key="group">
+                  <video class="video-fluid" src="@/assets/vids/group.mp4" autoplay muted></video>
+                </div>
+                <div v-if="currentSlide==2" key="invite">
+                  <video class="video-fluid" src="@/assets/vids/invite.mp4" autoplay muted></video>
+                </div>
+                <div v-if="currentSlide==3" key="vote">
+                  <video class="video-fluid" src="@/assets/vids/voting.mp4" autoplay muted></video>
+                </div>
+                <div v-if="currentSlide==4" key="rate">
+                  <video class="video-fluid" src="@/assets/vids/rate.mp4" autoplay muted></video>
+                </div>
+                <div v-if="currentSlide==5" key="result">
+                  <video class="video-fluid" src="@/assets/vids/result.mp4" autoplay muted></video>
+                </div>
+              </transition>
             </div>
           </div>
         </mdb-col>
@@ -315,18 +562,11 @@
                   </h2>
                 </mdb-col>
                 <mdb-col>
-                  <h2>Создавайте группы</h2>
+                  <h2>Создавайте проект</h2>
                 </mdb-col>
               </mdb-row>
               <hr />
-              <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-              <div class="arrow">
-                <font-awesome-icon
-                  :icon="['fas', 'chevron-down']"
-                  size="3x"
-                  class="mt-2 mb-4 nextSlide cursor-pointer"
-                />
-              </div>
+              <p>Проекты нужны для повышения эффективности работы. В приложение проект можно разбить на небольшие группы, это позволит каждому отделу заниматься своей работой и при этом оставаться на связи со всей командой</p>
             </swiper-slide>
             <!-- Слайд  -->
             <swiper-slide class="vertical-slide">
@@ -341,18 +581,11 @@
                   </h2>
                 </mdb-col>
                 <mdb-col>
-                  <h2>Приглашайте коллег</h2>
+                  <h2>Общайтесь</h2>
                 </mdb-col>
               </mdb-row>
               <hr />
-              <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-              <div class="arrow">
-                <font-awesome-icon
-                  :icon="['fas', 'chevron-down']"
-                  size="3x"
-                  class="mt-2 mb-4 nextSlide cursor-pointer"
-                />
-              </div>
+              <p>Для эффективной работы, вы должны быть всегда на связи. Приложение позволяет обмениваться не только текстовыми сообщениями, но также документами, медиафайлами и стикерами</p>
             </swiper-slide>
             <!-- Слайд  -->
             <swiper-slide class="vertical-slide">
@@ -367,18 +600,11 @@
                   </h2>
                 </mdb-col>
                 <mdb-col>
-                  <h2>Запускайте голосование</h2>
+                  <h2>Анонимно оценивайте</h2>
                 </mdb-col>
               </mdb-row>
               <hr />
-              <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-              <div class="arrow">
-                <font-awesome-icon
-                  :icon="['fas', 'chevron-down']"
-                  size="3x"
-                  class="mt-2 mb-4 nextSlide cursor-pointer"
-                />
-              </div>
+              <p>Оценивать чью-то работу всегда трудно. А внутри маленькой команды, зачастую, есть страх обидеть кого-то или быть наказанным за высказанное мнение. Но в каждом коллективе, для эффективной работы, важны честность и искренность, поэтому мы позволяем каждому оставаться анонимным</p>
             </swiper-slide>
             <!-- Слайд  -->
             <swiper-slide class="vertical-slide">
@@ -393,21 +619,14 @@
                   </h2>
                 </mdb-col>
                 <mdb-col>
-                  <h2>Оценивайте коллег</h2>
+                  <h2>Зарабатывайте рейтинг</h2>
                 </mdb-col>
               </mdb-row>
               <hr />
-              <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-              <div class="arrow">
-                <font-awesome-icon
-                  :icon="['fas', 'chevron-down']"
-                  size="3x"
-                  class="mt-2 mb-4 nextSlide cursor-pointer"
-                />
-              </div>
+              <p>В результате анонимного оценивания программа присваивает каждому итоговый рейтинг. И каждый из членов команды сможет увидеть над каким навыком ему нужно потрудиться, чтобы стать лучше</p>
             </swiper-slide>
             <!-- Слайд  -->
-            <swiper-slide class="vertical-slide">
+            <!-- <swiper-slide class="vertical-slide">
               <mdb-row>
                 <mdb-col xl="2">
                   <h2>
@@ -424,27 +643,40 @@
               </mdb-row>
               <hr />
               <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-              <div class="arrow">
-                <font-awesome-icon
-                  :icon="['fas', 'chevron-down']"
-                  size="3x"
-                  class="mt-2 mb-4 nextSlide"
-                />
-              </div>
-            </swiper-slide>
+            </swiper-slide>-->
           </swiper>
+          <mdb-row class="flex-column">
+            <mdb-col class="arrow">
+              <font-awesome-icon
+                :icon="['fas', 'chevron-up']"
+                size="3x"
+                class="mt-2 mb-4 previousSlide cursor-pointer"
+                @click="prevVid()"
+                :disabled="!firstSlide"
+              />
+            </mdb-col>
+            <mdb-col class="arrow">
+              <!-- {{this.currentSlide}} -->
+              <font-awesome-icon
+                :icon="['fas', 'chevron-down']"
+                size="3x"
+                class="mt-2 mb-4 nextSlide cursor-pointer"
+                @click="nextVid()"
+              />
+            </mdb-col>
+          </mdb-row>
         </mdb-col>
         <mdb-col class="d-block d-sm-none">
           <div class="fullpage">
-            <h2>Создавайте группы</h2>
+            <h2>Создавайте проект</h2>
             <hr />
-            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+            <p>Проекты нужны для повышения эффективности работы. В приложение проект можно разбить на небольшие группы, это позволит каждому отделу заниматься своей работой и при этом оставаться на связи со всей командой</p>
             <div class="text-center" style="margin-top:20vh;">
               <img src="@/assets/iphone-x.png" alt height="350" />
             </div>
           </div>
           <div class="fullpage">
-            <h2>Приглашайте коллег</h2>
+            <h2>Общайтесь</h2>
             <hr />
             <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
             <div class="text-center" style="margin-top:15vh;">
@@ -488,6 +720,7 @@ import { bus } from "../bus.js";
 import dtbtn from "@/components/UI/dt-btn";
 import Associate from "./Associate";
 import velocity from "velocity-animate";
+import VideoGallery from "@/components/VideoGallery";
 import {
   mdbRow,
   mdbCol,
@@ -526,10 +759,21 @@ export default {
     mdbCardGroup,
     Associate,
     mdbMask,
-    mdbView
+    mdbView,
+    VideoGallery
   },
   data() {
     return {
+      playlist: [
+        { bucketRef: "@/assets/vids/group.mp4" },
+        { bucketRef: "@/assets/vids/invite.mp4" },
+        { bucketRef: "@/assets/vids/voting.mp4" },
+        { bucketRef: "@/assets/vids/rate.mp4" },
+        { bucketRef: "@/assets/vids/result.mp4" }
+      ],
+      currentSlide: 1,
+      firstSlide: true,
+      lastSlide: false,
       video: "",
       rotate: "",
       mouseControl: true,
@@ -544,20 +788,40 @@ export default {
         }
       },
       swiperOption: {
+        on: {
+          slideNextTransitionStart: function() {
+            bus.$emit("nextSlide");
+            this.firstSlide = false;
+          },
+          slidePrevTransitionStart: function() {
+            console.log("prev slide");
+          },
+          reachBeginning: function() {
+            console.log("start");
+          },
+          reachEnd: function() {
+            console.log("end");
+            this.lastSlide = true;
+          }
+        },
         direction: "vertical",
         spaceBetween: 0,
-        mousewheel: true,
         simulateTouch: false,
         watchSlidesProgress: true,
         width: 500,
-        autoHeight: true,
+        height: 50,
         effect: "fade",
         speed: 1200,
         fadeEffect: {
           crossFade: true
         },
         navigation: {
-          nextEl: ".nextSlide"
+          nextEl: ".nextSlide",
+          prevEl: ".previousSlide"
+        },
+        autoplay: {
+          delay: 13000,
+          disableOnInteraction: false
         }
       }
     };
@@ -569,6 +833,12 @@ export default {
     bus.$emit(`paintHeadDestroy`);
   },
   methods: {
+    nextVid() {
+      this.currentSlide++;
+    },
+    prevVid() {
+      this.currentSlide--;
+    },
     enableRotatiion() {
       this.rotate = "rotate";
     },
@@ -599,7 +869,14 @@ export default {
   },
   computed: {
     currentvideo() {
-      return "group.31e6d585.mp4";
+      switch (this.slide) {
+        case 1:
+          return "group.31e6d585.mp4";
+          break;
+
+        default:
+          break;
+      }
     }
   }
 };
@@ -608,8 +885,9 @@ export default {
 @import (css)
   url("https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,900&display=swap");
 .home {
-  // overflow-x: unset;
+  overflow-x: hidden;
   margin-top: -1px;
+  background: linear-gradient(0deg, #ffffff 75%, #e6ecf2 100%);
   h2 {
     font-weight: 800;
     color: #1b3b59;
@@ -625,9 +903,9 @@ export default {
     line-height: 22px;
   }
   .app-card {
-    min-height: 150px;
+    height: 150px;
     min-width: 240px;
-    max-width: 20vw;
+    max-width: 22vw;
     font-weight: 800;
     position: relative;
     border-radius: 15px;
@@ -652,22 +930,20 @@ export default {
       border-radius: 50%;
       left: -1.5rem;
       top: -1.5rem;
-      padding: 1rem;
+      padding: 0.85rem;
+      height: 3.5rem;
+      width:3.5rem;
     }
   }
 }
 .card-roll-wrapper {
-  margin-bottom: 150px;
+  margin-bottom: 10px;
 }
 .card-scrolls {
   padding: 0 1rem;
 }
 .span-background {
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(230, 236, 242, 1) 100%
-  );
+  background: transparent;
 }
 
 .home-head-border {
@@ -704,7 +980,7 @@ section {
 .section-shaped .shape {
   position: absolute;
   top: 300px;
-  z-index: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
 }

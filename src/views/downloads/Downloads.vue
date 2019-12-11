@@ -54,4 +54,7 @@ export default {
 </script>
 
 <style scoped lang="less">
+body{
+  overflow: hidden;
+}
 </style>

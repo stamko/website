@@ -4,7 +4,7 @@
       <mdb-row>
         <mdb-col class="align-self-center">
           <mdb-row>
-            <mdb-col class="col-10">
+            <mdb-col col="10">
               <h2>
                 DreamTeam
                 <br />у вас в кармане
@@ -86,5 +86,14 @@ img {
   max-width: 100%;
   flex-shrink: 0 !important;
   align-self: flex-start;
+}
+@media screen and (max-width: 540px) {
+  h2 {
+    color: #1b3b59;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 800;
+  }
+
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mdbContainer class="my-5">
+    <mdbContainer class="my-5 ">
       <mdb-row class="advantages mb-3 p-2">
         <mdb-col>
           <mdb-card-body>
