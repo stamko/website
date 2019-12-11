@@ -15,22 +15,22 @@
           <span class="span-125"></span>
         </div>
       </div>
-      <div class="d-none d-xl-flex container-fluid ml-5">
+      <div class="d-none d-xl-flex container-fluid">
         <mdb-row class="d-flex justify-content-center ml-5">
           <mdb-col class="d-flex ml-5" lg="10" xl="8">
             <div class="horizontal-section align-self-center">
               <div>
                 <mdb-row class="d-flex">
-                  <mdb-col>
+                  <mdb-col col="12">
                     <h1>
                       Создайте команду
                       <br />мечты
                     </h1>
-                    <p>Сделайте вашу команду мечты лучше с помощью приложения DreamTeam</p>
+                    <p class="my-5">Сделайте вашу команду мечты лучше с помощью приложения DreamTeam</p>
                   </mdb-col>
                 </mdb-row>
-                <mdb-row class="d-flex">
-                  <mdb-col>
+                <mdb-row class="d-flex ">
+                  <mdb-col class="align-self-center">
                     <dtbtn
                       :gradiented="true"
                       title="Попробуйте"
@@ -50,7 +50,7 @@
                 </mdb-row>
               </div>
             </div>
-            <mdb-row class="d-flex justify-content-center py-5 horizontal-section">
+            <mdb-row class="d-flex justify-content-center horizontal-section">
               <mdb-col lg="10">
                 <img class="img-fluid" src="@/assets/hero-image.png" alt />
                 <div id="trigger2"></div>
@@ -517,13 +517,13 @@
     <mdbContainer class="mb-5">
       <mdb-row class="d-flex justify-content-center">
         <mdb-col class="col d-none d-sm-block" md="4">
-          <div>
+          <div class="phone-bg">
             <!-- <img src="@/assets/iphone-x.png" alt class="img-fluid" /> -->
             <!-- <VideoGallery class="video" :currentSlide="this.currentSlide" /> -->
             <!-- <video class="video" autoplay loop muted>
                 <source :src="'/media/' + currentvideo " type="video/mp4" />
             </video>-->
-            <div>
+            <div class="video">
               <transition name="ma" mode="out-in">
                 <div v-if="currentSlide==1" key="group">
                   <video class="video-fluid" src="@/assets/vids/group.mp4" autoplay muted></video>
@@ -544,6 +544,7 @@
             </div>
           </div>
         </mdb-col>
+        <mdb-col></mdb-col>
         <mdb-col
           md="6"
           class="d-none d-sm-block pl-5 align-self-center"
@@ -571,15 +572,6 @@
             <!-- Слайд  -->
             <swiper-slide class="vertical-slide">
               <mdb-row>
-                <mdb-col xl="2">
-                  <h2>
-                    <font-awesome-icon
-                      :icon="['fas', 'redo-alt']"
-                      :class="'cursor-pointer ' + rotate"
-                      @click="enableRotatiion(); disableRotatiion() "
-                    />
-                  </h2>
-                </mdb-col>
                 <mdb-col>
                   <h2>Общайтесь</h2>
                 </mdb-col>
@@ -809,7 +801,7 @@ export default {
         simulateTouch: false,
         watchSlidesProgress: true,
         width: 500,
-        height: 50,
+        height: 80,
         effect: "fade",
         speed: 1200,
         fadeEffect: {
@@ -819,10 +811,10 @@ export default {
           nextEl: ".nextSlide",
           prevEl: ".previousSlide"
         },
-        autoplay: {
-          delay: 13000,
-          disableOnInteraction: false
-        }
+        // autoplay: {
+        //   delay: 13000,
+        //   disableOnInteraction: false
+        // }
       }
     };
   },
@@ -888,6 +880,12 @@ export default {
   overflow-x: hidden;
   margin-top: -1px;
   background: linear-gradient(0deg, #ffffff 75%, #e6ecf2 100%);
+  h1 {
+    font-size: 60px;
+    color: #1b3b59;
+    text-align: left;
+    line-height: 60px;
+  }
   h2 {
     font-weight: 800;
     color: #1b3b59;
@@ -932,7 +930,7 @@ export default {
       top: -1.5rem;
       padding: 0.85rem;
       height: 3.5rem;
-      width:3.5rem;
+      width: 3.5rem;
     }
   }
 }
@@ -1156,5 +1154,11 @@ section {
 }
 .video {
   width: 102%;
+}
+.round{
+  border-style: solid;
+  border-color: #14b0bb;
+  border-radius: 50%;
+  text-align: center;
 }
 </style>
