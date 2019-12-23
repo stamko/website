@@ -92,7 +92,7 @@ export default {
 
 <style lang="less" scoped>
 .grey-background {
-  background-color: #e6ecf2;
+  background-color: rgb(242, 242, 242);
 }
 .dt-navbar {
   padding: 25px 0 50px 0;

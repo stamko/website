@@ -8,10 +8,10 @@
           @click.native="$router.push(`/post/`+postsData[postsData.length -1][0].when)"
           class="h-100 cursor-pointer"
         >
-          <mdb-card-image
+          <!-- <mdb-card-image
             :src="`data:image/*;base64,`+postsData[postsData.length -1][0].data.content"
             alt="Card image cap"
-          ></mdb-card-image>
+          ></mdb-card-image> -->
           <mdb-card-body class="gradiented-card">
             <mdb-card-text class="card-content">
               <mdb-card-title class="card-title">
@@ -24,7 +24,7 @@
                 <span
                 @click="$router.push(`/`)"
                   class="category"
-                >{{getRubricById(postsData[postsData.length -1][0].data.rubricId)}} 123213</span>
+                >{{getRubricById(postsData[postsData.length -1][0].data.rubricId)}}</span>
               </div>
             </mdb-card-text>
           </mdb-card-body>
@@ -48,7 +48,7 @@
                     <h2>{{postsData[postsData.length -2][0].data.title}}</h2>
                   </mdb-card-title>
                   <div>
-                    <p v-html="postsData[postsData.length -2][0].data.description" class="p-0 m-0"></p>
+                    <p v-html="postsData[postsData.length -2][0].data.description" class="p-0 m-0 trim-text"></p>
                   </div>
                   <div class="d-flex flex-grow-1 align-items-end justify-content-between">
                     <div
@@ -71,10 +71,10 @@
               @click.native="$router.push(`/post/`+postsData[postsData.length -3][0].when)"
               class="h-100 z-depth-0 cursor-pointer"
             >
-              <mdb-card-image
+              <!-- <mdb-card-image
                 :src="`data:image/*;base64,`+postsData[postsData.length -3][0].data.content"
                 alt="Card image cap"
-              ></mdb-card-image>
+              ></mdb-card-image> -->
               <mdb-card-body class="gradiented-card">
                 <mdb-card-text class="card-content">
                   <mdb-card-title class="card-title-small">
@@ -104,10 +104,10 @@
               @click.native="$router.push(`/post/`+postsData[postsData.length -4][0].when)"
               class="h-100 z-depth-0 cursor-pointer"
             >
-              <mdb-card-image
+              <!-- <mdb-card-image
                 :src="`data:image/*;base64,`+postsData[postsData.length -4][0].data.content"
                 alt="Card image cap"
-              ></mdb-card-image>
+              ></mdb-card-image> -->
               <mdb-card-body class="gradiented-card">
                 <mdb-card-text class="card-content">
                   <mdb-card-title class="card-title-small">

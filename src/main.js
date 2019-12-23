@@ -46,6 +46,8 @@ Vue.use(VueAwesomeSwiper)
 import '../firebase/';
 import VueMoment from 'vue-moment'
 import Moment from 'moment';
+import Sticky from 'vue-sticky-directive'
+Vue.use(Sticky)
 import {
   extendMoment
 } from 'moment-range';

@@ -64,6 +64,7 @@ export default {
 </script>
 
 <style lang="less">
+@gradient:linear-gradient(224deg, #14b0bb 32%, #517ec2 100%);
 .dt-btn {
   margin: -10px;
   .btn-rounded {
@@ -93,7 +94,6 @@ export default {
     padding: 0.35rem 1.45rem;
     font-weight: 500;
     line-height: 25px;
-    background: linear-gradient(157.11deg, #16ccd9 0.08%, #563dbf 100%);
     color: white;
   }
 
@@ -116,7 +116,6 @@ export default {
   }
 }
 @media screen and (max-width: 540px) {
-  
   .gradiented {
     display: flex;
     align-items: center;

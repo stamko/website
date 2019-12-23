@@ -2,8 +2,8 @@
   <div>
     <mdbContainer>
       <costs></costs>
-      <feedbacks></feedbacks>
-      <faq></faq>
+      <!-- <feedbacks></feedbacks>
+      <faq></faq> -->
     </mdbContainer>
   </div>
 </template>

@@ -1,19 +1,5 @@
 <template>
-  <div class="gradient-purple rotate-wrapper">
-    <div class="section-shaped-gr">
-      <div class="shape">
-        <span class="span-150"></span>
-        <span class="span-125"></span>
-        <span class="span-175"></span>
-        <span class="span-100"></span>
-        <span class="span-150"></span>
-        <span class="span-50"></span>
-        <span class="span-200"></span>
-        <span class="span-75"></span>
-        <span class="span-150"></span>
-        <span class="span-125"></span>
-      </div>
-    </div>
+  <div class="gradiented rotate-wrapper">
     <mdbContainer class="py-5">
       <h2>Присоединяйтесь!</h2>
       <mdb-row>
@@ -374,12 +360,7 @@ h3 {
 .titleBorder {
   border-bottom-style: solid;
   border-bottom-width: 5px;
-  border-image-source: linear-gradient(
-    315deg,
-    #ac35cd 0%,
-    #625dd7 51.54%,
-    #1ccedb 100%
-  );
+  border-image-source: linear-gradient(224deg, #14b0bb 32%, #517ec2 100%);
   border-image-slice: 1;
 }
 .associateCard {

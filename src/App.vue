@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <navbar />
+    <navbar class="animated fadeIn" />
     <router-view class="animated fadeIn"></router-view>
     <dtFooter />
   </div>
@@ -96,7 +96,7 @@ export default {
     this.getRubrics();
     this.getPosts();
     this.getVideos();
-  },
+  }
 };
 </script>
 
@@ -109,6 +109,7 @@ export default {
 }
 
 // ШРИФТЫ
+@gradient: linear-gradient(224deg, #14b0bb 32%, #517ec2 100%);
 h1 {
   font-size: 60px;
   font-family: "Montserrat Alternates", sans-serif;
@@ -218,7 +219,7 @@ h2 {
 }
 
 .gradiented-card {
-  border-radius: 0 0 10px 10px;
+  border-radius:  10px;
   .card-title {
     h2 {
       margin: 0;
@@ -234,15 +235,7 @@ h2 {
     font-size: 14px;
     line-height: 18px;
   }
-  background: linear-gradient(
-    315deg,
-    #6c68c5 0%,
-    #3e7cd2 19.98%,
-    #008cd5 39.97%,
-    #009ad1 59.95%,
-    #00a6c7 79.93%,
-    #14b0bb 99.92%
-  );
+  background: @gradient;
   .card-content {
     height: 100%;
     display: flex;
@@ -365,15 +358,11 @@ h2 {
 
 .gradiented {
   color: white;
-  background: linear-gradient(157.11deg, #16ccd9 0.08%, #563dbf 100%);
+  background: @gradient;
 }
 .gradiented-dark {
   background: linear-gradient(135deg, #1b3b59 0%, #000000 100%);
   color: white !important;
-}
-.gradient-purple {
-  color: white;
-  background: linear-gradient(315deg, #ac35cd 0%, #625dd7 51.54%, #1ccedb 100%);
 }
 
 .font-weight-400 {
@@ -406,7 +395,7 @@ h2 {
   height: 100vh;
   width: 300vw;
 }
-.horizontal-scroll-container{
+.horizontal-scroll-container {
   height: 90%;
 }
 

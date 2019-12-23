@@ -1,23 +1,9 @@
 <template>
-  <div class="home" ref="scrollBox">
+  <div class="home w-100" ref="scrollBox">
     <div class="span-background">
-      <div class="section-shaped">
-        <div class="shape shape-primary">
-          <span class="span-150"></span>
-          <span class="span-125"></span>
-          <span class="span-175"></span>
-          <span class="span-100"></span>
-          <span class="span-150"></span>
-          <span class="span-50"></span>
-          <span class="span-200"></span>
-          <span class="span-75"></span>
-          <span class="span-150"></span>
-          <span class="span-125"></span>
-        </div>
-      </div>
-      <div class="d-none d-xl-flex container-fluid">
+      <div class="d-none d-xl-flex justify-content-around">
         <mdb-row class="d-flex justify-content-center ml-5">
-          <mdb-col class="d-flex ml-5" lg="10" xl="8">
+          <mdb-col class="d-flex ml-5 main-container" lg="10" xl="8">
             <div class="horizontal-section align-self-center">
               <div>
                 <mdb-row class="d-flex">
@@ -29,7 +15,7 @@
                     <p class="my-5">Сделайте вашу команду мечты лучше с помощью приложения DreamTeam</p>
                   </mdb-col>
                 </mdb-row>
-                <mdb-row class="d-flex ">
+                <mdb-row class="d-flex">
                   <mdb-col class="align-self-center">
                     <dtbtn
                       :gradiented="true"
@@ -104,473 +90,75 @@
         </mdb-row>
       </mdbContainer>
     </div>
+    <mdbContainer>
+      <Capabilities />
+    </mdbContainer>
     <!-- <div class="home-head-border"></div> -->
-    <div class="card-roll-wrapper d-none d-sm-block">
-      <div c>
-        <h2 class="text-center">Возможности приложения:</h2>
-
-        <div class="d-flex card-scrolls overflow-hidden justify-content-around">
-          <swiper :options="horizontalOption" style="height: 33vh;
-    padding-top: 3rem">
-            <swiper-slide>
-              <div class="app-card">
-                <mdb-view hover>
-                  <a href="#!">
-                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-                  </a>
-                </mdb-view>
-                <mdb-card-body>
-                  <mdb-card-title>
-                    <span class="gradiented">
-                      <font-awesome-icon :icon="['fas', 'tasks']" />
-                    </span>Опросы
-                  </mdb-card-title>
-                  <mdb-card-text>
-                    <p>Формируйте честную и эффективную команду, используя несложные вопросы</p>
-                  </mdb-card-text>
-                </mdb-card-body>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="app-card">
-                <mdb-view hover>
-                  <a href="#!">
-                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-                  </a>
-                </mdb-view>
-                <mdb-card-body>
-                  <mdb-card-title>
-                    <span class="gradiented">
-                      <font-awesome-icon :icon="['fas', 'tasks']" />
-                    </span>Управление проектами
-                  </mdb-card-title>
-                  <mdb-card-text>Выстраивайте структуру команды при помощи групп</mdb-card-text>
-                </mdb-card-body>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="app-card">
-                <mdb-view hover>
-                  <a href="#!">
-                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-                  </a>
-                </mdb-view>
-                <mdb-card-body>
-                  <mdb-card-title>
-                    <span class="gradiented">
-                      <font-awesome-icon :icon="['fas', 'tasks']" />
-                    </span>Чаты
-                  </mdb-card-title>
-                  <mdb-card-text>
-                    <p>Общайтесь быстрее, безопаснее, эффективнее</p>
-                  </mdb-card-text>
-                </mdb-card-body>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="app-card">
-                <mdb-view hover>
-                  <a href="#!">
-                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-                  </a>
-                </mdb-view>
-                <mdb-card-body>
-                  <mdb-card-title>
-                    <span class="gradiented">
-                      <font-awesome-icon :icon="['fas', 'tasks']" />
-                    </span>Анонимное оценивание
-                  </mdb-card-title>
-                  <mdb-card-text>
-                    <p>Выставляйте оценку профессиональных качеств членам команды</p>
-                  </mdb-card-text>
-                </mdb-card-body>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="app-card">
-                <mdb-view hover>
-                  <a href="#!">
-                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-                  </a>
-                </mdb-view>
-                <mdb-card-body>
-                  <mdb-card-title>
-                    <span class="gradiented">
-                      <font-awesome-icon :icon="['fas', 'tasks']" />
-                    </span>Рейтинг
-                  </mdb-card-title>
-                  <mdb-card-text>
-                    <p>Зарабатывайте рейтинг по пяти ключевым компетенциям</p>
-                  </mdb-card-text>
-                </mdb-card-body>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="app-card">
-                <mdb-view hover>
-                  <a href="#!">
-                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-                  </a>
-                </mdb-view>
-                <mdb-card-body>
-                  <mdb-card-title>
-                    <span class="gradiented">
-                      <font-awesome-icon :icon="['fas', 'tasks']" />
-                    </span>Геймификация
-                  </mdb-card-title>
-                  <mdb-card-text>
-                    <p>Выполняйте рабочие задачи эффективнее в игровой форме</p>
-                  </mdb-card-text>
-                </mdb-card-body>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="app-card">
-                <mdb-view hover>
-                  <a href="#!">
-                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-                  </a>
-                </mdb-view>
-                <mdb-card-body>
-                  <mdb-card-title>
-                    <span class="gradiented">
-                      <font-awesome-icon :icon="['fas', 'tasks']" />
-                    </span>Голосование
-                  </mdb-card-title>
-                  <mdb-card-text>
-                    <p>Советуйтесь с коллегами в принятии важного решения</p>
-                  </mdb-card-text>
-                </mdb-card-body>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="app-card">
-                <mdb-view hover>
-                  <a href="#!">
-                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-                  </a>
-                </mdb-view>
-                <mdb-card-body>
-                  <mdb-card-title>
-                    <span class="gradiented">
-                      <font-awesome-icon :icon="['fas', 'tasks']" />
-                    </span>Мероприятия
-                  </mdb-card-title>
-                  <mdb-card-text>
-                    <p>Оповещайте о важном событии или деловой встрече</p>
-                  </mdb-card-text>
-                </mdb-card-body>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="app-card">
-                <mdb-view hover>
-                  <a href="#!">
-                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-                  </a>
-                </mdb-view>
-                <mdb-card-body>
-                  <mdb-card-title>
-                    <span class="gradiented">
-                      <font-awesome-icon :icon="['fas', 'tasks']" />
-                    </span>Предложения
-                  </mdb-card-title>
-                  <mdb-card-text>
-                    <p>Предлагайте крутые идеи для улучшения рабочих условий</p>
-                  </mdb-card-text>
-                </mdb-card-body>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="app-card">
-                <mdb-view hover>
-                  <a href="#!">
-                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-                  </a>
-                </mdb-view>
-                <mdb-card-body>
-                  <mdb-card-title>
-                    <span class="gradiented">
-                      <font-awesome-icon :icon="['fas', 'tasks']" />
-                    </span>Задачи
-                  </mdb-card-title>
-                  <mdb-card-text>
-                    <p>Ставьте задачи, определяйте сроки, назначайте ответственных</p>
-                  </mdb-card-text>
-                </mdb-card-body>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="app-card">
-                <mdb-view hover>
-                  <a href="#!">
-                    <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-                  </a>
-                </mdb-view>
-                <mdb-card-body>
-                  <mdb-card-title>
-                    <span class="gradiented">
-                      <font-awesome-icon :icon="['fas', 'tasks']" />
-                    </span>Стикеры
-                  </mdb-card-title>
-                  <mdb-card-text>
-                    <p>Выражайте эмоции при помощи стикеров</p>
-                  </mdb-card-text>
-                </mdb-card-body>
-              </div>
-            </swiper-slide>
-          </swiper>
-        </div>
-      </div>
-    </div>
-    <div class="mobile-container d-block d-sm-none">
-      <div class="mobile-container items">
-        <div class="item pl-2">
-          <mdb-view hover>
-            <a href="#!">
-              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-            </a>
-          </mdb-view>
-          <mdb-card-body>
-            <mdb-card-title>
-              <span class="gradiented">
-                <font-awesome-icon :icon="['fas', 'tasks']" />
-              </span>Опросы
-            </mdb-card-title>
-            <mdb-card-text>
-              <p>Формируйте честную и эффективную команду, используя несложные вопросы</p>
-            </mdb-card-text>
-          </mdb-card-body>
-        </div>
-        <div class="item px-1">
-          <mdb-view hover>
-            <a href="#!">
-              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-            </a>
-          </mdb-view>
-          <mdb-card-body>
-            <mdb-card-title>
-              <span class="gradiented">
-                <font-awesome-icon :icon="['fas', 'tasks']" />
-              </span>Управление проектами
-            </mdb-card-title>
-            <mdb-card-text>
-              <p>Выстраивайте структуру команды при помощи групп</p>
-            </mdb-card-text>
-          </mdb-card-body>
-        </div>
-        <div class="item px-1">
-          <mdb-view hover>
-            <a href="#!">
-              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-            </a>
-          </mdb-view>
-          <mdb-card-body>
-            <mdb-card-title>
-              <span class="gradiented">
-                <font-awesome-icon :icon="['fas', 'tasks']" />
-              </span>Чаты
-            </mdb-card-title>
-            <mdb-card-text>
-              <p>Общайтесь быстрее, безопаснее, эффективнее</p>
-            </mdb-card-text>
-          </mdb-card-body>
-        </div>
-        <div class="item px-1">
-          <mdb-view hover>
-            <a href="#!">
-              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-            </a>
-          </mdb-view>
-          <mdb-card-body>
-            <mdb-card-title>
-              <span class="gradiented">
-                <font-awesome-icon :icon="['fas', 'tasks']" />
-              </span>Анонимное оценивание
-            </mdb-card-title>
-            <mdb-card-text>
-              <p>Выставляйте оценку профессиональных качеств членам команды</p>
-            </mdb-card-text>
-          </mdb-card-body>
-        </div>
-        <div class="item px-1">
-          <mdb-view hover>
-            <a href="#!">
-              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-            </a>
-          </mdb-view>
-          <mdb-card-body>
-            <mdb-card-title>
-              <span class="gradiented">
-                <font-awesome-icon :icon="['fas', 'tasks']" />
-              </span>Рейтинг
-            </mdb-card-title>
-            <mdb-card-text>
-              <p>Зарабатывайте рейтинг по пяти ключевым компетенциям</p>
-            </mdb-card-text>
-          </mdb-card-body>
-        </div>
-        <div class="item px-1">
-          <mdb-view hover>
-            <a href="#!">
-              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-            </a>
-          </mdb-view>
-          <mdb-card-body>
-            <mdb-card-title>
-              <span class="gradiented">
-                <font-awesome-icon :icon="['fas', 'tasks']" />
-              </span>Геймификация
-            </mdb-card-title>
-            <mdb-card-text>
-              <p>Выполняйте рабочие задачи эффективнее в игровой форме</p>
-            </mdb-card-text>
-          </mdb-card-body>
-        </div>
-        <div class="item px-1">
-          <mdb-view hover>
-            <a href="#!">
-              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-            </a>
-          </mdb-view>
-          <mdb-card-body>
-            <mdb-card-title>
-              <span class="gradiented">
-                <font-awesome-icon :icon="['fas', 'tasks']" />
-              </span>Голосование
-            </mdb-card-title>
-            <mdb-card-text>
-              <p>Советуйтесь с коллегами в принятии важного решения</p>
-            </mdb-card-text>
-          </mdb-card-body>
-        </div>
-        <div class="item px-1">
-          <mdb-view hover>
-            <a href="#!">
-              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-            </a>
-          </mdb-view>
-          <mdb-card-body>
-            <mdb-card-title>
-              <span class="gradiented">
-                <font-awesome-icon :icon="['fas', 'tasks']" />
-              </span>Мероприятия
-            </mdb-card-title>
-            <mdb-card-text>
-              <p>Оповещайте о важном событии или деловой встрече</p>
-            </mdb-card-text>
-          </mdb-card-body>
-        </div>
-        <div class="item px-1">
-          <mdb-view hover>
-            <a href="#!">
-              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-            </a>
-          </mdb-view>
-          <mdb-card-body>
-            <mdb-card-title>
-              <span class="gradiented">
-                <font-awesome-icon :icon="['fas', 'tasks']" />
-              </span>Предложения
-            </mdb-card-title>
-            <mdb-card-text>
-              <p>Предлагайте крутые идеи для улучшения рабочих условий</p>
-            </mdb-card-text>
-          </mdb-card-body>
-        </div>
-        <div class="item px-1">
-          <mdb-view hover>
-            <a href="#!">
-              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-            </a>
-          </mdb-view>
-          <mdb-card-body>
-            <mdb-card-title>
-              <span class="gradiented">
-                <font-awesome-icon :icon="['fas', 'tasks']" />
-              </span>Задачи
-            </mdb-card-title>
-            <mdb-card-text>
-              <p>Ставьте задачи, определяйте сроки, назначайте ответственных</p>
-            </mdb-card-text>
-          </mdb-card-body>
-        </div>
-        <div class="item pr-2">
-          <mdb-view hover>
-            <a href="#!">
-              <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-            </a>
-          </mdb-view>
-          <mdb-card-body>
-            <mdb-card-title>
-              <span class="gradiented">
-                <font-awesome-icon :icon="['fas', 'tasks']" />
-              </span>Стикеры
-            </mdb-card-title>
-            <mdb-card-text style=" background-image: url(`/assets/iphone-x.png`);">
-              <p>Выражайте эмоции при помощи стикеров</p>
-            </mdb-card-text>
-          </mdb-card-body>
-        </div>
-      </div>
-    </div>
     <mdbContainer class="mb-5">
-      <mdb-row class="d-flex justify-content-center">
-        <mdb-col class="col d-none d-sm-block" md="4">
-          <div class="phone-bg">
-            <!-- <img src="@/assets/iphone-x.png" alt class="img-fluid" /> -->
-            <!-- <VideoGallery class="video" :currentSlide="this.currentSlide" /> -->
-            <!-- <video class="video" autoplay loop muted>
+      <div sticky-container>
+        <mdb-row class="d-flex justify-content-center">
+          <mdb-col class="col d-none d-sm-block" md="4">
+            <div class="phone-bg" v-sticky sticky-offset="offset">
+              <!-- <VideoGallery class="video" :currentSlide="this.currentSlide" /> -->
+              <!-- <video class="video" autoplay loop muted>
                 <source :src="'/media/' + currentvideo " type="video/mp4" />
-            </video>-->
-            <div class="video">
-              <transition name="ma" mode="out-in">
-                <div v-if="currentSlide==1" key="group">
-                  <video class="video-fluid" src="@/assets/vids/group.mp4" autoplay muted></video>
+              </video>-->
+              <div>
+                <div class="video">
+                  <!-- <img src="@/assets/iphone-x.svg" alt class="img-fluid" /> -->
+                  <transition name="ma" mode="out-in">
+                    <div v-if="currentSlide==1" key="group">
+                      <video class="video-fluid" src="@/assets/vids/group.mp4" autoplay loop muted></video>
+                    </div>
+                    <div v-if="currentSlide==2" key="invite">
+                      <video class="video-fluid" src="@/assets/vids/invite.mp4" autoplay loop muted></video>
+                    </div>
+                    <div v-if="currentSlide==3" key="vote">
+                      <video class="video-fluid" src="@/assets/vids/voting.mp4" autoplay loop muted></video>
+                    </div>
+                    <div v-if="currentSlide==4" key="rate">
+                      <video class="video-fluid" src="@/assets/vids/rate.mp4" autoplay loop muted></video>
+                    </div>
+                    <div v-if="currentSlide==5" key="result">
+                      <video class="video-fluid" src="@/assets/vids/result.mp4" autoplay loop muted></video>
+                    </div>
+                  </transition>
                 </div>
-                <div v-if="currentSlide==2" key="invite">
-                  <video class="video-fluid" src="@/assets/vids/invite.mp4" autoplay muted></video>
-                </div>
-                <div v-if="currentSlide==3" key="vote">
-                  <video class="video-fluid" src="@/assets/vids/voting.mp4" autoplay muted></video>
-                </div>
-                <div v-if="currentSlide==4" key="rate">
-                  <video class="video-fluid" src="@/assets/vids/rate.mp4" autoplay muted></video>
-                </div>
-                <div v-if="currentSlide==5" key="result">
-                  <video class="video-fluid" src="@/assets/vids/result.mp4" autoplay muted></video>
-                </div>
-              </transition>
+              </div>
             </div>
-          </div>
-        </mdb-col>
-        <mdb-col></mdb-col>
-        <mdb-col
-          md="6"
-          class="d-none d-sm-block pl-5 align-self-center"
-          style="height:100px; padding-bottom:280px;"
-        >
-          <swiper :options="swiperOption">
-            <swiper-slide class="vertical-slide">
+          </mdb-col>
+          <mdb-col>
+            <div v-sitcky>
+              <font-awesome-icon
+                :icon="['fas', 'redo-alt']"
+                :class="'cursor-pointer ' + rotate"
+                @click="enableRotatiion(); disableRotatiion() "
+              />
+            </div>
+          </mdb-col>
+          <mdb-col
+            md="6"
+            class="d-none d-sm-block pl-5 align-self-center"
+            style="padding-bottom:280px;"
+          >
+            <div class="advantages">
               <mdb-row>
-                <mdb-col xl="2">
-                  <h2>
-                    <font-awesome-icon
-                      :icon="['fas', 'redo-alt']"
-                      :class="'cursor-pointer ' + rotate"
-                      @click="enableRotatiion(); disableRotatiion() "
-                    />
-                  </h2>
-                </mdb-col>
                 <mdb-col>
                   <h2>Создавайте проект</h2>
                 </mdb-col>
               </mdb-row>
               <hr />
               <p>Проекты нужны для повышения эффективности работы. В приложение проект можно разбить на небольшие группы, это позволит каждому отделу заниматься своей работой и при этом оставаться на связи со всей командой</p>
-            </swiper-slide>
-            <!-- Слайд  -->
-            <swiper-slide class="vertical-slide">
+              <div class="arrow">
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-down']"
+                  size="3x"
+                  class="mt-2 mb-4 nextSlide cursor-pointer"
+                  @click="nextVid()"
+                />
+              </div>
+            </div>
+            <div class="advantages">
               <mdb-row>
                 <mdb-col>
                   <h2>Общайтесь</h2>
@@ -578,57 +166,53 @@
               </mdb-row>
               <hr />
               <p>Для эффективной работы, вы должны быть всегда на связи. Приложение позволяет обмениваться не только текстовыми сообщениями, но также документами, медиафайлами и стикерами</p>
-            </swiper-slide>
-            <!-- Слайд  -->
-            <swiper-slide class="vertical-slide">
+              <div class="arrow">
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-down']"
+                  size="3x"
+                  class="mt-2 mb-4 nextSlide cursor-pointer"
+                  @click="nextVid()"
+                />
+              </div>
+            </div>
+            <div class="advantages">
               <mdb-row>
-                <mdb-col xl="2">
-                  <h2>
-                    <font-awesome-icon
-                      :icon="['fas', 'redo-alt']"
-                      :class="'cursor-pointer ' + rotate"
-                      @click="enableRotatiion(); disableRotatiion() "
-                    />
-                  </h2>
-                </mdb-col>
                 <mdb-col>
                   <h2>Анонимно оценивайте</h2>
                 </mdb-col>
               </mdb-row>
               <hr />
               <p>Оценивать чью-то работу всегда трудно. А внутри маленькой команды, зачастую, есть страх обидеть кого-то или быть наказанным за высказанное мнение. Но в каждом коллективе, для эффективной работы, важны честность и искренность, поэтому мы позволяем каждому оставаться анонимным</p>
-            </swiper-slide>
-            <!-- Слайд  -->
-            <swiper-slide class="vertical-slide">
+              <div class="arrow">
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-down']"
+                  size="3x"
+                  class="mt-2 mb-4 nextSlide cursor-pointer"
+                  @click="nextVid()"
+                />
+              </div>
+            </div>
+            <div class="advantages-last">
               <mdb-row>
-                <mdb-col xl="2">
-                  <h2>
-                    <font-awesome-icon
-                      :icon="['fas', 'redo-alt']"
-                      :class="'cursor-pointer ' + rotate"
-                      @click="enableRotatiion(); disableRotatiion() "
-                    />
-                  </h2>
-                </mdb-col>
                 <mdb-col>
                   <h2>Зарабатывайте рейтинг</h2>
                 </mdb-col>
               </mdb-row>
               <hr />
               <p>В результате анонимного оценивания программа присваивает каждому итоговый рейтинг. И каждый из членов команды сможет увидеть над каким навыком ему нужно потрудиться, чтобы стать лучше</p>
-            </swiper-slide>
+              <div class="arrow">
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-down']"
+                  size="3x"
+                  class="mt-2 mb-4 nextSlide cursor-pointer"
+                  @click="nextVid()"
+                />
+              </div>
+            </div>
             <!-- Слайд  -->
             <!-- <swiper-slide class="vertical-slide">
               <mdb-row>
-                <mdb-col xl="2">
-                  <h2>
-                    <font-awesome-icon
-                      :icon="['fas', 'redo-alt']"
-                      :class="'cursor-pointer ' + rotate"
-                      @click="enableRotatiion(); disableRotatiion() "
-                    />
-                  </h2>
-                </mdb-col>
+               
                 <mdb-col>
                   <h2>Получите результаты</h2>
                 </mdb-col>
@@ -636,71 +220,53 @@
               <hr />
               <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
             </swiper-slide>-->
-          </swiper>
-          <mdb-row class="flex-column">
-            <mdb-col class="arrow">
-              <font-awesome-icon
-                :icon="['fas', 'chevron-up']"
-                size="3x"
-                class="mt-2 mb-4 previousSlide cursor-pointer"
-                @click="prevVid()"
-                :disabled="!firstSlide"
-              />
-            </mdb-col>
-            <mdb-col class="arrow">
-              <!-- {{this.currentSlide}} -->
-              <font-awesome-icon
-                :icon="['fas', 'chevron-down']"
-                size="3x"
-                class="mt-2 mb-4 nextSlide cursor-pointer"
-                @click="nextVid()"
-              />
-            </mdb-col>
-          </mdb-row>
-        </mdb-col>
-        <mdb-col class="d-block d-sm-none">
-          <div class="fullpage">
-            <h2>Создавайте проект</h2>
-            <hr />
-            <p>Проекты нужны для повышения эффективности работы. В приложение проект можно разбить на небольшие группы, это позволит каждому отделу заниматься своей работой и при этом оставаться на связи со всей командой</p>
-            <div class="text-center" style="margin-top:20vh;">
-              <img src="@/assets/iphone-x.png" alt height="350" />
+          </mdb-col>
+          <mdb-col class="d-block d-sm-none">
+            <div class="fullpage">
+              <h2>Создавайте проект</h2>
+              <hr />
+              <p>Проекты нужны для повышения эффективности работы. В приложение проект можно разбить на небольшие группы, это позволит каждому отделу заниматься своей работой и при этом оставаться на связи со всей командой</p>
+              <div class="text-center" style="margin-top:20vh;">
+                <img src="@/assets/iphone-x.png" alt height="350" />
+              </div>
             </div>
-          </div>
-          <div class="fullpage">
-            <h2>Общайтесь</h2>
-            <hr />
-            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-            <div class="text-center" style="margin-top:15vh;">
-              <img src="@/assets/iphone-x.png" alt height="300" />
+            <div class="fullpage">
+              <h2>Общайтесь</h2>
+              <hr />
+              <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+              <div class="text-center" style="margin-top:15vh;">
+                <img src="@/assets/iphone-x.png" alt height="300" />
+              </div>
             </div>
-          </div>
-          <div class="fullpage">
-            <h2>Запускайте голосование</h2>
-            <hr />
-            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-            <div class="text-center" style="margin-top:15vh;">
-              <img src="@/assets/iphone-x.png" alt height="300" />
+            <div class="fullpage">
+              <h2>Запускайте голосование</h2>
+              <hr />
+              <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+              <div class="text-center" style="margin-top:15vh;">
+                <img src="@/assets/iphone-x.png" alt height="300" />
+              </div>
             </div>
-          </div>
-          <div class="fullpage">
-            <h2>Оценивайте коллег</h2>
-            <hr />
-            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-            <div class="text-center" style="margin-top:15vh;">
-              <img src="@/assets/iphone-x.png" alt height="300" />
+            <div class="fullpage">
+              <h2>Оценивайте коллег</h2>
+              <hr />
+              <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+              <div class="text-center" style="margin-top:15vh;">
+                <img src="@/assets/iphone-x.png" alt height="300" />
+              </div>
             </div>
-          </div>
-          <div class="fullpage">
-            <h2>Получите результаты</h2>
-            <hr />
-            <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-            <div class="text-center" style="margin-top:15vh;">
-              <img src="@/assets/iphone-x.png" alt height="300" />
+            <div class="fullpage">
+              <h2>Получите результаты</h2>
+              <hr />
+              <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
+              <div class="text-center" style="margin-top:15vh;">
+                <img src="@/assets/iphone-x.png" alt height="300" />
+              </div>
             </div>
-          </div>
-        </mdb-col>
-      </mdb-row>
+          </mdb-col>
+        </mdb-row>
+      </div>
+      <Costs />
+      <youget />
     </mdbContainer>
     <Associate></Associate>
   </div>
@@ -713,6 +279,9 @@ import dtbtn from "@/components/UI/dt-btn";
 import Associate from "./Associate";
 import velocity from "velocity-animate";
 import VideoGallery from "@/components/VideoGallery";
+import Capabilities from "./Capabilities";
+import youget from "./YouGet";
+import Costs from "./price/Costs";
 import {
   mdbRow,
   mdbCol,
@@ -752,22 +321,22 @@ export default {
     Associate,
     mdbMask,
     mdbView,
-    VideoGallery
+    VideoGallery,
+    Capabilities,
+    youget,
+    Costs
   },
   data() {
     return {
-      playlist: [
-        { bucketRef: "@/assets/vids/group.mp4" },
-        { bucketRef: "@/assets/vids/invite.mp4" },
-        { bucketRef: "@/assets/vids/voting.mp4" },
-        { bucketRef: "@/assets/vids/rate.mp4" },
-        { bucketRef: "@/assets/vids/result.mp4" }
-      ],
       currentSlide: 1,
       firstSlide: true,
       lastSlide: false,
       video: "",
       rotate: "",
+      offset: {
+        top: 30,
+        bottom: 30
+      },
       mouseControl: true,
       horizontalOption: {
         direction: "horizontal",
@@ -810,7 +379,7 @@ export default {
         navigation: {
           nextEl: ".nextSlide",
           prevEl: ".previousSlide"
-        },
+        }
         // autoplay: {
         //   delay: 13000,
         //   disableOnInteraction: false
@@ -879,7 +448,6 @@ export default {
 .home {
   overflow-x: hidden;
   margin-top: -1px;
-  background: linear-gradient(0deg, #ffffff 75%, #e6ecf2 100%);
   h1 {
     font-size: 60px;
     color: #1b3b59;
@@ -941,7 +509,7 @@ export default {
   padding: 0 1rem;
 }
 .span-background {
-  background: transparent;
+  background: linear-gradient(180deg, #f2f2f2 14%, #ffffff 100%);
 }
 
 .home-head-border {
@@ -1155,10 +723,19 @@ section {
 .video {
   width: 102%;
 }
-.round{
+.round {
   border-style: solid;
   border-color: #14b0bb;
   border-radius: 50%;
   text-align: center;
+}
+.advantages {
+  height: 60vh;
+}
+.advantages-last {
+  height: 10vh;
+}
+.main-container {
+  max-width: 1800px;
 }
 </style>

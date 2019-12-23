@@ -24,12 +24,12 @@
               v-if="rubricsData && getPostForDom(0,rubricsData[0].id)"
             >
               <mdb-card class="h-100 z-depth-0">
-                <mdb-card-image
+                <!-- <mdb-card-image
                   :src="`data:image/*;base64,`+getPostForDom(0,rubricsData[0].id)[0].data.content"
                   alt="Card image cap"
                   class="cursor-pointer"
                   @click.native="$router.push(`/post/`+getPostForDom(0,rubricsData[0].id)[0].when)"
-                ></mdb-card-image>
+                ></mdb-card-image> -->
                 <mdb-card-body class="gradiented-card">
                   <mdb-card-text class="card-content">
                     <mdb-card-title

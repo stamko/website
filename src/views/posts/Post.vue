@@ -6,7 +6,7 @@
           <h2>{{postsData[0].data.title}}</h2>
           <span>{{rubricData.name}}</span>
         </mdbContainer>
-        <img :src="`data:image/*;base64,`+postsData[0].data.content" alt class="full-roll my-5" />
+        <!-- <img :src="`data:image/*;base64,`+postsData[0].data.content" alt class="full-roll my-5" /> -->
       </div>
       <mdbContainer>
         <mdb-row class="d-flex justify-content-center">
@@ -23,7 +23,7 @@
             <div v-if="post.type===`shortImg`" class="d-flex justify-content-center">
               <img :src="`data:image/*;base64,`+post.data.content" alt class="img-fluid" />
             </div>
-            <div v-html="post.data.content" class="post-text" v-else-if="post.type===`text`"></div>
+            <div v-html="post.data" class="post-text" v-else-if="post.type===`text`"></div>
           </mdb-col>
         </mdb-row>
       </mdbContainer>

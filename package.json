@@ -34,6 +34,7 @@
     "vue-moment": "^4.0.0",
     "vue-router": "^3.0.3",
     "vue-scrollmagic": "^1.2.0",
+    "vue-sticky-directive": "0.0.10",
     "vuefire": "^2.2.0-alpha.0",
     "vuex": "^3.0.1",
     "webpack": "^4.41.2"
