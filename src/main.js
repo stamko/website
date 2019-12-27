@@ -46,6 +46,10 @@ Vue.use(VueAwesomeSwiper)
 import '../firebase/';
 import VueMoment from 'vue-moment'
 import Moment from 'moment';
+import VueWaypoint from 'vue-waypoint'
+
+// Waypoint plugin
+Vue.use(VueWaypoint)
 import Sticky from 'vue-sticky-directive'
 Vue.use(Sticky)
 import {

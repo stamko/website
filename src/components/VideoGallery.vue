@@ -31,28 +31,5 @@ export default {
 </script>
 
 <style>
-.ma-enter {
-  opacity: 0;
-}
-.ma-enter-active {
-  transition: all 3s;
-}
-.ma-enter-to {
-}
-.ma-leave {
-}
-.ma-leave-active {
-  transition: all 3s;
-}
-.ma-leave-to {
-  opacity: 0;
-}
-@keyframes ma-slide {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(150px);
-  }
-}
+
 </style>

@@ -91,36 +91,33 @@
       </mdbContainer>
     </div>
     <mdbContainer>
-      <Capabilities />
+      <Capabilities class="my-9" />
     </mdbContainer>
     <!-- <div class="home-head-border"></div> -->
-    <mdbContainer class="mb-5">
+    <mdbContainer class="my-5">
       <div sticky-container>
         <mdb-row class="d-flex justify-content-center">
-          <mdb-col class="col d-none d-sm-block" md="4">
+          <mdb-col class="col d-none d-md-block" md="4">
             <div class="phone-bg" v-sticky sticky-offset="offset">
               <!-- <VideoGallery class="video" :currentSlide="this.currentSlide" /> -->
               <!-- <video class="video" autoplay loop muted>
                 <source :src="'/media/' + currentvideo " type="video/mp4" />
               </video>-->
-              <div>
+              <div class="bgbgbg">
                 <div class="video">
                   <!-- <img src="@/assets/iphone-x.svg" alt class="img-fluid" /> -->
                   <transition name="ma" mode="out-in">
-                    <div v-if="currentSlide==1" key="group">
+                    <div v-if="currentSlide<3" key="group">
                       <video class="video-fluid" src="@/assets/vids/group.mp4" autoplay loop muted></video>
                     </div>
-                    <div v-if="currentSlide==2" key="invite">
+                    <div v-if="currentSlide<5" key="invite">
                       <video class="video-fluid" src="@/assets/vids/invite.mp4" autoplay loop muted></video>
                     </div>
-                    <div v-if="currentSlide==3" key="vote">
+                    <div v-if="currentSlide<7" key="vote">
                       <video class="video-fluid" src="@/assets/vids/voting.mp4" autoplay loop muted></video>
                     </div>
-                    <div v-if="currentSlide==4" key="rate">
+                    <div v-if="currentSlide>=7" key="rate">
                       <video class="video-fluid" src="@/assets/vids/rate.mp4" autoplay loop muted></video>
-                    </div>
-                    <div v-if="currentSlide==5" key="result">
-                      <video class="video-fluid" src="@/assets/vids/result.mp4" autoplay loop muted></video>
                     </div>
                   </transition>
                 </div>
@@ -150,13 +147,15 @@
               <hr />
               <p>Проекты нужны для повышения эффективности работы. В приложение проект можно разбить на небольшие группы, это позволит каждому отделу заниматься своей работой и при этом оставаться на связи со всей командой</p>
               <div class="arrow">
-                <font-awesome-icon
-                  :icon="['fas', 'chevron-down']"
-                  size="3x"
-                  class="mt-2 mb-4 nextSlide cursor-pointer"
-                  @click="nextVid()"
-                />
+                <vue-next-level-scroll target="#slide2">
+                  <font-awesome-icon
+                    :icon="['fas', 'chevron-down']"
+                    size="3x"
+                    class="mt-2 mb-4 nextSlide cursor-pointer"
+                  />
+                </vue-next-level-scroll>
               </div>
+              <div id="slide2"></div>
             </div>
             <div class="advantages">
               <mdb-row>
@@ -166,14 +165,19 @@
               </mdb-row>
               <hr />
               <p>Для эффективной работы, вы должны быть всегда на связи. Приложение позволяет обмениваться не только текстовыми сообщениями, но также документами, медиафайлами и стикерами</p>
-              <div class="arrow">
-                <font-awesome-icon
-                  :icon="['fas', 'chevron-down']"
-                  size="3x"
-                  class="mt-2 mb-4 nextSlide cursor-pointer"
-                  @click="nextVid()"
-                />
+              <div
+                class="arrow"
+                v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
+              >
+                <vue-next-level-scroll target="#slide3">
+                  <font-awesome-icon
+                    :icon="['fas', 'chevron-down']"
+                    size="3x"
+                    class="mt-2 mb-4 nextSlide cursor-pointer"
+                  />
+                </vue-next-level-scroll>
               </div>
+              <div id="slide3"></div>
             </div>
             <div class="advantages">
               <mdb-row>
@@ -183,14 +187,19 @@
               </mdb-row>
               <hr />
               <p>Оценивать чью-то работу всегда трудно. А внутри маленькой команды, зачастую, есть страх обидеть кого-то или быть наказанным за высказанное мнение. Но в каждом коллективе, для эффективной работы, важны честность и искренность, поэтому мы позволяем каждому оставаться анонимным</p>
-              <div class="arrow">
-                <font-awesome-icon
-                  :icon="['fas', 'chevron-down']"
-                  size="3x"
-                  class="mt-2 mb-4 nextSlide cursor-pointer"
-                  @click="nextVid()"
-                />
+              <div
+                class="arrow"
+                v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
+              >
+                <vue-next-level-scroll target="#slide4">
+                  <font-awesome-icon
+                    :icon="['fas', 'chevron-down']"
+                    size="3x"
+                    class="mt-2 mb-4 nextSlide cursor-pointer"
+                  />
+                </vue-next-level-scroll>
               </div>
+              <div id="slide4"></div>
             </div>
             <div class="advantages-last">
               <mdb-row>
@@ -201,12 +210,13 @@
               <hr />
               <p>В результате анонимного оценивания программа присваивает каждому итоговый рейтинг. И каждый из членов команды сможет увидеть над каким навыком ему нужно потрудиться, чтобы стать лучше</p>
               <div class="arrow">
-                <font-awesome-icon
-                  :icon="['fas', 'chevron-down']"
-                  size="3x"
-                  class="mt-2 mb-4 nextSlide cursor-pointer"
-                  @click="nextVid()"
-                />
+                <vue-next-level-scroll target="#prices">
+                  <font-awesome-icon
+                    :icon="['fas', 'chevron-down']"
+                    size="3x"
+                    class="mt-2 mb-4 nextSlide cursor-pointer"
+                  />
+                </vue-next-level-scroll>
               </div>
             </div>
             <!-- Слайд  -->
@@ -282,6 +292,7 @@ import VideoGallery from "@/components/VideoGallery";
 import Capabilities from "./Capabilities";
 import youget from "./YouGet";
 import Costs from "./price/Costs";
+import VueNextLevelScroll from "vue-next-level-scroll";
 import {
   mdbRow,
   mdbCol,
@@ -324,17 +335,23 @@ export default {
     VideoGallery,
     Capabilities,
     youget,
-    Costs
+    Costs,
+    VueNextLevelScroll
   },
   data() {
     return {
+      intersectionOptions: {
+        root: null,
+        rootMargin: "0px 0px 0px 0px",
+        threshold: [0, 1] // [0.25, 0.75] if you want a 25% offset!
+      },
       currentSlide: 1,
       firstSlide: true,
       lastSlide: false,
       video: "",
       rotate: "",
       offset: {
-        top: 30,
+        top: 220,
         bottom: 30
       },
       mouseControl: true,
@@ -394,11 +411,30 @@ export default {
     bus.$emit(`paintHeadDestroy`);
   },
   methods: {
+    onWaypoint({ going, direction }) {
+      // going: in, out
+      // direction: top, right, bottom, left
+      // if (going === this.$waypointMap.GOING_IN) {
+      //   console.log("vidim title 1");
+      //   this.currentSlide = 2;
+      // }
+
+      if (direction === this.$waypointMap.DIRECTION_TOP) {
+        console.log(" scrolim vniz!");
+        this.nextVid();
+      }
+      if (direction === this.$waypointMap.DIRECTION_BOTTOM) {
+        console.log("scrolim vverh!");
+        this.prevVid();
+      }
+    },
     nextVid() {
       this.currentSlide++;
+      console.log("slide", this.currentSlide);
     },
     prevVid() {
       this.currentSlide--;
+      console.log("slide", this.currentSlide);
     },
     enableRotatiion() {
       this.rotate = "rotate";
@@ -631,7 +667,7 @@ section {
 }
 @media screen and (max-width: 540px) {
   h1 {
-    color: #1b3b59;
+    color: #0980f0;
     font-size: 48px;
     line-height: 48px;
   }
@@ -733,9 +769,38 @@ section {
   height: 60vh;
 }
 .advantages-last {
-  height: 10vh;
+  height: 30vh;
 }
 .main-container {
   max-width: 1800px;
+}
+.bgbgbg {
+  // background-image: url("../assets/splash screen.svg");
+  // background-size: contain;
+}
+.ma-enter {
+  opacity: 0;
+}
+.ma-enter-active {
+  transition: all 500ms;
+}
+.ma-enter-to {
+}
+.ma-leave {
+}
+.ma-leave-active {
+  transition: all 500ms;
+  animation: 1s ma-slide forwards;
+}
+.ma-leave-to {
+  opacity: 0;
+}
+@keyframes ma-slide {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(150px);
+  }
 }
 </style>

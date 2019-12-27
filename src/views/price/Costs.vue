@@ -4,6 +4,7 @@
       <mdb-col col="12">
         <div class="cost-card">
           <mdb-card-title>
+            @
             <div class="d-flex justify-content-center mb-5 pb-5">
               <div class="cost-value gradiented">
                 <span>0$</span>
@@ -13,7 +14,7 @@
           <mdb-card-body>
             <mdb-row>
               <mdb-col>
-                <h2 style="margin-top: -6rem;">DreamPrice</h2>
+                <h2 style="margin-top: -6rem;" id="prices">DreamPrice</h2>
               </mdb-col>
               <mdb-col>
                 <p
@@ -45,8 +46,10 @@
     <mdb-row class="pt-5" style="margin:7rem 0;">
       <mdb-col>
         <div class="cost-card h-100">
-          <div class="cost-value gradiented-dark">
-            <span class="per-month">49$</span>
+          <div class="d-flex justify-content-center">
+            <div class="cost-value gradiented-dark">
+              <span class="per-month">49$</span>
+            </div>
           </div>
           <mdb-card-body>
             <mdb-card-text>
@@ -61,8 +64,10 @@
       </mdb-col>
       <mdb-col>
         <div class="cost-card h-100">
-          <div class="cost-value gradiented-dark">
-            <span class="per-month">49$</span>
+          <div class="d-flex justify-content-center">
+            <div class="cost-value gradiented-dark">
+              <span class="per-month">49$</span>
+            </div>
           </div>
           <mdb-card-body>
             <mdb-card-text>
@@ -84,7 +89,7 @@
       <mdb-col>
         <mdb-row></mdb-row>
         <div class="cost-card h-100">
-          <div class="d-flex justify-content-center"> 
+          <div class="d-flex justify-content-center">
             <div class="cost-value gradiented-dark">
               <span class="per-month">49$</span>
             </div>
@@ -179,7 +184,7 @@ export default {
   }
 }
 .gradiented-dark {
-  margin-left: 27%;
+  // margin-left: 27%;
 }
 .cost-value {
   border-radius: 50%;
@@ -216,7 +221,7 @@ export default {
     content: "в месяц";
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .cost-card {
     width: 100%;
   }

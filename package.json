@@ -26,12 +26,14 @@
     "mdbvue": "5.8.2",
     "moment-range": "^4.0.2",
     "serialize": "^0.1.3",
+    "sticky": "^0.8.0",
     "svgo": "^1.3.0",
     "velocity-animate": "^1.5.2",
     "vue": "^2.6.10",
     "vue-awesome-swiper": "^3.1.3",
     "vue-lottie": "^0.2.1",
-    "vue-moment": "^4.0.0",
+    "vue-moment": "^4.1.0",
+    "vue-next-level-scroll": "^1.2.0",
     "vue-router": "^3.0.3",
     "vue-scrollmagic": "^1.2.0",
     "vue-sticky-directive": "0.0.10",
@@ -51,7 +53,8 @@
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "vue-cli-plugin-mdb": "^1.8.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "vue-waypoint": "^3.2.2"
   },
   "eslintConfig": {
     "root": true,

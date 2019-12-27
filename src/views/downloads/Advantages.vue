@@ -71,10 +71,10 @@
               <p class="header">Загрузить</p>
               <mdb-row>
                 <mdb-col class="d-flex" col="6" md="10" lg="6">
-                  <img src="@/assets/googlePlay.png" alt class="img-fluid" />
+                  <img src="@/assets/googlePlay.png" alt class="img-fluid sfari-fix" />
                 </mdb-col>
                 <mdb-col class="d-flex" col="6" md="10" lg="6">
-                  <img src="@/assets/appStore.png" style="opacity:50%" alt class="img-fluid" />
+                  <img src="@/assets/appStore.png" style="opacity:50%" alt class="img-fluid safari-fix" />
                 </mdb-col>
               </mdb-row>
             </mdb-card-text>

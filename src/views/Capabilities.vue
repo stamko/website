@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="card-roll-wrapper d-none d-sm-block">
+    <div class="card-roll-wrapper">
       <div>
         <h2 class="text-center">Возможности приложения:</h2>
         <div class="d-flex card-scrolls justify-content-around">
           <mdb-row>
-            <mdb-col>
+            <mdb-col col="12" md="6" class="d-flex">
               <div class="app-card">
                 <mdb-view hover>
                   <a href="#!">
@@ -22,7 +22,7 @@
                   </mdb-card-text>
                 </mdb-card-body>
               </div>
-              <div class="app-card mt-2">
+              <div class="app-card">
                 <mdb-view hover>
                   <a href="#!">
                     <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
@@ -39,7 +39,7 @@
                 </mdb-card-body>
               </div>
             </mdb-col>
-            <mdb-col>
+            <mdb-col col="12" md="6" class="d-flex">
               <div class="app-card">
                 <mdb-view hover>
                   <a href="#!">
@@ -56,7 +56,7 @@
                   </mdb-card-text>
                 </mdb-card-body>
               </div>
-              <div class="app-card mt-4">
+              <div class="app-card">
                 <mdb-view hover>
                   <a href="#!">
                     <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
@@ -73,7 +73,7 @@
                 </mdb-card-body>
               </div>
             </mdb-col>
-            <mdb-col>
+            <mdb-col col="12" md="6" class="d-flex">
               <div class="app-card">
                 <mdb-view hover>
                   <a href="#!">
@@ -90,7 +90,7 @@
                   </mdb-card-text>
                 </mdb-card-body>
               </div>
-              <div class="app-card mt-4">
+              <div class="app-card">
                 <mdb-view hover>
                   <a href="#!">
                     <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
@@ -107,7 +107,7 @@
                 </mdb-card-body>
               </div>
             </mdb-col>
-            <mdb-col>
+            <mdb-col col="12" md="6" class="d-flex">
               <div class="app-card">
                 <mdb-view hover>
                   <a href="#!">
@@ -124,7 +124,7 @@
                   </mdb-card-text>
                 </mdb-card-body>
               </div>
-              <div class="app-card mt-4">
+              <div class="app-card">
                 <mdb-view hover>
                   <a href="#!">
                     <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
@@ -145,7 +145,7 @@
         </div>
       </div>
     </div>
-    <div class="mobile-container d-block d-sm-none">
+    <div class="mobile-container d-none d-sm-none">
       <div class="mobile-container items">
         <div class="item pl-2">
           <mdb-view hover>
@@ -382,7 +382,7 @@ export default {
 h2 {
   font-size: 36px;
   color: #1b3b59;
-  font-weight: 600; 
+  font-weight: 600;
 }
 .app-card {
   h2 {
@@ -398,6 +398,26 @@ h2 {
     line-height: 18px;
   }
 }
-.card-title {
+@media screen and (max-width: 540px) {
+  h2 {
+    font-size: 32px;
+    color: #1b3b59;
+    text-align: center;
+    line-height: 32px;
+  }
+  .app-card {
+    h2 {
+      font-size: 18px;
+      color: rgba(27, 59, 89, 1);
+      text-align: left;
+    }
+    p {
+      font-size: 14px;
+      color: #bfbfbf;
+      letter-spacing: 0.4px;
+      text-align: left;
+      line-height: 16px;
+    }
+  }
 }
 </style>

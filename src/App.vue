@@ -108,13 +108,16 @@ export default {
   font-weight: 400;
 }
 
-// ШРИФТЫ
+// ЦВЕТА
 @gradient: linear-gradient(224deg, #14b0bb 32%, #517ec2 100%);
+@deep-blue: #1b3b59;
+@teal: #14b0bb;
+// ШРИФТЫ
 h1 {
   font-size: 60px;
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 900 !important;
-  color: #1b3b59 !important;
+  color: @deep-blue !important;
 }
 h4 {
   font-size: 24px;
@@ -138,7 +141,7 @@ h2 {
   border-radius: 25px;
   font-weight: 500;
   background-color: #ffffff !important;
-  color: #1b3b59;
+  color: @deep-blue;
   transition-duration: 0.2s;
 }
 .dt-rounded-btn:hover {
@@ -219,7 +222,7 @@ h2 {
 }
 
 .gradiented-card {
-  border-radius:  10px;
+  border-radius: 10px;
   .card-title {
     h2 {
       margin: 0;
@@ -245,7 +248,7 @@ h2 {
       border-radius: 15px;
       background-color: #ffffff;
       padding: 0 10px 1px 10px;
-      color: #1b3b59;
+      color: @deep-blue;
       font-weight: 500;
     }
     p {
@@ -272,7 +275,7 @@ h2 {
     display: flex;
     flex-direction: column;
     p {
-      color: #1b3b59;
+      color: @deep-blue;
       font-size: 14px;
       font-weight: 500;
       line-height: 18px;
@@ -318,7 +321,7 @@ h2 {
     display: flex;
     flex-direction: column;
     p {
-      color: #1b3b59;
+      color: @deep-blue;
       font-size: 14px;
       font-weight: 500;
       line-height: 18px;
@@ -328,7 +331,7 @@ h2 {
       border-radius: 15px;
       background-color: #f2f2f2;
       padding: 0 10px 1px 10px;
-      color: #1b3b59;
+      color: @deep-blue;
       font-weight: 500;
     }
 
@@ -361,7 +364,7 @@ h2 {
   background: @gradient;
 }
 .gradiented-dark {
-  background: linear-gradient(135deg, #1b3b59 0%, #000000 100%);
+  background: linear-gradient(135deg, @deep-blue 0%, #000000 100%);
   color: white !important;
 }
 
@@ -398,11 +401,15 @@ h2 {
 .horizontal-scroll-container {
   height: 90%;
 }
-
+.safari-fix {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+  align-self: flex-start;
+}
 @media screen and (max-width: 540px) {
   section {
     > h2 {
-      color: #1b3b59;
+      color: @deep-blue;
       font-size: 24px;
       font-weight: 700;
       line-height: 29px;
