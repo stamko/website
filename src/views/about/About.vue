@@ -86,7 +86,7 @@
       </mdb-row>
       <mdb-row>
         <mdb-col class="align-self-center">
-          <img src="@/assets/about/everyday-life.svg" alt="story" class="img-fluid" />
+          <img src="@/assets/about/secure.svg" alt="story" class="img-fluid" />
         </mdb-col>
         <mdb-col class="story">
           <p>
@@ -105,15 +105,15 @@
             И это лишь малая часть всех возможностей нашего приложения.
           </p>
         </mdb-col>
-        <mdb-col cls>
-          <img src="@/assets/about/secure.svg" alt="story" class="img-fluid" />
+        <mdb-col class="align-self-center">
+          <img src="@/assets/about/everyday-life.svg" alt="story" class="img-fluid" />
         </mdb-col>
       </mdb-row>
       <mdb-row class="flex-column last">
         <mdb-col class="story-last">
           <p>Мы готовимся к выпуску MVP, будем проводить закрытую бету, обкатаем теорию на реальных людях и реальных жизненных ситуациях, и будем работать в бирюзовом ключе дальше. Времена меняются и меняются подходы к организации рабочего процесса. И какой бы эффективной не была система «кнута и пряника», но заинтересованность и самоорганизованность человека никакому прянику не переплюнуть!</p>
         </mdb-col>
-        <mdb-col class="text-center">
+        <mdb-col class="text-center my-5">
           <img src="@/assets/about/team.svg" alt="team" class="img-fluid" />
         </mdb-col>
       </mdb-row>

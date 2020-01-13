@@ -2,7 +2,7 @@
   <mdbContainer>
     <NewestPosts></NewestPosts>
     <Categories></Categories>
-    <VideoBlog></VideoBlog>
+    <!-- <VideoBlog></VideoBlog> -->
   </mdbContainer>
 </template>
 

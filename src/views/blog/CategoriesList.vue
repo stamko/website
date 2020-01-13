@@ -23,10 +23,10 @@
                 v-if="rubricsData && getPostForDom(0,rubricsData[index].id)"
               >
                 <mdb-card class="h-100 z-depth-0">
-                  <mdb-card-image
+                  <!-- <mdb-card-image
                     :src="`data:image/*;base64,`+getPostForDom(0,rubricsData[index].id)[0].data.content"
                     alt="Card image cap"
-                  ></mdb-card-image>
+                  ></mdb-card-image> -->
                   <mdb-card-body class="gradiented-card">
                     <mdb-card-text class="card-content">
                       <mdb-card-title class="card-title-small">

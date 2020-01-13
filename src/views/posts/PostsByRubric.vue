@@ -9,7 +9,10 @@
           sm="12"
           md="6"
         >
-          <mdb-card class="h-100 z-depth-0 cursor-pointer">
+          <mdb-card
+            class="h-100 z-depth-0 cursor-pointer"
+            @click.native="$router.push(`/post/`+postsData[postsData.length -1][0].when)"
+          >
             <mdb-card-image
               v-if="post[0].data.content"
               :src="`data:image/*;base64,`+post[0].data.content"

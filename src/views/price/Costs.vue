@@ -7,7 +7,7 @@
             @
             <div class="d-flex justify-content-center mb-5 pb-5">
               <div class="cost-value gradiented">
-                <span>0$</span>
+                <span>0₽</span>
               </div>
             </div>
           </mdb-card-title>
@@ -48,7 +48,7 @@
         <div class="cost-card h-100">
           <div class="d-flex justify-content-center">
             <div class="cost-value gradiented-dark">
-              <span class="per-month">49$</span>
+              <span class="per-month">49₽</span>
             </div>
           </div>
           <mdb-card-body>
@@ -66,20 +66,23 @@
         <div class="cost-card h-100">
           <div class="d-flex justify-content-center">
             <div class="cost-value gradiented-dark">
-              <span class="per-month">49$</span>
+              <span class="per-month">49₽</span>
             </div>
           </div>
           <mdb-card-body>
             <mdb-card-text>
               <h4 class="p-5 text-center">Для руководителей групп:</h4>
-              <ul style="margin-top: -2rem;">
+              <ul style="margin-top: -2rem;" class="py-4">
                 <li>"Пятый элемент"</li>
                 <ol class="p-0">
-                  <li>свой критерий и вопросы</li>
+                  <li>Добавляйте критерий или вопросы</li>
                 </ol>
                 <li>Настройка оценивания</li>
                 <ol class="p-0">
-                  <li>время запуска, длительность оценивания выбор вопросов</li>
+                  <li>
+                    Изменяйте время запуска, длительность
+                    Исключайте вопросы
+                  </li>
                 </ol>
               </ul>
             </mdb-card-text>
@@ -91,7 +94,7 @@
         <div class="cost-card h-100">
           <div class="d-flex justify-content-center">
             <div class="cost-value gradiented-dark">
-              <span class="per-month">49$</span>
+              <span class="per-month">49₽</span>
             </div>
           </div>
           <mdb-card-body>
@@ -100,12 +103,12 @@
               <ul class="pt-4">
                 <li>"Новая жизнь"</li>
                 <ol class="p-0">
-                  <li>очистка истории рейтинга, обнуление оценки</li>
+                  <li>Обнуляйте свой рейтинг и его историю</li>
                 </ol>
                 <li>Усиление голоса</li>
-                <li>Настройка оценивания</li>
+                <li>Покупка «Тилов»</li>
                 <ol class="p-0">
-                  <li>внутренняя валюта для покупки стикеров и кастомизации профиля</li>
+                  <li>Внутренняя валюта для покупки стикеров и кастомизации профиля</li>
                 </ol>
               </ul>
             </mdb-card-text>

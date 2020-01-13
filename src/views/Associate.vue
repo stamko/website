@@ -6,9 +6,10 @@
         <mdb-col class="mt-2">
           <mdb-card class="associateCard">
             <mdb-card-body>
-              <mdb-card-title class="titleBorder">
+              <mdb-card-title>
                 <h3>Зарегистрируйте компанию</h3>
               </mdb-card-title>
+              <div class="border m-2"></div>
               <mdb-card-text class="d-flex flex-column align-items-center">
                 <div class="form-group">
                   <input
@@ -31,9 +32,10 @@
         <mdb-col class="mt-2">
           <mdb-card class="associateCard">
             <mdb-card-body>
-              <mdb-card-title class="titleBorder">
+              <mdb-card-title>
                 <h3>Загрузите приложение</h3>
               </mdb-card-title>
+              <div class="border m-2"></div>
               <mdb-card-text>
                 <mdb-row class="d-flex">
                   <mdb-col>
@@ -222,6 +224,7 @@
               type="button"
               class="btn btn-light m-3"
               @click="$router.push(`/blog`)"
+              v-scroll-to="'.dt-navbar, 10px'"
             >Перейти в блог</button>
           </div>
         </mdb-col>
@@ -362,6 +365,12 @@ h3 {
   border-bottom-width: 5px;
   border-image-source: linear-gradient(224deg, #14b0bb 32%, #517ec2 100%);
   border-image-slice: 1;
+}
+.border {
+  background: linear-gradient(224deg, #14b0bb 32%, #517ec2 100%);
+  border-radius: 25%;
+  height: 6px;
+  border-style: none;
 }
 .associateCard {
   background-color: hsla(0, 0%, 100%, 0.75);

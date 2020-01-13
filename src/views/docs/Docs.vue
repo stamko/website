@@ -44,7 +44,7 @@
                   <div class="contact-variant-chat w-100">
                     <font-awesome-icon class="mb-3" size="2x" :icon="['fab', 'vk']" />
                     <font-awesome-icon class="mb-3" size="2x" :icon="['fab', 'facebook-f']" />
-
+                  </div><div class="d-flex justify-content-center">
                     <dtBtn class="mb-3" :bgColor="`grey`" title="Чат на сайте"></dtBtn>
                   </div>
                 </div>

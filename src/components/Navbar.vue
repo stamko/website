@@ -32,7 +32,7 @@
           <mdb-col md="5" lg="4" class="d-none d-md-block">
             <div class="d-flex justify-content-between w-100">
               <!-- <a @click="$router.push(`/functions`)">Функция</a> -->
-              <a @click="$router.push(`/price`)">Цены</a>
+               <router-link to="/" v-scroll-to="'.cost-card, 10px'">Цены</router-link>
               <a @click="$router.push(`/blog`)">Блог</a>
               <a @click="$router.push(`/about`)">О нас</a>
             </div>
@@ -110,5 +110,8 @@ export default {
 }
 .dropdown-toggle::after {
   display: none;
+}
+mdb-dropdown{
+  z-index: 10000 !important;
 }
 </style>

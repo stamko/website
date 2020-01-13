@@ -41,17 +41,16 @@ import {
 import VueScrollmagic from 'vue-scrollmagic'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
-
 Vue.use(VueAwesomeSwiper)
+import vueScrollTo from 'vue-scroll-to';
+Vue.use(vueScrollTo);
 import '../firebase/';
 import VueMoment from 'vue-moment'
 import Moment from 'moment';
-import VueWaypoint from 'vue-waypoint'
-
-// Waypoint plugin
-Vue.use(VueWaypoint)
 import Sticky from 'vue-sticky-directive'
 Vue.use(Sticky)
+import checkView from 'vue-check-view'
+Vue.use(checkView)
 import {
   extendMoment
 } from 'moment-range';

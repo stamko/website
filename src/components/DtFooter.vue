@@ -14,48 +14,44 @@
             <mdb-col col="8" md="12" lg="4">
               <ul>
                 <li>
-                  <router-link to="/updates">Обновления</router-link>
+                  <router-link to="/blog" v-scroll-to="'.dt-navbar, 10px'">Обновления</router-link>
                 </li>
                 <li>
-                  <router-link to="/beta">Бета-версия</router-link>
+                  <router-link to="/downloads" v-scroll-to="'.dt-navbar, 10px'">Бета-версия</router-link>
                 </li>
                 <li>
-                  <router-link to="/functions">Функции</router-link>
+                  <router-link to="/" v-scroll-to="'.phone-bg, 50px'" class="cursor-pointer">Функции</router-link>
                 </li>
                 <li>
-                  <router-link to="/price">Цены</router-link>
+                  <router-link to="/price" v-scroll-to="'.dt-navbar, 10px'">Цены</router-link>
                 </li>
               </ul>
             </mdb-col>
             <mdb-col col="8" md="12" lg="4">
               <ul>
-                <li>
+                <!-- <li>
                   <router-link to="/guide">Руководство пользователя</router-link>
-                </li>
-                <li>
+                </li>-->
+                <!-- <li>
                   <router-link to="/support">Техподдержка</router-link>
-                </li>
+                </li>-->
                 <li>
                   <router-link to="/docs">Документация</router-link>
                 </li>
-                <li>
+                <!-- <li>
                   <router-link to="/terms">Правовая информация</router-link>
-                </li>
-              </ul>
-            </mdb-col>
-            <mdb-col col="8" md="12" lg="4">
-              <ul>
+                </li>-->
                 <li>
-                  <router-link to="/about">О компании</router-link>
+                  <router-link to="/about" v-scroll-to="'.dt-navbar, -50px'">О компании</router-link>
                 </li>
                 <li>
-                  <router-link to="/contacts">Контакты</router-link>
+                  <router-link to="/about" v-scroll-to="'.contact-card, 10px'">Контакты</router-link>
                 </li>
-                <li>
+                <!-- <li>
                   <router-link to="/job">Вакансии</router-link>
-                </li>
+                </li>-->
                 <li>
-                  <router-link to="/blog">Блог</router-link>
+                  <router-link to="/blog" v-scroll-to="'.dt-navbar, 10px'">Блог</router-link>
                 </li>
               </ul>
             </mdb-col>

@@ -1,28 +1,17 @@
 <template>
-  <div class="justify-content-center">
+  <div>
     <h2 class="m-3">Компоненты DreamTeam</h2>
-    <mdb-row>
+    <mdb-row class="d-flex">
       <mdb-col class="d-flex">
         <mdb-row class="d-flex">
-          <mdb-col>
-            <div class="yg-card">
-              <mdb-card-title>
-                <img src="@/assets/youget/efficiency.svg" alt="card-image" />
-              </mdb-card-title>
-              <mdb-card-body>
-                <p class="header">Эффективность</p>
-                <p>Каждая команда хочет получать лучший результата, но тратить на это меньше. В бесплатном приложении Dream Team члены команды оценивают результат друг друга анонимно и зарабатывают рейтинг за свою работу</p>
-              </mdb-card-body>
-            </div>
-          </mdb-col>
           <mdb-col>
             <div class="yg-card">
               <mdb-card-title>
                 <img src="@/assets/youget/productivity.svg" alt="card-image" />
               </mdb-card-title>
               <mdb-card-body>
-                <p class="header">Продуктивность</p>
-                <p>Для повышения продуктивности важно грамотно распланировать все задачи. В приложении есть функция объявления задачи, назначение ответственных за эту задачу и определение конечного времени задачи.</p>
+                <p class="header">Эффективность</p>
+                <p>Каждая команда хочет получать лучший результата, но тратить на это меньше. В бесплатном приложении Dream Team члены команды оценивают результат друг друга анонимно и зарабатывают рейтинг за свою работу</p>
               </mdb-card-body>
             </div>
           </mdb-col>
@@ -68,17 +57,6 @@
           <mdb-col>
             <div class="yg-card">
               <mdb-card-title>
-                <img src="@/assets/youget/motivation.svg" alt="card-image" />
-              </mdb-card-title>
-              <mdb-card-body>
-                <p class="header">Мотивация</p>
-                <p>Рейтинг персонал — инструмент для стимулирования более эффективной работы команды. Этот метод не несет материальные затраты, но хорошо мотивирует за счет стремления каждого быть лучше, чем то, кто рядом.</p>
-              </mdb-card-body>
-            </div>
-          </mdb-col>
-          <mdb-col>
-            <div class="yg-card">
-              <mdb-card-title>
                 <img src="@/assets/youget/self-org.svg" alt="card-image" />
               </mdb-card-title>
               <mdb-card-body>
@@ -116,7 +94,7 @@ import {
   mdbBtn
 } from "mdbvue";
 export default {
-  compoents: {
+  components: {
     mdbContainer,
     mdbRow,
     mdbCol,

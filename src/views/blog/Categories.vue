@@ -115,9 +115,9 @@
       </mdb-card-text>-->
     </div>
 
-    <mdb-row>
+    <mdb-row class="mb-5">
       <mdb-col class="d-flex justify-content-center">
-        <dtbtn @click.native="$router.push(`/rubrics`)" :title="`Все рубрики`"></dtbtn>
+        <dtbtn @click.native="$router.push(`/rubrics`)" :gradiented="true" :title="`Все рубрики`"></dtbtn>
       </mdb-col>
     </mdb-row>
   </section>

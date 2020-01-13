@@ -96,7 +96,7 @@
     <!-- <div class="home-head-border"></div> -->
     <mdbContainer class="my-5">
       <div sticky-container>
-        <mdb-row class="d-flex justify-content-center">
+        <mdb-row class="d-flex justify-content-between">
           <mdb-col class="col d-none d-md-block" md="4">
             <div class="phone-bg" v-sticky sticky-offset="offset">
               <!-- <VideoGallery class="video" :currentSlide="this.currentSlide" /> -->
@@ -107,16 +107,16 @@
                 <div class="video">
                   <!-- <img src="@/assets/iphone-x.svg" alt class="img-fluid" /> -->
                   <transition name="ma" mode="out-in">
-                    <div v-if="currentSlide<3" key="group">
+                    <div v-if="currentSlide==1" key="group">
                       <video class="video-fluid" src="@/assets/vids/group.mp4" autoplay loop muted></video>
                     </div>
-                    <div v-if="currentSlide<5" key="invite">
+                    <div v-if="currentSlide==2" key="invite">
                       <video class="video-fluid" src="@/assets/vids/invite.mp4" autoplay loop muted></video>
                     </div>
-                    <div v-if="currentSlide<7" key="vote">
+                    <div v-if="currentSlide==3" key="vote">
                       <video class="video-fluid" src="@/assets/vids/voting.mp4" autoplay loop muted></video>
                     </div>
-                    <div v-if="currentSlide>=7" key="rate">
+                    <div v-if="currentSlide==4" key="rate">
                       <video class="video-fluid" src="@/assets/vids/rate.mp4" autoplay loop muted></video>
                     </div>
                   </transition>
@@ -124,15 +124,15 @@
               </div>
             </div>
           </mdb-col>
-          <mdb-col>
-            <div v-sitcky>
+          <!-- <mdb-col>
+            <div>
               <font-awesome-icon
                 :icon="['fas', 'redo-alt']"
                 :class="'cursor-pointer ' + rotate"
                 @click="enableRotatiion(); disableRotatiion() "
               />
             </div>
-          </mdb-col>
+          </mdb-col>-->
           <mdb-col
             md="6"
             class="d-none d-sm-block pl-5 align-self-center"
@@ -141,95 +141,74 @@
             <div class="advantages">
               <mdb-row>
                 <mdb-col>
-                  <h2>Создавайте проект</h2>
+                  <h2 v-view="viewHandler">Создавайте проект</h2>
                 </mdb-col>
               </mdb-row>
               <hr />
               <p>Проекты нужны для повышения эффективности работы. В приложение проект можно разбить на небольшие группы, это позволит каждому отделу заниматься своей работой и при этом оставаться на связи со всей командой</p>
               <div class="arrow">
-                <vue-next-level-scroll target="#slide2">
-                  <font-awesome-icon
-                    :icon="['fas', 'chevron-down']"
-                    size="3x"
-                    class="mt-2 mb-4 nextSlide cursor-pointer"
-                  />
-                </vue-next-level-scroll>
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-down']"
+                  size="3x"
+                  class="mt-2 mb-4 nextSlide cursor-pointer"
+                  v-scroll-to="'#slide2, 0px'"
+                />
               </div>
               <div id="slide2"></div>
             </div>
             <div class="advantages">
               <mdb-row>
                 <mdb-col>
-                  <h2>Общайтесь</h2>
+                  <h2 v-view="viewHandler1">Общайтесь</h2>
                 </mdb-col>
               </mdb-row>
               <hr />
               <p>Для эффективной работы, вы должны быть всегда на связи. Приложение позволяет обмениваться не только текстовыми сообщениями, но также документами, медиафайлами и стикерами</p>
-              <div
-                class="arrow"
-                v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
-              >
-                <vue-next-level-scroll target="#slide3">
-                  <font-awesome-icon
-                    :icon="['fas', 'chevron-down']"
-                    size="3x"
-                    class="mt-2 mb-4 nextSlide cursor-pointer"
-                  />
-                </vue-next-level-scroll>
+              <div class="arrow">
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-down']"
+                  size="3x"
+                  class="mt-2 mb-4 nextSlide cursor-pointer"
+                  v-scroll-to="'#slide3, 0px'"
+                />
               </div>
               <div id="slide3"></div>
             </div>
             <div class="advantages">
               <mdb-row>
                 <mdb-col>
-                  <h2>Анонимно оценивайте</h2>
+                  <h2 v-view="viewHandler2">Анонимно оценивайте</h2>
                 </mdb-col>
               </mdb-row>
               <hr />
               <p>Оценивать чью-то работу всегда трудно. А внутри маленькой команды, зачастую, есть страх обидеть кого-то или быть наказанным за высказанное мнение. Но в каждом коллективе, для эффективной работы, важны честность и искренность, поэтому мы позволяем каждому оставаться анонимным</p>
-              <div
-                class="arrow"
-                v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
-              >
-                <vue-next-level-scroll target="#slide4">
-                  <font-awesome-icon
-                    :icon="['fas', 'chevron-down']"
-                    size="3x"
-                    class="mt-2 mb-4 nextSlide cursor-pointer"
-                  />
-                </vue-next-level-scroll>
+              <div class="arrow">
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-down']"
+                  size="3x"
+                  class="mt-2 mb-4 nextSlide cursor-pointer"
+                  v-scroll-to="'#slide4, 0px'"
+                />
               </div>
               <div id="slide4"></div>
             </div>
             <div class="advantages-last">
               <mdb-row>
                 <mdb-col>
-                  <h2>Зарабатывайте рейтинг</h2>
+                  <h2 v-view="viewHandler3">Зарабатывайте рейтинг</h2>
                 </mdb-col>
               </mdb-row>
               <hr />
               <p>В результате анонимного оценивания программа присваивает каждому итоговый рейтинг. И каждый из членов команды сможет увидеть над каким навыком ему нужно потрудиться, чтобы стать лучше</p>
               <div class="arrow">
-                <vue-next-level-scroll target="#prices">
-                  <font-awesome-icon
-                    :icon="['fas', 'chevron-down']"
-                    size="3x"
-                    class="mt-2 mb-4 nextSlide cursor-pointer"
-                  />
-                </vue-next-level-scroll>
+                <font-awesome-icon
+                  :icon="['fas', 'chevron-down']"
+                  size="3x"
+                  class="mt-2 mb-4 nextSlide cursor-pointer"
+                  v-scroll-to="'.cost-card, 10px'"
+                />
               </div>
             </div>
-            <!-- Слайд  -->
-            <!-- <swiper-slide class="vertical-slide">
-              <mdb-row>
-               
-                <mdb-col>
-                  <h2>Получите результаты</h2>
-                </mdb-col>
-              </mdb-row>
-              <hr />
-              <p>Создавайте опросы с различными вариантами ответа. Анонимные и публичные. С чатом обсуждения и без него</p>
-            </swiper-slide>-->
           </mdb-col>
           <mdb-col class="d-block d-sm-none">
             <div class="fullpage">
@@ -292,7 +271,6 @@ import VideoGallery from "@/components/VideoGallery";
 import Capabilities from "./Capabilities";
 import youget from "./YouGet";
 import Costs from "./price/Costs";
-import VueNextLevelScroll from "vue-next-level-scroll";
 import {
   mdbRow,
   mdbCol,
@@ -335,8 +313,7 @@ export default {
     VideoGallery,
     Capabilities,
     youget,
-    Costs,
-    VueNextLevelScroll
+    Costs
   },
   data() {
     return {
@@ -364,43 +341,6 @@ export default {
           delay: 3000,
           disableOnInteraction: false
         }
-      },
-      swiperOption: {
-        on: {
-          slideNextTransitionStart: function() {
-            bus.$emit("nextSlide");
-            this.firstSlide = false;
-          },
-          slidePrevTransitionStart: function() {
-            console.log("prev slide");
-          },
-          reachBeginning: function() {
-            console.log("start");
-          },
-          reachEnd: function() {
-            console.log("end");
-            this.lastSlide = true;
-          }
-        },
-        direction: "vertical",
-        spaceBetween: 0,
-        simulateTouch: false,
-        watchSlidesProgress: true,
-        width: 500,
-        height: 80,
-        effect: "fade",
-        speed: 1200,
-        fadeEffect: {
-          crossFade: true
-        },
-        navigation: {
-          nextEl: ".nextSlide",
-          prevEl: ".previousSlide"
-        }
-        // autoplay: {
-        //   delay: 13000,
-        //   disableOnInteraction: false
-        // }
       }
     };
   },
@@ -411,30 +351,25 @@ export default {
     bus.$emit(`paintHeadDestroy`);
   },
   methods: {
-    onWaypoint({ going, direction }) {
-      // going: in, out
-      // direction: top, right, bottom, left
-      // if (going === this.$waypointMap.GOING_IN) {
-      //   console.log("vidim title 1");
-      //   this.currentSlide = 2;
-      // }
-
-      if (direction === this.$waypointMap.DIRECTION_TOP) {
-        console.log(" scrolim vniz!");
-        this.nextVid();
-      }
-      if (direction === this.$waypointMap.DIRECTION_BOTTOM) {
-        console.log("scrolim vverh!");
-        this.prevVid();
+    viewHandler(e) {
+      if (e.percentCenter < 0.5) {
+        this.currentSlide = 1;
       }
     },
-    nextVid() {
-      this.currentSlide++;
-      console.log("slide", this.currentSlide);
+    viewHandler1(e) {
+      if (e.percentCenter < 0.5) {
+        this.currentSlide = 2;
+      }
     },
-    prevVid() {
-      this.currentSlide--;
-      console.log("slide", this.currentSlide);
+    viewHandler2(e) {
+      if (e.percentCenter < 0.5) {
+        this.currentSlide = 3;
+      }
+    },
+    viewHandler3(e) {
+      if (e.percentCenter < 0.5) {
+        this.currentSlide = 4;
+      }
     },
     enableRotatiion() {
       this.rotate = "rotate";
@@ -462,18 +397,6 @@ export default {
     },
     leave(el, done) {
       done();
-    }
-  },
-  computed: {
-    currentvideo() {
-      switch (this.slide) {
-        case 1:
-          return "group.31e6d585.mp4";
-          break;
-
-        default:
-          break;
-      }
     }
   }
 };
@@ -790,17 +713,8 @@ section {
 }
 .ma-leave-active {
   transition: all 500ms;
-  animation: 1s ma-slide forwards;
 }
 .ma-leave-to {
   opacity: 0;
-}
-@keyframes ma-slide {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(150px);
-  }
 }
 </style>
