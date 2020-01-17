@@ -80,7 +80,7 @@ export default {
         .ref("Rubrics/")
         .once("value", snapshot => {
           let data = snapshot.val();
-          console.log(`Рубрика получен`, data);
+          // console.log(`Рубрика получен`, data);
           for (const key in data) {
             if (data.hasOwnProperty(key)) {
               let rubric = data[key];

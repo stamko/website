@@ -134,14 +134,14 @@ export default new Vuex.Store({
   },
   actions: {
     setRubrics({ commit }, payload) {
-      console.log(payload)
+      // console.log(payload)
       commit(`setRubrics`, payload)
     },
     clearRubrics({ commit }) {
       commit(`clearRubrics`)
     },
     setPosts({ commit }, payload) {
-      console.log(payload)
+      // console.log(payload)
       commit(`setPosts`, payload)
     },
     clearPosts({ commit }) {

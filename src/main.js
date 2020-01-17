@@ -56,6 +56,13 @@ import {
 } from 'moment-range';
 import 'moment/locale/ru'
 import store from './store';
+import VueYandexMetrika from 'vue-yandex-metrika' 
+Vue.use(VueYandexMetrika, {
+    id: 57069997,
+    router: router,
+    env: process.env.NODE_ENV
+    // other options
+})
 import {
   CollapsePlugin,
   VBScrollspyPlugin

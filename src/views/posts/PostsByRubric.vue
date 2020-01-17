@@ -89,7 +89,7 @@ export default {
           posts.push(this.postsData[i]);
         }
       }
-      console.log(`posts`, posts);
+      // console.log(`posts`, posts);
       return posts;
     }
   }
