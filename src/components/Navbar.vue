@@ -1,6 +1,7 @@
 <template>
   <div :class="headClass" id="navbar">
     <div class="dt-navbar">
+      <!-- //TODO: dropdown закрыт другими элементами -->
       <mdb-container>
         <mdb-row class="align-items-center">
           <mdb-col col="4" class="d-block d-md-none">
@@ -111,7 +112,5 @@ export default {
 .dropdown-toggle::after {
   display: none;
 }
-mdb-dropdown{
-  z-index: 10000 !important;
-}
+
 </style>
