@@ -1,19 +1,18 @@
 <template>
   <div :class="headClass" id="navbar">
     <div class="dt-navbar">
-      <!-- //TODO: dropdown закрыт другими элементами -->
+      <!-- //TODO: передалть меню - при клике выезжает оверлей -->
       <mdb-container>
         <mdb-row class="align-items-center">
-          <mdb-col col="4" class="d-block d-md-none">
+          <mdb-col col="4" class="d-block d-md-none pt-3 mr-4">
             <mdb-dropdown>
               <mdb-dropdown-toggle slot="toggle">
-                <font-awesome-icon icon="bars" />
+                <p class="burger">
+                  <font-awesome-icon icon="bars" />
+                </p>
               </mdb-dropdown-toggle>
               <mdb-dropdown-menu>
-                <!-- <mdb-dropdown-item  @click="$router.push(`/functions`)">
-                  <a>Функция</a>
-                </mdb-dropdown-item> -->
-                <mdb-dropdown-item  @click="$router.push(`/price`)">
+                <mdb-dropdown-item @click="$router.push(`/price`)">
                   <a>Цены</a>
                 </mdb-dropdown-item>
                 <mdb-dropdown-item @click="$router.push(`/blog`)">
@@ -25,20 +24,20 @@
               </mdb-dropdown-menu>
             </mdb-dropdown>
           </mdb-col>
-          <mdb-col col="4" md="4" class="d-flex justify-content-center justify-content-xl-start">
+          <mdb-col col="4" md="4" class="d-flex offset-md-1 offset-xl-0">
             <a @click="$router.push(`/`)">
-              <img src="@/assets/logo-color.svg" class="img-fluid" alt="Логотип DreamTeam" />
+              <img src="@/assets/logo-color.png" class="img-fluid" width="180px" alt="Логотип DreamTeam" />
             </a>
           </mdb-col>
           <mdb-col md="5" lg="4" class="d-none d-md-block">
-            <div class="d-flex justify-content-between w-100">
+            <div class="d-flex w-100 justify-content-center">
               <!-- <a @click="$router.push(`/functions`)">Функция</a> -->
-               <router-link to="/" v-scroll-to="'.cost-card, 10px'">Цены</router-link>
-              <a @click="$router.push(`/blog`)">Блог</a>
+              <router-link class="mr-3" to="/" v-scroll-to="'.cost-card, 10px'">Цены</router-link>
+              <a class="mr-3" @click="$router.push(`/blog`)">Блог</a>
               <a @click="$router.push(`/about`)">О нас</a>
             </div>
           </mdb-col>
-          <mdb-col col="4" md="3" lg="4" class="d-flex justify-content-end">
+          <mdb-col col="4" md="3" lg="4" class="d-none justify-content-end">
             <dtbtn :icon="`sign-in-alt`" :title="`Войти`" :gradiented="true"></dtbtn>
           </mdb-col>
         </mdb-row>
@@ -49,7 +48,6 @@
 
 <script>
 import { bus } from "../bus.js";
-
 import {
   mdbContainer,
   mdbRow,
@@ -63,7 +61,12 @@ import dtbtn from "@/components/UI/dt-btn";
 export default {
   data() {
     return {
-      headClass: ""
+      headClass: "",
+      catalog: {
+        element: {
+          title: "Цены"
+        }
+      }
     };
   },
   methods: {
@@ -96,6 +99,8 @@ export default {
   background-color: rgb(242, 242, 242);
 }
 .dt-navbar {
+  z-index: 100000;
+  overflow: visible;
   padding: 25px 0 50px 0;
   a {
     font-weight: 600;
@@ -112,5 +117,10 @@ export default {
 .dropdown-toggle::after {
   display: none;
 }
-
+.dropdown-menu {
+  top: 0 !important;
+}
+.burger {
+  font-size: 20px;
+}
 </style>

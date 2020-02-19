@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="m-3">Компоненты DreamTeam</h2>
-    <mdb-row class="d-flex">
+    <mdb-row class="d-flex" col="4" md="8">
       <mdb-col>
         <div class="yg-card">
           <mdb-card-title>
@@ -106,8 +106,8 @@ h2 {
   text-align: center;
 }
 .yg-card {
-  width: 280px;
-  margin: 2rem;
+  width: 325px;
+  margin: 0.7rem;
   font-size: 16px;
   color: #6c7580;
   letter-spacing: 0.4px;
@@ -120,6 +120,14 @@ h2 {
     letter-spacing: 0.4px;
     text-align: left;
     font-weight: 700;
+  }
+}
+@media screen and (max-width: 1024px) {
+  h2 {
+    font-size: 30px;
+  }
+  .yg-card {
+    width: 250px;
   }
 }
 </style>

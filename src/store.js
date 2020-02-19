@@ -9,107 +9,445 @@ export default new Vuex.Store({
     postsData: [],
     videosData: [],
     docs: [
-      [
-        {
+      [{
           type: `title`,
-          content: `Название документации`,
+          content: `Начало работы`,
+          icon: `docs/sign-in.svg`
+        },
+        {
+          type: `description`,
+          subTitle: `Регистрация в  приложении Dream Team`,
+          content: `Итак, вы наконец скачали приложение Dream Team из Google Play или AppStore. И не знаете, что делать дальше? Сейчас мы все расскажем`
         },
         {
           type: `img`,
-          content: `@/assets/anonim.jpg`
+          content: `docs/1step.jpg`
         },
         {
           type: `description`,
-          subTitle: `Подзаголовок`,
-          content: `lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem`
+          subTitle: ``,
+          content: `Первым делом открываем приложение и попадаем на окошко со входом, но для начала нам нужно зарегистрироваться. Верно? Кнопка «Регистрация» находится сразу по кнопкой «Войти». Тык-тык на нее
+
+          Отлично с этим справились. Теперь мы готовы регистрироваться. Для этого вводим номер телефона, к которому имеем доступ и вводим пароль(инструкция по паролю есть прямо в окошке «Введите пароль» за вопросительным знаком)
+          
+          Ввели правильный телефон и пароль? Отлично! Жмем кнопку «Зарегистрироваться».
+          
+          Но это еще не все.`
+        },
+        {
+          type: `img`,
+          content: `docs/2step.jpg`
         },
         {
           type: `description`,
-          subTitle: `Подзаголовок`,
-          content: `lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem`
+          subTitle: ``,
+          content: `На Ваш номер телефона отправлен секретный код, который поможет вам зарегистрироваться и войти в приложение Dream Team.
+
+          Вводим его в окне «SMS-код» и тык-тык на кнопку «Отправить».
+          
+          Теперь осталось придумать и ввести «Nickname», а также заполнить поля «Имя» и «Фамилия».
+          
+          Тык-тык на кнопку «Создать».
+          
+          Все. Вы великолепны. Теперь вы полноценный пользователь приложения Dream Team.`
         },
       ],
-      [
-        {
+      [{
           type: `title`,
-          content: `Название документации`,
+          content: `Профиль`,
+          icon: `docs/profile.svg`
         },
 
         {
           type: `description`,
-          subTitle: `Подзаголовок`,
-          content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit praesentium molestias explicabo non labore modi libero! Sunt ratione illo ullam nihil omnis modi animi, debitis fugiat deserunt excepturi pariatur odit eius unde nobis a atque consequuntur fuga praesentium eos dolor eligendi deleniti exercitationem eveniet? Voluptates numquam omnis aspernatur mollitia!`
+          subTitle: `Как изменить профиль`,
+          content: `Вы успешно зарегистрировались. Теперь вам нужно добавить фотографию и написать пару слов о себе`
         },
         {
           type: `img`,
-          content: `@/assets/anonim.jpg`
+          content: `docs/3step.jpg`
         },
         {
           type: `description`,
-          subTitle: `Подзаголовок`,
-          content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit praesentium molestias explicabo non labore modi libero! Sunt ratione illo ullam nihil omnis modi animi, debitis fugiat deserunt excepturi pariatur odit eius unde nobis a atque consequuntur fuga praesentium eos dolor eligendi deleniti exercitationem eveniet? Voluptates numquam omnis aspernatur mollitia!`
+          subTitle: ``,
+          content: `Внизу экрана вы обнаружите клавиши «Группы», «Уведомления» и «Профиль».
+
+          Для того, чтобы посмотреть свой «рейтинг», поменять «аватар», изменить «Имя» и «Фамилию», нужно зайти во вкладку «Профиль». Здесь вы уже видите всю информацию о себе.
+          
+          Для того, чтобы ее изменить, нужно в верхнем правом углу клацнуть по «трем точкам» и выбрать пункт «Изменить профиль»`
+        },
+        {
+          type: `img`,
+          content: `docs/4step.jpg`
         },
         {
           type: `description`,
-          subTitle: `Подзаголовок`,
-          content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit praesentium molestias explicabo non labore modi libero! Sunt ratione illo ullam nihil omnis modi animi, debitis fugiat deserunt excepturi pariatur odit eius unde nobis a atque consequuntur fuga praesentium eos dolor eligendi deleniti exercitationem eveniet? Voluptates numquam omnis aspernatur mollitia!`
-        },
-        {
-          type: `description`,
-          subTitle: `Подзаголовок`,
-          content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit praesentium molestias explicabo non labore modi libero! Sunt ratione illo ullam nihil omnis modi animi, debitis fugiat deserunt excepturi pariatur odit eius unde nobis a atque consequuntur fuga praesentium eos dolor eligendi deleniti exercitationem eveniet? Voluptates numquam omnis aspernatur mollitia!`
+          subTitle: ``,
+          content: `После этого откроется окно «Изменение профиля»
+
+          Чтобы изменить фотографию, нужно нажать на значок 4 — «Аватар», выбрать существующее фото из галереи или сделать новое.
+          
+          Все остальные поля менять можно просто нажатием.
+          
+          Не забываем сохранить все изменения кнопкой «Сохранить».`
         },
       ],
-      [
-        {
+      [{
           type: `title`,
-          content: `Название документации`,
+          content: `Команда`,
+          icon:`docs/team.svg`
+        },
+
+        {
+          type: `description`,
+          subTitle: `Как слздать команду`,
+          content: `Команда — это группа людей, с которым вы работаете. Именно эти люди люди — лидеры в своих отделах. Именно через команду вы сможете запускать оценивание`
         },
         {
           type: `img`,
-          content: `@/assets/anonim.jpg`
+          content: `docs/5step.jpg`
         },
         {
           type: `description`,
-          subTitle: `Подзаголовок 1`,
-          content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit praesentium molestias explicabo non labore modi libero! Sunt ratione illo ullam nihil omnis modi animi, debitis fugiat deserunt excepturi pariatur odit eius unde nobis a atque consequuntur fuga praesentium eos dolor eligendi deleniti exercitationem eveniet? Voluptates numquam omnis aspernatur mollitia!`
+          subTitle: ``,
+          content: `Для того, чтобы создать команду, Вам нужно перейти на экран «Группы».
+
+          Сверху вы увидите окно «Команды». Команд может быть несколько, например, в одной команде вы соберете тех, кто работает у вас в компании, в другой команде вы соберете людей которые работают над новым проектом, который не переплетается с деятельностью основной команды.
+          
+          Далее вам нужно ввести «Название», «Описание» и «Nickname» для своей команды. Nickname вводим сознательно, позже его изменить уже нельзя`
         },
         {
           type: `description`,
-          subTitle: `Подзаголовок`,
-          content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit praesentium molestias explicabo non labore modi libero! Sunt ratione illo ullam nihil omnis modi animi, debitis fugiat deserunt excepturi pariatur odit eius unde nobis a atque consequuntur fuga praesentium eos dolor eligendi deleniti exercitationem eveniet? Voluptates numquam omnis aspernatur mollitia!`
+          subTitle: `Как изменить информацию о команде?`,
+          content: `Чтобы изменить информацию о команде, нужно перейти в нужную команду`
+        },
+        {
+          type: `img`,
+          content: `docs/6step.jpg`
         },
         {
           type: `description`,
-          subTitle: `Подзаголовок`,
-          content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit praesentium molestias explicabo non labore modi libero! Sunt ratione illo ullam nihil omnis modi animi, debitis fugiat deserunt excepturi pariatur odit eius unde nobis a atque consequuntur fuga praesentium eos dolor eligendi deleniti exercitationem eveniet? Voluptates numquam omnis aspernatur mollitia!`
+          subTitle: ``,
+          content: `Открыть меню команды через три точки в верхнем правом углу и выбрать «Изменить информацию»
+
+          Также в редактировании информации о команде, вы можете изменить аватар команды, это нужно лишь для вашего удобства`
+        },
+        {
+          type: `img`,
+          content: `docs/7step.jpg`
         },
         {
           type: `description`,
-          subTitle: `Подзаголовок`,
-          content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque reprehenderit praesentium molestias explicabo non labore modi libero! Sunt ratione illo ullam nihil omnis modi animi, debitis fugiat deserunt excepturi pariatur odit eius unde nobis a atque consequuntur fuga praesentium eos dolor eligendi deleniti exercitationem eveniet? Voluptates numquam omnis aspernatur mollitia!`
+          subTitle: ``,
+          content: `Кликаете на «Аватар команды», выбираете фото из галереи или делаете новое. Также вы можете поменять название и описание команды. Не забываем нажать на кнопку изменить, чтобы сохранить изменения
+
+        Готово. Теперь у вас есть команда. Осталось добавить туда лидеров отделов`
+        },
+
+        {
+          type: `description`,
+          subTitle: `Как добавить людей в команду?`,
+          content: ``
+        },
+        {
+          type: `img`,
+          content: `docs/8step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `Чтобы добавить лидеров, заходим в нужную «команду», и переходим в «связанные пользователи»`
+        },
+        {
+          type: `img`,
+          content: `docs/9step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `После чего видим список всех связанных пользователей. Нажимаем на плюсик в верхнем правом углу и в строке «Поиск» вводим имя, фамилию или nickname нужного пользователя`
+        },
+        {
+          type: `img`,
+          content: `docs/10step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `Затем тык-тык на нужного пользователя в списке поиска. Готово, теперь вы не одиноки в своей команде
+
+          Лидеры — которые есть у вас в в команде, могут влиять на все группы привязанные к этой команде, а именно «Изменять информацию о группе» или «Удалять группу»`
+        },
+        {
+          type: `description`,
+          subTitle: `Как назначить участника капитаном команды`,
+          content: `Капитан команды может «Запускать голосования» и «Удалять/добавлять участников» во все группы, созданные этой командой.`
+        },
+        {
+          type: `img`,
+          content: `docs/11step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `Достаточно зайти в нужную «Команду», нажать на «Связанные пользователи»`
+        },
+        {
+          type: `img`,
+          content: `docs/12step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `Выбрать пользователя, нажать на 3 точки справа от пользователя
+
+          В выплывающем окне подтвердить действие нажав на «ОК»`
         },
       ],
-      [
-        {
+      [{
           type: `title`,
-          content: `Название документации`,
+          content: `Группа`,
+          icon:`docs/group.svg`
+        },
+        {
+          type: `description`,
+          subTitle: `Как создать группу`,
+          content: `Группа нужна для того, чтобы собрать внутри всех членов одного отдела, общаться и обмениваться медиафайлами по рабочей теме. А не ждать ответ по электронной почте по пол дня.
+          Создать группу можно только в команде`
         },
         {
           type: `img`,
-          content: `@/assets/anonim.jpg`
+          content: `docs/12step.jpg`
         },
         {
           type: `description`,
-          subTitle: `Подзаголовок`,
-          content: `lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem`
+          subTitle: ``,
+          content: `Для этого перейдите в «Команду», в которой нужно создать группу. Откройте меню нажав на три точки в правом верхнем углу. Выберите «Добавить группу»`
+        },
+        {
+          type: `img`,
+          content: `docs/12step.jpg`
         },
         {
           type: `description`,
-          subTitle: `Подзаголовок`,
-          content: `lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem`
+          subTitle: ``,
+          content: `Для этого перейдите в «Команду», в которой нужно создать группу. Откройте меню нажав на три точки в правом верхнем углу. Выберите «Добавить группу»`
+        },
+        {
+          type: `img`,
+          content: `docs/13step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: `Как создать подгруппу?`,
+          content: `Создать подгруппу также просто как и группу. Составление групп и подгрупп нужно для построения иерархии, чтобы каждый отдел знал своих старших`
+        },
+        {
+          type: `img`,
+          content: `docs/14step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `Для этого перейдите в «Команду», в которой нужно создать группу. Откройте меню нажав на три точки в правом верхнем углу. Выберите «Добавить группу»`
+        },
+        {
+          type: `img`,
+          content: `docs/15step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: `Как создать подгруппу?`,
+          content: `Создать подгруппу также просто как и группу. Составление групп и подгрупп нужно для построения иерархии, чтобы каждый отдел знал своих старших`
+        },
+        {
+          type: `img`,
+          content: `docs/15step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `В нужной группе открываем меню через три точки в правом верхнем углу, и выбираем «Добавить подгруппу». Получаем окно по созданию подгруппы`
+        },
+        {
+          type: `img`,
+          content: `docs/16step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `Вводим «Название», «Описание», «Nickname» и сохраняем введенную информацию, нажав на галочку в верхнем правом углу.
+        Готово! Теперь в том же духе продолжай создавать иерархию компании`
+        },
+        {
+          type: `description`,
+          subTitle: `Как пригласить коллег в группу?`,
+          content: `Теперь как же пригласить туда людей, иначе зачем вам нужны эти группы
+
+          В нужной группе/подгруппе нажимаем на значок «Участники», да именно туда, куда показывает палец на скрине сверху, открывается окно участников.`
+        },
+        {
+          type: `img`,
+          content: `docs/17step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `Чтобы добавить участников нужно нажать на плюс в верхнем правом углу, после чего вам откроется окно поиска`
+        },
+        {
+          type: `img`,
+          content: `docs/18step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `Нажав на лупу, вы можете начать вводить «Имя», «Фамилию» или «Nickname». Когда нужный человек найден,нажимаем на строчку с его данными.
+          Готово! Вы добавили участника в группу`
+        },
+        {
+          type: `description`,
+          subTitle: `Как дать права администратора участнику группы?`,
+          content: ``
+        },
+        {
+          type: `img`,
+          content: `docs/19step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `Для этого, выберите в списке участников группы, как это сделать, есть инструкция выше, нужного участника, тык-тык на три точки справа от его имени. Из списка действий выбрать «Сделать админом группы». В появившемся окне нажать «ОК»`
         },
       ],
+      [{
+          type: `title`,
+          content: `Чат`,
+          icon:`docs/group.svg`
+        },
+        {
+          type: `description`,
+          subTitle: `Как писать в чат?`,
+          content: `Чтобы написать в чат, нужно сначала зайти в группу`
+        },
+        {
+          type: `img`,
+          content: `docs/20step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `И под названием группы нажать на клавишу «Перейти в чат».
+        В открывшемся окне написать текст и отправить сообщение.
+        
+        Также в скором времени будет доступно:
+        
+        — отправка медиафайлов;
+        
+        — отправка голосовых сообщений;
+        
+        — отправка задач.
+        
+        Ждите вместе с нами`
+        }
+      ],
+      [{
+          type: `title`,
+          content: `Оценивание`,
+          icon:`docs/star.svg`
+        },
+        {
+          type: `description`,
+          subTitle: `Как запустить оценивание?`,
+          content: `Начнем с того, что такое оценивание.
+
+        Оценивание — это метод анкетирования, при помощи которого можно узнать чужую оценку своей работы и заодно оценить работу коллеги.
+        Оценивание исключительно анонимное и результаты оценивания доступны только в виде рейтинга у каждого человека.
+        Посмотреть конкретные ответы конкретных людей нельзя.`
+        },
+        {
+          type: `img`,
+          content: `docs/21step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `Оценивание запускается во вкладке «Команда», через клавишу «Запуск голосования». После активации этой клавиши вы увидите дату и время окончания голосования. Голосование запускается во всех группах/подгруппах, которые были созданы под этой командой. В общем списке групп , группы с запущенным оцениванием отмечены значком «Часы».`
+        },
+        {
+          type: `description`,
+          subTitle: `Как оценить участников?`,
+          content: `Для того, чтобы оценить участников команды`
+        },
+        {
+          type: `img`,
+          content: `docs/21step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `Нужно перейти в группу с оцениванием, нажать на клавишу «Идет голосование». И попадете в окно с участниками группы`
+        },
+        {
+          type: `img`,
+          content: `docs/22step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `Если вы пока не готовы оценить этого участника, вы можете выбрать любого другого пролистав вправо или влево, либо нажав на кнопку «Пропустить». Когда будете готовы, нажмите на кнопку «Начать».
+
+      В оценивании нужно выбрать один из трех вариантов и вас автоматически перебросит к следующему вопросу. Когда вы ответите на все вопросы об этом участнике нужно нажать на кнопку «Отправить»
+      
+      Система увидит, если не все вопросы были отвечены и вернет вас к этим вопросам.`
+        },
+        {
+          type: `description`,
+          subTitle: `Что такое еженедельное голосование?`,
+          content: `Еженедельное голосование будет включаться каждую пятницу в 17.00 без вашего участия
+
+      Чтобы его включить, нужно перейти в команду`
+        },
+        {
+          type: `img`,
+          content: `docs/23step.jpg`
+        },
+        {
+          type: `description`,
+          subTitle: ``,
+          content: `И нажать на ползунок возле «Еженедельное голосование». Если в этом нужды нет, вы можете его выключить
+
+      Состояние ползунка отображается внизу экрана`
+        },
+      ],[
+        {
+            type: `title`,
+            content: `Уведомления`,
+            icon:`docs/notifications.svg`
+      },
+      {
+        type: `description`,
+        subTitle: `Как работать с уведомлениями?`,
+        content: `Уведомления в приложении Dream Team бывают двух видов.
+
+        Требующие действия. Это уведомления администратору группы о создании подгруппы в его группе.
+        
+        Не требующие действия. Это уведомления оповещающие пользователей о добавлении в группу или назначении новых прав`
+      },
+      {
+        type: `img`,
+        content: `docs/24step.jpg`
+      },
+      {
+        type: `description`,
+        subTitle: `Как работать с уведомлениями?`,
+        content: `Вкладка уведомлений расположена по середине в нижней панели.
+
+        Для уведомлений, требующих действия есть две клавиши «Принять» и «Отменить»
+        
+        Для уведомлений, не требующих действий есть клавиша «ОК», что говорит о просмотре данного уведомления.`
+      },
+    ]
     ]
   },
   mutations: {
@@ -133,24 +471,36 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    setRubrics({ commit }, payload) {
+    setRubrics({
+      commit
+    }, payload) {
       // console.log(payload)
       commit(`setRubrics`, payload)
     },
-    clearRubrics({ commit }) {
+    clearRubrics({
+      commit
+    }) {
       commit(`clearRubrics`)
     },
-    setPosts({ commit }, payload) {
+    setPosts({
+      commit
+    }, payload) {
       // console.log(payload)
       commit(`setPosts`, payload)
     },
-    clearPosts({ commit }) {
+    clearPosts({
+      commit
+    }) {
       commit(`clearPosts`)
     },
-    setVideos({ commit }, payload) {
+    setVideos({
+      commit
+    }, payload) {
       commit(`setVideos`, payload)
     },
-    clearVideos({ commit }) {
+    clearVideos({
+      commit
+    }) {
       commit(`clearVideos`)
     },
   },

@@ -1,8 +1,8 @@
 <template>
   <div style="margin-top:7rem;">
     <mdb-row>
-      <mdb-col col="12">
-        <div class="cost-card">
+      <mdb-col col="11">
+        <div class="cost-card big">
           <mdb-card-title>
             @
             <div class="d-flex justify-content-center mb-5 pb-5">
@@ -14,16 +14,17 @@
           <mdb-card-body>
             <mdb-row>
               <mdb-col>
-                <h2 style="margin-top: -6rem;" id="prices">DreamPrice</h2>
+                <h2 style="margin-top: -6rem;" class="d-none d-md-block ml-3" id="prices">DreamPrice</h2>
               </mdb-col>
               <mdb-col>
                 <p
+                  class="d-none d-md-block"
                   style="margin-top: -5.5rem; margin-left: 6rem;"
                 >Все функции платформы доступны бесплатно</p>
               </mdb-col>
             </mdb-row>
-            <h3>Функции:</h3>
-            <mdb-row>
+            <h3 class="ml-3">Функции:</h3>
+            <mdb-row class="ml-1">
               <mdb-col>
                 <ul class="p-0">
                   <li>Создание групп</li>
@@ -44,7 +45,7 @@
       </mdb-col>
     </mdb-row>
     <mdb-row class="pt-5" style="margin:7rem 0;">
-      <mdb-col>
+      <mdb-col col="12" lg="4" style="margin-top:7rem;">
         <div class="cost-card h-100">
           <div class="d-flex justify-content-center">
             <div class="cost-value gradiented-dark">
@@ -53,7 +54,7 @@
           </div>
           <mdb-card-body>
             <mdb-card-text>
-              <h4 class="p-5 text-center">Для участников группы:</h4>
+              <h4 class="pt-5 text-center">Для участников группы:</h4>
               <ul>
                 <li>Оценивание руководителя</li>
                 <li>Просмотр чужой истории оценок</li>
@@ -62,7 +63,7 @@
           </mdb-card-body>
         </div>
       </mdb-col>
-      <mdb-col>
+      <mdb-col col="12" lg="4" style="margin-top:7rem;">
         <div class="cost-card h-100">
           <div class="d-flex justify-content-center">
             <div class="cost-value gradiented-dark">
@@ -71,7 +72,7 @@
           </div>
           <mdb-card-body>
             <mdb-card-text>
-              <h4 class="p-5 text-center">Для руководителей групп:</h4>
+              <h4 class="pt-5 text-center">Для руководителей групп:</h4>
               <ul style="margin-top: -2rem;" class="py-4">
                 <li>"Пятый элемент"</li>
                 <ol class="p-0">
@@ -89,7 +90,7 @@
           </mdb-card-body>
         </div>
       </mdb-col>
-      <mdb-col>
+      <mdb-col col="12" lg="4" style="margin-top:7rem;">
         <mdb-row></mdb-row>
         <div class="cost-card h-100">
           <div class="d-flex justify-content-center">
@@ -99,7 +100,7 @@
           </div>
           <mdb-card-body>
             <mdb-card-text>
-              <h4 class="p-5 text-center">Для всех:</h4>
+              <h4 class="pt-5 text-center">Для всех:</h4>
               <ul class="pt-4">
                 <li>"Новая жизнь"</li>
                 <ol class="p-0">
@@ -151,7 +152,8 @@ export default {
   font-size: 12px;
   color: #1b3b59;
   font-weight: 200;
-  width: 106%;
+  margin: 1rem;
+
   ul li {
     list-style-type: none;
     font-size: 16px;
@@ -186,8 +188,11 @@ export default {
     font-weight: 400;
   }
 }
-.gradiented-dark {
-  // margin-left: 27%;
+.big {
+  width: 106%;
+}
+.gradiented {
+  box-shadow: 0 5px 10px 0 #16ccd9 !important;
 }
 .cost-value {
   border-radius: 50%;
@@ -202,8 +207,17 @@ export default {
 
   span {
     color: white;
-    font-size: 72px;
+    font-size: 60px;
     font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  span.per-month {
+    color: white;
+    font-size: 60px;
+    font-weight: 200;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,14 +225,14 @@ export default {
   }
   span.per-month:before {
     font-size: 21px;
-    font-weight: 600;
+    font-weight: 200;
     line-height: 25px;
     margin-bottom: -1.25rem;
     content: "от";
   }
   span.per-month:after {
     font-size: 21px;
-    font-weight: 600;
+    font-weight: 200;
     line-height: 25px;
     margin-top: -1.25rem;
     content: "в месяц";
@@ -227,6 +241,10 @@ export default {
 @media screen and (max-width: 1024px) {
   .cost-card {
     width: 100%;
+    margin: 0;
+  }
+  .big {
+    margin-left: 1rem;
   }
 }
 </style>

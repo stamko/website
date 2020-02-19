@@ -2,7 +2,7 @@
   <section class="feedback pt-5 mb-5">
     <h2 class="text-center mb-5">Частые вопросы</h2>
     <mdb-row>
-      <mdb-col  class="text-left">
+      <mdb-col class="text-left">
         <accordion :panes="panes" />
       </mdb-col>
     </mdb-row>
@@ -44,10 +44,14 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 p {
   color: #1b3b59;
   font-size: 21px;
   line-height: 25px;
 }
-</style>s
+.accordion .card:hover {
+  box-shadow: none !important;
+  transition: none !important;
+}
+</style>

@@ -2,7 +2,7 @@
   <div>
     <h2>Как с нами связаться?</h2>
     <mdb-row>
-      <mdb-col class="d-flex justify-content-around">
+      <mdb-col class="d-block d-md-flex justify-content-around">
         <div class="contact-card my-5 p-3">
           <p class="p-3">Чат техподдержки в приложении</p>
           <dtbtn withShadow="true" :gradiented="true" title="Перейти в чат" class="ml-5 pl-2"></dtbtn>
@@ -95,6 +95,11 @@ h2 {
         color: #15b0bb !important;
         border-bottom: 1px dashed;
       }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .contact-card {
+      margin: 1rem !important;
     }
   }
 }

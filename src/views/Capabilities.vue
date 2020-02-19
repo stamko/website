@@ -398,7 +398,7 @@ h2 {
     line-height: 18px;
   }
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 768px) {
   h2 {
     font-size: 32px;
     color: #1b3b59;
@@ -418,6 +418,9 @@ h2 {
       text-align: left;
       line-height: 16px;
     }
+  }
+  .card-body{
+    padding: 10px;
   }
 }
 </style>

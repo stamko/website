@@ -4,7 +4,7 @@
       <mdb-row class="mb-5">
         <mdb-col class="footer-logo">
           <a @click="$router.push(`/`)">
-            <img src="@/assets/blackwhitelogo.svg" class="img-fluid" alt="Логотип DreamTeam" />
+            <img src="@/assets/blackwhitelogo.png" class="img-fluid" alt="Логотип DreamTeam" width="180px"/>
           </a>
         </mdb-col>
       </mdb-row>
@@ -63,7 +63,7 @@
           lg="4"
           offset="2"
           offset-md="0"
-          class="d-flex flex-column align-items-center mb-5 order-1 order-md-2"
+          class="d-flex flex-column align-items-center mb-5 order-1 order-md-4 form"
         >
           <h2 class="mb-3 text-white">Подпишись на нашу рассылку</h2>
           <div class="form-group mb-3 w-100">
@@ -148,7 +148,10 @@ footer {
       list-style-type: none;
     }
   }
-  @media screen and (max-width: 540px) {
+  .form {
+    margin-top: -7rem !important;
+  }
+  @media screen and (max-width: 768px) {
     .footer-logo {
       display: flex;
       justify-content: center;
@@ -156,6 +159,9 @@ footer {
     .footer-links {
       display: flex;
       justify-content: center;
+    }
+    .form{
+      margin-top: 0 !important;
     }
     h2 {
       font-size: 24px;

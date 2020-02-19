@@ -2,48 +2,52 @@
   <div class="home w-100" ref="scrollBox">
     <div class="span-background">
       <div class="d-none d-xl-flex justify-content-around">
-        <mdb-row class="d-flex justify-content-center ml-5">
-          <mdb-col class="d-flex ml-5 main-container" lg="10" xl="8">
-            <div class="horizontal-section align-self-center">
-              <div>
-                <mdb-row class="d-flex">
-                  <mdb-col col="12">
-                    <h1>
-                      Создайте команду
-                      <br />мечты
-                    </h1>
-                    <p class="my-5">Сделайте вашу команду мечты лучше с помощью приложения DreamTeam</p>
-                  </mdb-col>
-                </mdb-row>
-                <mdb-row class="d-flex">
-                  <mdb-col class="align-self-center">
-                    <dtbtn
-                      :gradiented="true"
-                      title="Попробуйте"
-                      icon="download"
-                      :iconPosition="'end'"
-                      class="d-flex align-items-center"
-                      @click.native="$router.push('/downloads')"
-                    ></dtbtn>
-                  </mdb-col>
-                  <mdb-col class="d-flex">
-                    <div class="brandIcons">
-                      <font-awesome-icon :icon="['fab', 'android']" size="2x" class="mr-2" />
-                      <font-awesome-icon :icon="['fab', 'apple']" size="2x" class="mr-2" />
-                      <font-awesome-icon :icon="['fas', 'globe-americas']" size="2x" />
-                    </div>
-                  </mdb-col>
-                </mdb-row>
+        <mdbContainer>
+          <mdb-row class="d-flex ml-3">
+            <mdb-col class="d-flex  justify-content-between">
+              <div class="horizontal-section align-self-center">
+                <div>
+                  <mdb-row class="d-flex">
+                    <mdb-col col="12">
+                      <h1>
+                        Создайте команду
+                        <br />мечты
+                      </h1>
+                      <p
+                        class="my-5"
+                      >Сделайте вашу команду мечты лучше с помощью приложения DreamTeam</p>
+                    </mdb-col>
+                  </mdb-row>
+                  <mdb-row class="d-flex">
+                    <mdb-col class="align-self-center">
+                      <dtbtn
+                        :gradiented="true"
+                        title="Попробуйте"
+                        icon="download"
+                        :iconPosition="'end'"
+                        class="d-flex align-items-center"
+                        @click.native="$router.push('/downloads')"
+                      ></dtbtn>
+                    </mdb-col>
+                    <mdb-col class="d-flex">
+                      <div class="brandIcons">
+                        <font-awesome-icon :icon="['fab', 'android']" size="2x" class="mr-2" />
+                        <font-awesome-icon :icon="['fab', 'apple']" size="2x" class="mr-2" />
+                        <font-awesome-icon :icon="['fas', 'globe-americas']" size="2x" />
+                      </div>
+                    </mdb-col>
+                  </mdb-row>
+                </div>
               </div>
-            </div>
-            <mdb-row class="d-flex justify-content-center horizontal-section">
-              <mdb-col lg="10">
-                <img class="img-fluid" src="@/assets/hero-image.png" alt />
-                <div id="trigger2"></div>
-              </mdb-col>
-            </mdb-row>
-          </mdb-col>
-        </mdb-row>
+              <mdb-row class="d-flex justify-content-center horizontal-section">
+                <mdb-col lg="10">
+                  <img class="img-fluid" src="@/assets/hero-image.png" alt />
+                  <div id="trigger2"></div>
+                </mdb-col>
+              </mdb-row>
+            </mdb-col>
+          </mdb-row>
+        </mdbContainer>
       </div>
       <mdbContainer class="d-xl-none">
         <mdb-row class="d-flex justify-content-center">
@@ -91,7 +95,7 @@
       </mdbContainer>
     </div>
     <mdbContainer>
-      <Capabilities class="my-9" />
+      <Capabilities class="my-5" />
     </mdbContainer>
     <!-- <div class="home-head-border"></div> -->
     <mdbContainer class="my-5">
@@ -103,7 +107,7 @@
               <!-- <video class="video" autoplay loop muted>
                 <source :src="'/media/' + currentvideo " type="video/mp4" />
               </video>-->
-              <div class="bgbgbg">
+              <div>
                 <div class="video">
                   <!-- <img src="@/assets/iphone-x.svg" alt class="img-fluid" /> -->
                   <transition name="ma" mode="out-in">
@@ -138,7 +142,7 @@
             class="d-none d-sm-block pl-5 align-self-center"
             style="padding-bottom:280px;"
           >
-            <div class="advantages">
+            <div class="advantages" style="margin-top:12rem">
               <mdb-row>
                 <mdb-col>
                   <h2 v-view="viewHandler">Создавайте проект</h2>
@@ -215,8 +219,8 @@
               <h2>Создавайте проект</h2>
               <hr />
               <p>Проекты нужны для повышения эффективности работы. В приложение проект можно разбить на небольшие группы, это позволит каждому отделу заниматься своей работой и при этом оставаться на связи со всей командой</p>
-              <div class="text-center" style="margin-top:20vh;">
-                <img src="@/assets/iphone-x.png" alt height="350" />
+              <div class="text-center" style="margin-top:10vh;">
+                <img src="@/assets/iphone-x.png" alt height="300" />
               </div>
             </div>
             <div class="fullpage">
@@ -588,10 +592,10 @@ section {
 .brandIcons {
   color: #1b3b59;
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 768px) {
   h1 {
     color: #0980f0;
-    font-size: 48px;
+    font-size: 48px !important;
     line-height: 48px;
   }
   h2 {
@@ -690,16 +694,15 @@ section {
 }
 .advantages {
   height: 60vh;
+  p{
+    font-weight: 400;
+  }
 }
 .advantages-last {
   height: 30vh;
 }
 .main-container {
   max-width: 1800px;
-}
-.bgbgbg {
-  // background-image: url("../assets/splash screen.svg");
-  // background-size: contain;
 }
 .ma-enter {
   opacity: 0;

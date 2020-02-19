@@ -107,7 +107,12 @@
                 <h2 :id="`doc-`+index" v-if="doc.type===`title`">{{doc.content}}</h2>
                 <h3 :id="`doc-`+index" v-if="doc.type===`description`">{{doc.subTitle}}</h3>
                 <p v-if="doc.type===`description`">{{doc.content}}</p>
-                <img v-else-if="doc.type===`img`" src="@/assets/appStore.png" alt class="img-fluid" />
+                <img
+                  v-else-if="doc.type===`img`"
+                  :src="`${publicPath}` + doc.content"
+                  alt
+                  class="img-fluid"
+                />
               </div>
             </div>
           </div>
@@ -148,7 +153,8 @@ export default {
       window: {
         width: 0,
         height: 0
-      }
+      },
+      publicPath: process.env.BASE_URL
     };
   },
   created() {

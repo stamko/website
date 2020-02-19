@@ -8,7 +8,7 @@
             <div @click="$router.push(`/docs/`+index)" class="card">
               <div class="card-title pt-2 px-2">
                 <span>
-                  <font-awesome-icon color="white" icon="bars" />
+                  <img :src="`${publicPath}` + doc[0].icon" alt class="img-fluid" width="30px" />
                 </span>
                 <h3>{{doc[0].content}}</h3>
               </div>
@@ -44,7 +44,8 @@
                   <div class="contact-variant-chat w-100">
                     <font-awesome-icon class="mb-3" size="2x" :icon="['fab', 'vk']" />
                     <font-awesome-icon class="mb-3" size="2x" :icon="['fab', 'facebook-f']" />
-                  </div><div class="d-flex justify-content-center">
+                  </div>
+                  <div class="d-flex justify-content-center">
                     <dtBtn class="mb-3" :bgColor="`grey`" title="Чат на сайте"></dtBtn>
                   </div>
                 </div>
@@ -67,6 +68,9 @@
 <script>
 import dtBtn from "@/components/UI/dt-btn.vue";
 export default {
+  data() {
+    return { publicPath: process.env.BASE_URL };
+  },
   components: { dtBtn },
   computed: {
     docs() {
@@ -82,10 +86,15 @@ export default {
     cursor: pointer;
     border-radius: 10px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+    min-height: 120px;
+    img{
+      border-radius: 0%;
+    }
   }
 
   .card:hover {
-    box-shadow: unset;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25) !important;
+    transition-duration: 0.3s !important;
   }
   .card-title {
     h3 {
@@ -101,8 +110,8 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 4.5rem;
-      width: 4.5rem;
+      height: 3.2rem;
+      width: 3.2rem;
       background: linear-gradient(
         315deg,
         #6c68c5 0%,
