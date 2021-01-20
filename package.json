@@ -21,7 +21,7 @@
     "core-js": "^2.6.11",
     "easy-scroll": "^0.6.0",
     "firebase": "^5.11.1",
-    "gsap": "^2.1.3",
+    "gsap": "^3.6.0",
     "horizontal-scroll": "^1.1.0",
     "mdbvue": "5.8.2",
     "moment-range": "^4.0.2",
